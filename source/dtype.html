@@ -2109,18 +2109,18 @@ $(document).ready(function () {
 <a class="sourceLine" id="cb26-5" title="5"><span class="op">&gt;&gt;&gt;</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>],[<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>],[<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>]][<span class="dv">2</span>]</a>
 <a class="sourceLine" id="cb26-6" title="6">[<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</a></code></pre></div>
 <p>인덱싱을 사용하여 개별 요소를 추출하였다면, 해당 요소에 대해 다시 인덱싱이나 슬라이싱을 사용하는 것도 가능합니다. 아래는 리스트에서 개별 요소를 추출한 후, 해당 요소에 대해 다시 인덱싱/슬라이싱을 적용한 예제입니다.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb27-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [<span class="st">&quot;Life&quot;</span>, <span class="st">&quot;is&quot;</span>, <span class="st">&quot;short&quot;</span>, <span class="st">&quot;you&quot;</span>, <span class="st">&quot;need&quot;</span>, <span class="st">&quot;Python&quot;</span>] <span class="co"># 리스트 생성</span></a>
-<a class="sourceLine" id="cb27-2" title="2"><span class="op">&gt;&gt;&gt;</span> element <span class="op">=</span> mylist[<span class="dv">0</span>] <span class="co"># 0번 요소인 &quot;Life&quot; 추출</span></a>
-<a class="sourceLine" id="cb27-3" title="3"><span class="op">&gt;&gt;&gt;</span> element[:<span class="dv">2</span>] <span class="co"># &quot;Life&quot;에서 2번 문자까지 슬라이싱</span></a>
-<a class="sourceLine" id="cb27-4" title="4"><span class="co">&#39;Li&#39;</span></a>
-<a class="sourceLine" id="cb27-5" title="5"><span class="op">&gt;&gt;&gt;</span> element[:<span class="dv">2</span>] <span class="op">==</span> [<span class="st">&quot;Life&quot;</span>, <span class="st">&quot;is&quot;</span>, <span class="st">&quot;short&quot;</span>, <span class="st">&quot;you&quot;</span>, <span class="st">&quot;need&quot;</span>, <span class="st">&quot;Python&quot;</span>][<span class="dv">0</span>][:<span class="dv">2</span>] <span class="co"># 위 과정을 붙여서 쓴 코드</span></a>
-<a class="sourceLine" id="cb27-6" title="6"><span class="va">True</span></a></code></pre></div>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb28-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>],[<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]] <span class="co"># 리스트 생성</span></a>
-<a class="sourceLine" id="cb28-2" title="2"><span class="op">&gt;&gt;&gt;</span> sublist <span class="op">=</span> mylist[<span class="op">-</span><span class="dv">1</span>] <span class="co"># 마지막 요소인 [7,8,9] 추출</span></a>
-<a class="sourceLine" id="cb28-3" title="3"><span class="op">&gt;&gt;&gt;</span> sublist[<span class="dv">2</span>] <span class="co"># [7,8,9]에서 2번 문자 인덱싱</span></a>
-<a class="sourceLine" id="cb28-4" title="4"><span class="dv">9</span></a>
-<a class="sourceLine" id="cb28-5" title="5"><span class="op">&gt;&gt;&gt;</span> sublist[<span class="dv">2</span>] <span class="op">==</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>],[<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]][<span class="op">-</span><span class="dv">1</span>][<span class="dv">2</span>] <span class="co"># 위 과정을 붙여서 쓴 코드</span></a>
-<a class="sourceLine" id="cb28-6" title="6"><span class="va">True</span></a></code></pre></div>
+<pre><code>&gt;&gt;&gt; mylist = [&quot;Life&quot;, &quot;is&quot;, &quot;short&quot;, &quot;you&quot;, &quot;need&quot;, &quot;Python&quot;] # 리스트 생성
+&gt;&gt;&gt; element = mylist[0] # 0번 요소인 &quot;Life&quot; 추출
+&gt;&gt;&gt; element[:2] # &quot;Life&quot;에서 2번 문자까지 슬라이싱
+&#39;Li&#39;
+&gt;&gt;&gt; element[:2] == [&quot;Life&quot;, &quot;is&quot;, &quot;short&quot;, &quot;you&quot;, &quot;need&quot;, &quot;Python&quot;][0][:2] # 위 과정을 붙여서 쓴 코드
+True</code></pre>
+<pre><code>&gt;&gt;&gt; mylist = [[1,2,3],[4,5,6],[7,8,9]] # 리스트 생성
+&gt;&gt;&gt; sublist = mylist[-1] # 마지막 요소인 [7,8,9] 추출
+&gt;&gt;&gt; sublist[2] # [7,8,9]에서 2번 문자 인덱싱
+9
+&gt;&gt;&gt; sublist[2] == [[1,2,3],[4,5,6],[7,8,9]][-1][2] # 위 과정을 붙여서 쓴 코드
+True</code></pre>
 </div>
 <div id="슬라이싱-1" class="section level3">
 <h3>슬라이싱</h3>
