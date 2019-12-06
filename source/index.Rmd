@@ -15,7 +15,7 @@ reticulate::use_python("C://Users/administrator/Anaconda3/python")
 
 데이터사이언스랩 기초 파이썬 스터디 자료입니다. 전체적인 목차는 다음과 같습니다. 주어진 시간이 많지 않기 때문에 깊이있는 내용을 다루기보다는 방학 중 프로젝트를 진행할 수 있는 능력을 키우는 것에 초점이 맞추어져 있습니다.
 
-- [01. 자료형과 연산자](https://yonseidslab.github.io/pybasic/dtype)
+- [01. 자료형과 연산자](https://yonseidslab.github.io/pyfords/dtype)
 
     - 숫자
     - 문자열
@@ -41,7 +41,7 @@ reticulate::use_python("C://Users/administrator/Anaconda3/python")
     
 - [04. 시각화: `matplotlib`, `seaborn`]()
 
-# 2. [아나콘다 설치](https://www.anaconda.com/)
+# 2. 아나콘다 설치
 
 ## 2.1. 아나콘다 인스톨러 다운로드
 
