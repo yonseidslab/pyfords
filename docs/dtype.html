@@ -1487,7 +1487,7 @@ code span.vs { color: #bf0303; } /* VerbatimString */
 code span.wa { color: #bf0303; } /* Warning */
 </style>
 
-<style type="text/css">h1, h2, h3, h4, h5 {font-family:NanumSquare,Consolas;line-height: 120%;font-weight: bold;}#table-of-contents a {display: inline-block;line-height: 18px;padding: 0.4045em 1.618em;display: block;position: relative;font-family: NanumSquare;font-size: 12pt;font-weight: bold;color: #b3b3b3;direction: ltr;text-decoration: none;}#content pre code {font-family: Consolas,NanumSquare;border: none;background: none;font-size: 11pt;white-space: pre;}body {font-family: NanumSquare;font-size:11pt;line-height: 160%;}p {font-family: NanumSquare;font-size:11pt;line-height: 160%;}li {font-family: NanumSquare;font-size:11pt;line-height: 160%;	}tr {height: 20px;background-color: black;}tr .header {font-family: NanumSquare;font-size:12pt;line-height: 160%;}td {font-family: NanumSquare;font-size:11pt;line-height: 160%;}</style>
+<style type="text/css">h1, h2, h3, h4, h5 {font-family:NanumSquare,Consolas;font-weight: bold;line-height: 120%;}h1{line-height: 100%;}.subtitle {font-size:18pt;}#table-of-contents a {display: inline-block;line-height: 18px;padding: 0.4045em 1.618em;display: block;position: relative;font-family: NanumSquare;font-size: 12pt;font-weight: bold;color: #b3b3b3;direction: ltr;text-decoration: none;}#content pre code {font-family: Consolas,NanumSquare;border: none;background: none;font-size: 10pt;white-space: pre;}body {font-family: NanumSquare;font-size:11pt;line-height: 160%;}p {font-family: NanumSquare;font-size:11pt;line-height: 160%;}li {font-family: NanumSquare;font-size:11pt;line-height: 160%;	font-weight: lighter;}tr {height: 20px;background-color: black;}tr .header {font-family: NanumSquare;font-size:12pt;line-height: 160%;}td {font-family: NanumSquare;font-size:11pt;line-height: 160%;}</style>
 
 </head>
 
@@ -1512,6 +1512,7 @@ $(document).ready(function () {
 
 <div id="header">
 <h1 class="title">데이터 과학을 위한 파이썬</h1>
+<h1 class="subtitle">01.자료형과 연산자</h1>
 </div>
 
 
@@ -1519,53 +1520,32 @@ $(document).ready(function () {
     <h2><a href="#content">데이터 과학을 위한 파이썬</a></h2>
     <div id="text-table-of-contents">
       <ul>
-      <li><a href="#목차">목차</a></li>
-      <li><a href="#자료형과-연산자-1">01. 자료형과 연산자</a><ul>
-      <li><a href="#intro">Intro</a></li>
-      <li><a href="#숫자">1. 숫자</a></li>
-      <li><a href="#문자열">2. 문자열</a></li>
+      <li><a href="#intro">Intro</a><ul>
+      <li><a href="#기본적인-파이썬-자료형">기본적인 파이썬 자료형</a></li>
+      <li><a href="#기본적인-함수와-연산자">기본적인 함수와 연산자</a></li>
+      </ul></li>
+      <li><a href="#숫자">1. 숫자</a><ul>
+      <li><a href="#정수와-소수">1.1. 정수와 소수</a></li>
+      <li><a href="#파이썬으로-계산하기">1.2 파이썬으로 계산하기</a></li>
+      </ul></li>
+      <li><a href="#문자열">2. 문자열</a><ul>
+      <li><a href="#hello-world">2.1. Hello World</a></li>
+      <li><a href="#인덱싱-슬라이싱">2.2. 인덱싱 &amp; 슬라이싱</a></li>
+      <li><a href="#문자열의-메소드">2.3. 문자열의 메소드</a></li>
+      </ul></li>
+      <li><a href="#리스트">3. 리스트</a><ul>
+      <li><a href="#리스트-인덱싱-슬라이싱">3.1. 리스트 인덱싱 &amp; 슬라이싱</a></li>
       </ul></li>
       </ul>
     </div>
 </div>
 
 <div id="main">
-<div id="목차" class="section level1">
-<h1>목차</h1>
-<div id="자료형과-연산자" class="section level3">
-<h3><a href="https://jhgan00.github.io/pybasic/dtype">01. 자료형과 연산자</a></h3>
-<ul>
-<li>숫자, 문자열, 불: 기본적인 연산과 조작</li>
-<li>리스트, 튜플, 딕셔너리: 기본적인 연산과 조작</li>
-<li>변수</li>
-</ul>
-</div>
-<div id="제어문" class="section level3">
-<h3><a href>02. 제어문</a></h3>
-<ul>
-<li>조건문: if, else, elif</li>
-<li>반복문: while, for</li>
-</ul>
-</div>
-<div id="데이터-다루기-pandas" class="section level3">
-<h3><a href>03. 데이터 다루기: <code>pandas</code></a></h3>
-<ul>
-<li>Series &amp; DataFrame</li>
-<li>필터링</li>
-<li>기술통계와 요약</li>
-</ul>
-</div>
-<div id="시각화-matplotlib-seaborn" class="section level3">
-<h3><a href>04. 시각화: <code>matplotlib</code>, <code>seaborn</code></a></h3>
-</div>
-</div>
-<div id="자료형과-연산자-1" class="section level1">
-<h1>01. 자료형과 연산자</h1>
-<div id="intro" class="section level2">
-<h2>Intro</h2>
+<div id="intro" class="section level1">
+<h1>Intro</h1>
 <p>파이썬으로 데이터를 다루기 위해 가장 기본적으로 알아야 하는 것이 데이터의 형태입니다. 데이터는 숫자, 문자, 배열, 집합, 순서쌍 등 다양한 형태를 가질 수 있습니다. 파이썬에는 몇 가지 기본적인 자료형들이 정의되어 있으며, 각각의 자료형마다 다른 연산과 조작을 할 수 있습니다. 이번 장의 목표는 <strong>내가 다루는 데이터가 어떤 형태인지를 알고, 자료형에 맞는 연산과 조작을 할 수 있는 능력</strong>을 키우는 것입니다.</p>
-<div id="기본적인-파이썬-자료형" class="section level3">
-<h3>기본적인 파이썬 자료형</h3>
+<div id="기본적인-파이썬-자료형" class="section level2">
+<h2>기본적인 파이썬 자료형</h2>
 <p>다음은 파이썬에서 사용되는 기본적인 자료형들의 예시입니다. 자세한 내용은 앞으로 차근차근 다룰 예정이니 눈으로만 봐두시면 됩니다. # 표시가 붙은 부분은 코드에 대한 주석으로, 실제 실행되는 파이썬 코드가 아닙니다.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># 1. 숫자: 정수와 소수</span></a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="dv">365</span> <span class="co"># 정수</span></a>
@@ -1592,9 +1572,9 @@ $(document).ready(function () {
 <a class="sourceLine" id="cb1-23" title="23">{<span class="st">&quot;김연아&quot;</span>:<span class="st">&quot;피겨&quot;</span>, <span class="st">&quot;손흥민&quot;</span>:<span class="st">&quot;축구&quot;</span>, <span class="st">&quot;박찬호&quot;</span>:<span class="st">&quot;야구&quot;</span>}</a>
 <a class="sourceLine" id="cb1-24" title="24">{<span class="dv">1</span>:<span class="st">&quot;짜장면&quot;</span>, <span class="dv">2</span>:<span class="st">&quot;짬뽕&quot;</span>}</a></code></pre></div>
 </div>
-<div id="기본적인-함수와-연산자" class="section level3">
-<h3>기본적인 함수와 연산자</h3>
-<p>다음은 간단한 함수들과 연산자들입니다. 앞으로도 계속 사용할 명령어들이므로 꼭 직접 코딩해보시기 바랍니다.</p>
+<div id="기본적인-함수와-연산자" class="section level2">
+<h2>기본적인 함수와 연산자</h2>
+<p>다음은 간단한 함수들과 연산자들입니다. 앞으로도 계속 사용할 명령어들이므로 꼭 직접 코딩해보시기 바랍니다. 특히, 비교연산자 <code>==</code>와 할당연산자 <code>=</code>의 차이에 유의하세요! 할당연산자 <code>=</code>는 두 대상이 같은지 비교하는 연산자가 아니라, 변수에 값을 할당하는 할당연산자입니다. <strong>즉 <code>a=5</code>은 “a는 5와 같다”가 아니라, “a에 5를 할당하라”는 명령입니다!</strong></p>
 <table>
 <thead>
 <tr class="header">
@@ -1615,7 +1595,7 @@ $(document).ready(function () {
 <td><code>type()</code></td>
 <td>대상의 자료형을 반환</td>
 <td><code>type(5)</code></td>
-<td><code>class &lt;&#39;int&#39;&gt;</code></td>
+<td><code>int&#39;</code></td>
 </tr>
 <tr class="odd">
 <td><code>==</code></td>
@@ -1629,24 +1609,28 @@ $(document).ready(function () {
 <td><code>&#39;Python&#39;!=&#39;R&#39;</code></td>
 <td><code>True</code></td>
 </tr>
+<tr class="odd">
+<td><code>=</code></td>
+<td>왼쪽 변수에 오른쪽 값을 할당</td>
+<td><code>a=5</code></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 </div>
 </div>
-<div id="숫자" class="section level2">
-<h2>1. 숫자</h2>
-<div id="정수와-소수" class="section level3">
-<h3>1.1. 정수와 소수</h3>
+<div id="숫자" class="section level1">
+<h1>1. 숫자</h1>
+<div id="정수와-소수" class="section level2">
+<h2>1.1. 정수와 소수</h2>
 <p>파이썬의 숫자는 <strong>정수</strong>와 <strong>소수</strong>로 나뉘며, 각각 <strong><code>int</code></strong>와 <strong><code>float</code></strong>으로 표기합니다. 아래는 정수 <code>2</code>와 소수 <code>3.14</code>의 자료형을 확인하는 코드와 결과입니다. <code>2</code>의 자료형은 <code>int</code>, <code>3.14</code>의 자료형은 <code>float</code>임을 확인할 수 있습니다.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="co"># 2의 자료형: 정수(int)</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="bu">type</span>(<span class="dv">2</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="bu">type</span>(<span class="dv">2</span>)</a></code></pre></div>
 <pre><code>## &lt;class &#39;int&#39;&gt;</code></pre>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" title="1"><span class="co"># 3.14의 자료형: 소수(float)</span></a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="bu">type</span>(<span class="fl">3.14</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" title="1"><span class="bu">type</span>(<span class="fl">3.14</span>)</a></code></pre></div>
 <pre><code>## &lt;class &#39;float&#39;&gt;</code></pre>
 </div>
-<div id="파이썬으로-계산하기" class="section level3">
-<h3>1.2 파이썬으로 계산하기</h3>
+<div id="파이썬으로-계산하기" class="section level2">
+<h2>1.2 파이썬으로 계산하기</h2>
 <p>숫자들 간에는 정수와 소수 구분 없이 다음의 연산이 가능합니다. 번거롭더라도 최소한 사칙연산 코드는 따라 쳐보면서 파이썬에 익숙해지시기 바랍니다! 사칙연산을 제외한 연산자들은 사용하는 빈도가 많지 않으니, 이런 연산이 있다고만 알아두시면 됩니다.</p>
 <table>
 <thead>
@@ -1724,10 +1708,10 @@ $(document).ready(function () {
 <pre><code>## 3.0</code></pre>
 </div>
 </div>
-<div id="문자열" class="section level2">
-<h2>2. 문자열</h2>
-<div id="hello-world" class="section level3">
-<h3>2.1. Hello World</h3>
+<div id="문자열" class="section level1">
+<h1>2. 문자열</h1>
+<div id="hello-world" class="section level2">
+<h2>2.1. Hello World</h2>
 <p>문자열은 말 그대로 문자들의 나열을 의미하며, <code>str</code>로 표기합니다. 작은 따옴표(<code>&#39;&#39;</code>), 혹은 큰 따옴표(<code>&quot;&quot;</code>) 안에 원하는 내용을 적어주면 문자열 데이터를 만들 수 있습니다. 둘 중 무엇을 사용하든 상관은 없습니다. 프로그래밍 언어를 배울 때는 <code>&quot;Hello World&quot;</code>를 출력해보는 것이 관례입니다. 다같이 인사해보세요! <code>type(&quot;Hello world&quot;)</code>을 실행해보면 <code>&quot;Hello world&quot;</code>의 자료형이 문자열(<code>str</code>)임을 확인할 수 있습니다.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb14-1" title="1"><span class="bu">print</span>(<span class="st">&quot;Hello world&quot;</span>)</a></code></pre></div>
 <pre><code>## Hello world</code></pre>
@@ -1739,8 +1723,9 @@ $(document).ready(function () {
 <div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb20-1" title="1"><span class="dv">365</span> <span class="op">==</span> <span class="st">&quot;365&quot;</span> <span class="co"># 365 는 &quot;365&quot;와 같다: 거짓이므로 False를 반환합니다.</span></a></code></pre></div>
 <pre><code>## False</code></pre>
 </div>
-<div id="indexing-slicing-문자열은-순서가-있는-배열" class="section level3">
-<h3>2.2. Indexing &amp; Slicing: 문자열은 순서가 있는 배열</h3>
+<div id="인덱싱-슬라이싱" class="section level2">
+<h2>2.2. 인덱싱 &amp; 슬라이싱</h2>
+<p>문자열은 <strong>문자를 순서대로 나열한 데이터입니다.</strong> 따라서 문자열을 구성하는 하나하나의 문자에 순서대로 번호를 매길 수 있으며, 이 번호를 <strong>인덱스</strong>라고 부릅니다. 아래 그림은 <code>&quot;Hello World&quot;</code>라는 문자열에 앞쪽부터 번호를 매긴 결과입니다. 파이썬의 인덱스는 0부터 시작하기 때문에, 가장 먼저 나온 문자인 <code>&quot;H&quot;</code>의 인덱스는 <code>0</code>이 됩니다. 그 이후 순차적으로 1, 2, … 10 까지의 번호가 매겨졌습니다. 공백 역시 문자열에 포함된다는 사실을 유의해주세요!</p>
 <table>
 <thead>
 <tr class="header">
@@ -1775,18 +1760,58 @@ $(document).ready(function () {
 </tr>
 </tbody>
 </table>
-<p>문자열은 <strong>문자를 순서대로 나열한 데이터입니다.</strong> 따라서 문자열을 구성하는 하나하나의 문자에 순서대로 번호를 매길 수 있으며, 이 번호를 <strong>인덱스</strong>라고 부릅니다. 위 그림은 <code>&quot;Hello World&quot;</code>라는 문자열에 앞쪽부터 번호를 매긴 결과입니다. 파이썬의 인덱스는 0부터 시작하기 때문에, 가장 먼저 나온 문자인 <code>&quot;H&quot;</code>의 인덱스는 <code>0</code>이 됩니다. 그 이후 순차적으로 1, 2, … 10 까지의 번호가 매겨졌습니다. 공백 역시 문자열에 포함된다는 사실을 유의해주세요!</p>
-<div id="인덱싱" class="section level4">
-<h4>인덱싱</h4>
+<p>파이썬의 인덱스는 뒤에서부터 부여할 수도 있습니다. <code>&quot;Hello world&quot;</code>의 인덱스를 뒤에서부터 매기면 다음과 같습니다. 즉 가장 뒤에서부터 <code>-1</code>, <code>-2</code>, … 와 같이 음수 인덱스가 매겨집니다.</p>
+<table>
+<thead>
+<tr class="header">
+<th>인덱스</th>
+<th>-11</th>
+<th>-10</th>
+<th>-9</th>
+<th>-8</th>
+<th>-7</th>
+<th>-6</th>
+<th>-5</th>
+<th>-4</th>
+<th>-3</th>
+<th>-2</th>
+<th>-1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>문자열</td>
+<td>H</td>
+<td>e</td>
+<td>l</td>
+<td>l</td>
+<td>o</td>
+<td></td>
+<td>w</td>
+<td>o</td>
+<td>r</td>
+<td>l</td>
+<td>d</td>
+</tr>
+</tbody>
+</table>
+<div id="인덱싱" class="section level3">
+<h3>인덱싱</h3>
 <p>문자열에 부여된 <strong>인덱스를 통해서 개별 문자를 뽑아낼 수 있고, 이것을 인덱싱이라고 합니다.</strong> 비유하면, 여러분과 파이썬이 다음과 같은 대화를 한다고 생각하시면 됩니다.</p>
 <blockquote>
-<p>You: <code>&quot;Hello world&quot;</code>의 0번째 문자를 찾아줘!</p>
-<p>Python: <code>&quot;Hello world&quot;</code>의 0번째 문자는 <code>&quot;H&quot;</code> 입니다.</p>
+<p>You: <code>&quot;Hello world&quot;</code>의 0번 문자를 찾아줘!</p>
+<p>Python: <code>&quot;Hello world&quot;</code>의 0번 문자는 <code>&quot;H&quot;</code> 입니다.</p>
 </blockquote>
-<p>그렇다면 ’<code>&quot;Hello world&quot;</code>의 0번째 문자를 찾아줘!’라는 명령을 어떻게 파이썬에 전달할 수 있을까요? 문자열 바로 뒤에 대괄호<code>[]</code>를 적고, 대괄호 안에 원하는 인덱스 숫자를 넣어주면 됩니다. 실제 파이썬 코드를 실행하면 다음과 같은 결과를 얻을 수 있습니다.</p>
+<p>그렇다면 <code>&quot;Hello world&quot;</code>의 0번 문자를 찾아줘!’라는 명령을 어떻게 파이썬에 전달할 수 있을까요? 문자열 바로 뒤에 대괄호<code>[]</code>를 적고, 대괄호 안에 원하는 인덱스 숫자를 넣어주면 됩니다. 실제 파이썬 코드를 실행하면 다음과 같은 결과를 얻을 수 있습니다. 예시 코드들을 따라 쳐보면서 인덱싱의 문법에 익숙해지시기 바랍니다. 실행 결과의 자료형은 당연하게도 문자열입니다!</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb22-1" title="1"><span class="co">&quot;Hello world&quot;</span>[<span class="dv">0</span>]</a></code></pre></div>
 <pre><code>## &#39;H&#39;</code></pre>
 <table>
+<colgroup>
+<col width="25%"></col>
+<col width="25%"></col>
+<col width="25%"></col>
+<col width="25%"></col>
+</colgroup>
 <thead>
 <tr class="header">
 <th>문자열</th>
@@ -1814,12 +1839,232 @@ $(document).ready(function () {
 <td><code>&quot;010-5782-3579&quot;[7]</code></td>
 <td><code>&#39;2&#39;</code></td>
 </tr>
+<tr class="even">
+<td><code>&quot;Life is short, you need Python.&quot;</code></td>
+<td>-1</td>
+<td><code>&quot;Life is short, you need Python.&quot;[-1]</code></td>
+<td><code>&#39;.&#39;</code></td>
+</tr>
 </tbody>
 </table>
 </div>
-<div id="슬라이싱" class="section level4">
-<h4>슬라이싱</h4>
+<div id="슬라이싱" class="section level3">
+<h3>슬라이싱</h3>
+<p>슬라이싱은 말 그대로 잘라내기 입니다. 일정 구간에 걸쳐서 인덱싱을 실행한다고 생각하시면 편합니다. 역시 대화로 표현하면 다음과 같습니다.</p>
+<blockquote>
+<p>You: <code>&quot;Hello world&quot;</code>의 0번부터 4번까지의 문자를 찾아줘!</p>
+<p>Python: <code>&quot;Hello world&quot;</code>의 0번부터 4번까지 문자는 <code>&quot;Hello&quot;</code> 입니다.</p>
+</blockquote>
+<p>슬라이싱을 할 때는, <code>[a:b]</code>와 같이 대괄호 안에 구간을 입력해주면 됩니다. 구간을 입력할 때는 주의사항이 있습니다. 예시와 함께 보겠습니다.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb24-1" title="1"><span class="co">&quot;Hello world&quot;</span>[<span class="dv">0</span>:<span class="dv">4</span>]</a></code></pre></div>
+<pre><code>## &#39;Hell&#39;</code></pre>
+<p><code>[0:4]</code>의 구간을 입력했으므로 0, 1, 2, 3, 4번 문자가 출력되어야 할 것 같은데, 이상하게 <code>&#39;Hell&#39;</code>까지만 출력되었습니다. 이는 슬라이싱에서 구간 <code>[a:b]</code>가 <code>a</code> 이상 <code>b</code> 미만으로 해석되기 때문입니다. 즉 0번부터 4번까지를 슬라이싱 하려면 구간을 <code>[0:5]</code>와 같이 입력해야 합니다. 코드를 수정하면 정상적으로 실행되는 것을 볼 수 있습니다.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb26-1" title="1"><span class="co">&quot;Hello world&quot;</span>[<span class="dv">0</span>:<span class="dv">5</span>]</a></code></pre></div>
+<pre><code>## &#39;Hello&#39;</code></pre>
+<p>슬라이싱의 구간 표현법을 정리하면 다음과 같습니다.</p>
+<table>
+<thead>
+<tr class="header">
+<th>구간</th>
+<th>설명</th>
+<th>예시 코드</th>
+<th>실행 결과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>[a:b]</code></td>
+<td><code>a</code>번 문자부터 <code>b</code>번 문자 직전까지 슬라이싱</td>
+<td><code>&#39;www.naver.com&#39;[4:9]</code></td>
+<td><code>&#39;naver&#39;</code></td>
+</tr>
+<tr class="even">
+<td><code>[:]</code></td>
+<td>문자열의 전 구간을 슬라이싱</td>
+<td><code>&quot;Super Awesome Code&quot;[:]</code></td>
+<td><code>&#39;Super Awesome Code&#39;</code></td>
+</tr>
+<tr class="odd">
+<td><code>[a:]</code></td>
+<td><code>a</code>번 문자부터 끝까지 슬라이싱</td>
+<td><code>&quot;Avengers: Endgame&quot;[-7:]</code></td>
+<td><code>&#39;Endgame&#39;</code></td>
+</tr>
+<tr class="even">
+<td><code>[:b]</code></td>
+<td>처음부터 <code>b</code>번 문자 직전까지 슬라이싱</td>
+<td><code>&quot;서울특별시 서대문구&quot;[:5]</code></td>
+<td><code>&#39;서울특별시&#39;</code></td>
+</tr>
+</tbody>
+</table>
 </div>
+</div>
+<div id="문자열의-메소드" class="section level2">
+<h2>2.3. 문자열의 메소드</h2>
+<table>
+<colgroup>
+<col width="25%"></col>
+<col width="25%"></col>
+<col width="25%"></col>
+<col width="25%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>메소드</th>
+<th>기능</th>
+<th>예시</th>
+<th>결과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>strip()</code></td>
+<td>문자열 양쪽의 공백을 제거</td>
+<td><code>&quot;     Hello world      &quot;.strip()</code></td>
+<td><code>&quot;Hello world&quot;</code></td>
+</tr>
+<tr class="even">
+<td><code>replace()</code></td>
+<td>문자열 내의 특정 문자를 다른 문자로 교체</td>
+<td><code>&quot;You need Python&quot;.replace(&quot;Python&quot;, &quot;R&quot;)</code></td>
+<td><code>&quot;You need Python&quot;</code></td>
+</tr>
+<tr class="odd">
+<td><code>split()</code></td>
+<td>특정 문자를 기준으로 문자열을 쪼갬</td>
+<td><code>&quot;one,two,three,four&quot;.split(&quot;,&quot;)</code></td>
+<td><code>[&#39;one&#39;,&#39;two&#39;,&#39;three&#39;,&#39;four]</code></td>
+</tr>
+<tr class="even">
+<td><code>join()</code></td>
+<td>특정 문자열을 삽입</td>
+<td><code>&quot;/&quot;.join(&quot;ABCDE&quot;)</code></td>
+<td><code>&quot;A,B,C,D,E&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<p>메소드는 일종의 함수이며, 대상 뒤에 점 <code>.</code>을 찍고 사용할 수 있습니다. 문자열에 사용하는 대표적인 메소드들을 네 가지만 배워 보겠습니다.</p>
+<div id="strip" class="section level3">
+<h3><strong>strip()</strong></h3>
+<p><strong><code>strip()</code> 메소드는 문자열 양쪽의 공백을 개수에 상관없이 모두 제거합니다. 원하는 문자열 뒤에 점을 찍어서 <code>&quot;문자열&quot;.strip()</code>과 같이 적어주면 됩니다. </strong> 문자열 <code>&quot;   Hello world   &quot;</code>는 양쪽에 공백이 있고, 가운데에도 한 칸의 공백이 있습니다. <code>&quot;   Hello world   &quot;</code>를 변수 <code>s</code>에 할당하고, <code>s.strip()</code>을 실행한 결과, 양쪽의 공백만 지워지고 가운데 공백은 잘 남아있는 것을 확인할 수 있습니다.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb28-1" title="1">s <span class="op">=</span> <span class="st">&quot;   Hello world   &quot;</span></a>
+<a class="sourceLine" id="cb28-2" title="2">s.strip()</a></code></pre></div>
+<pre><code>## &#39;Hello world&#39;</code></pre>
+<p>사실 <code>s.strip()</code>은 <code>s</code>를 실제로 변화시키지는 않으며, 변화한 상태를 일시적으로 보여줄 뿐입니다. <code>s</code>를 출력해보면 양쪽의 공백이 그대로 남아있습니다. 공백을 제거한 결과를 <code>s</code>에 저장하고 싶다면, <code>s=s.strip()</code>과 같이 다시 할당을 해주어야 합니다. 처음 <code>s = s.strip()</code>과 같은 식을 마주하면 당황스러울 것입니다. 하지만 <code>=</code>는 같음을 뜻하는 연산자가 아니고, 할당을 뜻하는 연산자입니다. 즉 <code>s=s.strip()</code>이라는 코드는 <strong>“<code>s.strip()</code>을 실행하고 이 결과를 <code>s</code>에 할당하라”</strong>는 의미입니다.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb30-1" title="1">s</a></code></pre></div>
+<pre><code>## &#39;   Hello world   &#39;</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb32-1" title="1">s <span class="op">=</span> s.strip() <span class="co"># s.strip()을 실행하고 이 결과를 s에 할당하라</span></a>
+<a class="sourceLine" id="cb32-2" title="2">s</a></code></pre></div>
+<pre><code>## &#39;Hello world&#39;</code></pre>
+<p><strong>탭을 의미하는 <code>\t</code> 문자열과 개행을 의미하는 <code>\n</code> 문자열 역시 공백으로 인식됩니다.</strong> <code>\t</code> 와 <code>\n</code>을 사용한 공백은 웹 문서를 크롤링해서 작업할 때 자주 볼 수 있습니다. 아래 예제에서는 왼쪽에 <code>\n</code>, 오른쪽에 <code>\t</code> 세 개를 사용해서 <code>&#39;Hello world&#39;</code>를 감싸주었습니다. 이 결과를 변수 <code>s</code>에 할당하고 <code>s.strip()</code>을 실행한 결과, <code>&#39;Hello world&#39;</code>만 남아있는 것을 확인할 수 있습니다. <code>\t</code>와 <code>\n</code>이 공백으로 인식되어 지워졌기 때문입니다.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb34-1" title="1">s <span class="op">=</span> <span class="st">&quot;</span><span class="ch">\n\n\n</span><span class="st">Hello world</span><span class="ch">\t\t\t</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb34-2" title="2">s <span class="op">=</span> s.strip() </a>
+<a class="sourceLine" id="cb34-3" title="3"><span class="bu">print</span>(s)</a></code></pre></div>
+<pre><code>## Hello world</code></pre>
+</div>
+<div id="replace" class="section level3">
+<h3><strong>replace()</strong></h3>
+<p><strong><code>replace()</code> 메소드는 문자열 내의 특정 문자를 다른 문자로 모두 교체합니다. <code>s.replace(&quot;교체할 문자&quot;,&quot;새 문자&quot;)</code>와 같이 적어주면 됩니다.</strong> 아래는 <code>&quot;You need Python&quot;</code> 에서 <code>&quot;Python&quot;</code>을 <code>&quot;R&quot;</code>로 바꾸어준 예제입니다. 먼저 <code>&#39;You need Python&#39;</code>라는 문자열을 <code>s</code>라는 변수에 할당하였습니다. <code>s.replace(&quot;Python&quot;,&quot;R&quot;)</code> 은 s에 할당된 문자열 <code>&quot;You need Python&quot;</code>에서 <code>&#39;Python&#39;</code>을 <code>&#39;R&#39;</code>로 바꾸어주는 코드입니다. 역시 <code>s.replace(&quot;Python&quot;,&quot;R&quot;)</code>를 실행하는것만으로는 <code>s</code>에 할당된 값이 변화하지 않으며, <code>s</code>를 변화시키고 싶다면 <code>s=s.replace(&quot;Python&quot;,&quot;R&quot;)</code>과 같이 다시 할당을 해주어야 합니다.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb36-1" title="1">s <span class="op">=</span> <span class="st">&#39;You need Python&#39;</span> <span class="co"># 문자열을 변수 s에 할당</span></a>
+<a class="sourceLine" id="cb36-2" title="2">s.replace(<span class="st">&quot;Python&quot;</span>, <span class="st">&quot;R&quot;</span>) <span class="co"># s에서 Python -&gt; R로 교체</span></a></code></pre></div>
+<pre><code>## &#39;You need R&#39;</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb38-1" title="1">s <span class="co"># s는 변화하지 않음</span></a></code></pre></div>
+<pre><code>## &#39;You need Python&#39;</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb40-1" title="1">s <span class="op">=</span> s.replace(<span class="st">&quot;Python&quot;</span>, <span class="st">&quot;R&quot;</span>) <span class="co"># Python을 R로 교체한 후 이 결과를 s에 할당</span></a>
+<a class="sourceLine" id="cb40-2" title="2">s</a></code></pre></div>
+<pre><code>## &#39;You need R&#39;</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb42-1" title="1">s <span class="op">=</span> s.replace(<span class="st">&quot; &quot;</span>, <span class="st">&quot;,&quot;</span>) <span class="co"># 모든 &quot; &quot;를 &quot;,&quot;로 교체</span></a>
+<a class="sourceLine" id="cb42-2" title="2">s </a></code></pre></div>
+<pre><code>## &#39;You,need,R&#39;</code></pre>
+</div>
+<div id="split" class="section level3">
+<h3><strong>split()</strong></h3>
+<p><strong><code>split()</code> 메소드는 특정 문자를 기준으로 문자열을 쪼개어 리스트를 반환합니다. <code>s.split(&quot;기준문자&quot;)</code>와 같이 적어주면 됩니다.</strong> 아무런 문자도 주어지지 않는다면 공백을 기준으로 문자열을 쪼갭니다. 역시 쪼갠 결과를 저장하려면 다시 할당을 해주어야 합니다.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb44-1" title="1">s <span class="op">=</span> <span class="st">&quot;Hello world&quot;</span></a>
+<a class="sourceLine" id="cb44-2" title="2">s.split(<span class="st">&quot; &quot;</span>) <span class="co"># &quot; &quot; 를 기준으로 문자열을 쪼갬 &gt; 이 결과를 리스트로 반환</span></a></code></pre></div>
+<pre><code>## [&#39;Hello&#39;, &#39;world&#39;]</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb46-1" title="1">s <span class="op">=</span> <span class="st">&quot;one/two/three/four&quot;</span></a>
+<a class="sourceLine" id="cb46-2" title="2">s.split(<span class="st">&quot;/&quot;</span>)</a></code></pre></div>
+<pre><code>## [&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;]</code></pre>
+<div id="join" class="section level4">
+<h4><strong>join()</strong></h4>
+<p><strong><code>join()</code> 메소드는 문자열 사이사이에 다른 문자를 삽입합니다. “삽입할 문자”.join(문자열)과 같이 적어주면 됩니다.</strong> <code>join</code> 메소드는 문자열보다는 리스트에 대해 사용하는 경우가 많습니다. 이후 리스트를 다루면서 다시 한 번 언급하겠습니다.</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb48-1" title="1">alphabet <span class="op">=</span> <span class="st">&quot;ABCDEFG&quot;</span></a>
+<a class="sourceLine" id="cb48-2" title="2"><span class="co">&quot;|&quot;</span>.join(alphabet)</a></code></pre></div>
+<pre><code>## &#39;A|B|C|D|E|F|G&#39;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="리스트" class="section level1">
+<h1>3. 리스트</h1>
+<p>리스트는 <code>[요소1, 요소2, 요소3, ...]</code>과 같이 여러 요소들을 묶어놓은 자료형입니다. 각 요소들은 쉼표 <code>,</code>로 구분되며, 바깥은 대괄호 <code>[]</code>로 감싸줍니다. 리스트는 거의 모든 자료형을 요소로 가질 수 있으며, 요소들의 자료형이 모두 같을 필요도 없습니다. 다음은 모두 리스트의 예시입니다.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb50-1" title="1">[] <span class="co"># 빈 리스트</span></a>
+<a class="sourceLine" id="cb50-2" title="2">[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>] <span class="co"># 숫자 리스트</span></a>
+<a class="sourceLine" id="cb50-3" title="3">[<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>,<span class="st">&#39;d&#39;</span>,<span class="st">&#39;e&#39;</span>] <span class="co"># 문자열 리스트</span></a>
+<a class="sourceLine" id="cb50-4" title="4">[<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="st">&#39;d&#39;</span>,<span class="va">False</span>] <span class="co"># 여러 자료형을 포함한 리스트</span></a>
+<a class="sourceLine" id="cb50-5" title="5">[[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]] <span class="co"># 리스트의 리스트</span></a></code></pre></div>
+<div id="리스트-인덱싱-슬라이싱" class="section level2">
+<h2>3.1. 리스트 인덱싱 &amp; 슬라이싱</h2>
+<p>리스트는 요소들의 순차적인 배열입니다. 따라서 문자열과 마찬가지로, 각각의 요소들에 번호를 매길 수 있습니다. 번호를 매기는 방식 역시 문자열과 동일합니다. 즉 앞에서부터 <code>0</code>, <code>1</code>, <code>2</code> … 순으로 인덱스가 붙고, 뒤에서부터 <code>-1</code>,<code>-2</code>,<code>-3</code> … 순으로 인덱스가 붙습니다. 예를 들어 <code>[&quot;Life&quot;, &quot;is&quot;, &quot;short&quot;, &quot;you&quot;, &quot;need&quot;, &quot;Python&quot;]</code> 과 같은 리스트에 인덱스를 매겨보면 다음과 같습니다.</p>
+<table>
+<thead>
+<tr class="header">
+<th>인덱스</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>요소</td>
+<td>“Life”</td>
+<td>“is”</td>
+<td>“short”</td>
+<td>“you”</td>
+<td>“need”</td>
+<td>“Python”</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>인덱스</th>
+<th>-6</th>
+<th>-5</th>
+<th>-4</th>
+<th>-3</th>
+<th>-2</th>
+<th>-1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>요소</td>
+<td>“Life”</td>
+<td>“is”</td>
+<td>“short”</td>
+<td>“you”</td>
+<td>“need”</td>
+<td>“Python”</td>
+</tr>
+</tbody>
+</table>
+<div id="인덱싱-1" class="section level3">
+<h3>인덱싱</h3>
+<p>문자열의 인덱싱과 슬라이싱에 익숙해졌다면, 리스트의 인덱싱과 슬라이싱 역시 어렵지 않을 겁니다. 리스트의 인덱싱 역시 문자열과 마찬가지로 대괄호 <code>[]</code>를 사용합니다.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb51-1" title="1">[<span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">1.0</span>][<span class="dv">1</span>]</a></code></pre></div>
+<pre><code>## 0.5</code></pre>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb53-1" title="1">[<span class="st">&quot;Life&quot;</span>, <span class="st">&quot;is&quot;</span>, <span class="st">&quot;short&quot;</span>, <span class="st">&quot;you&quot;</span>, <span class="st">&quot;need&quot;</span>, <span class="st">&quot;Python&quot;</span>][<span class="op">-</span><span class="dv">1</span>]</a></code></pre></div>
+<pre><code>## &#39;Python&#39;</code></pre>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb55-1" title="1">[[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>],[<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>],[<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>]][<span class="dv">2</span>]</a></code></pre></div>
+<pre><code>## [7, 8, 9]</code></pre>
 </div>
 </div>
 </div>

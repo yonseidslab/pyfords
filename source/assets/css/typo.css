@@ -1,7 +1,15 @@
 h1, h2, h3, h4, h5 {
 	font-family:NanumSquare,Consolas;
-	line-height: 120%;
 	font-weight: bold;
+	line-height: 120%;
+}
+
+h1{
+	line-height: 100%;
+}
+
+.subtitle {
+	font-size:18pt;
 }
 
 #table-of-contents a {
@@ -24,7 +32,7 @@ h1, h2, h3, h4, h5 {
     font-family: Consolas,NanumSquare;
     border: none;
     background: none;
-    font-size: 11pt;
+    font-size: 10pt;
     white-space: pre;
 }
 
@@ -44,6 +52,7 @@ li {
 	font-family: NanumSquare;
 	font-size:11pt;
 	line-height: 160%;	
+	font-weight: lighter;
 }
 
 tr {
