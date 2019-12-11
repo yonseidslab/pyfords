@@ -70,3 +70,8 @@ td {
 	font-size:11pt;
 	line-height: 160%;
 }
+
+code {
+	color: black;
+	font-size: 10pt;
+}
