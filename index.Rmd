@@ -26,20 +26,21 @@ reticulate::use_python("C://Users/administrator/Anaconda3/python")
     - 셋
     - 딕셔너리
     
-- [02. 제어문, 객체지향 프로그래밍과 클래스]()
+- [02. 제어문, 객체지향 프로그래밍과 클래스](https://yonseidslab.github.io/pyfords/control)
 
     - 반복문: for, while
     - 조건문: if, else, elif
-    - 객체지향 프로그래밍과 클래스
+    - 제어문, 클래스
+    - 파이썬 패키지
 
-- [03. 데이터 다루기: `numpy`&`pandas`]()
+- [03. 데이터 다루기: numpy & pandas]()
 
     - Array
     - Series
     - DataFrame
     - 필터링, groupby
     
-- [04. 시각화: `matplotlib`, `seaborn`]()
+- [04. 시각화: matplotlib, seaborn]()
 
 # 2. 아나콘다 설치
 
