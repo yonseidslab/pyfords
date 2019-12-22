@@ -12,6 +12,12 @@ knitr::opts_chunk$set(echo = TRUE)
 reticulate::use_python("C://User/Administrator/Anaconda3/python")
 ```
 
+- [00. 데이터 과학을 위한 파이썬](https://yonseidslab.github.io/pyfords/)
+- [01. 자료형과 연산자](https://yonseidslab.github.io/pyfords/page1)
+- [02. 제어문, 객체지향 프로그래밍과 클래스](https://yonseidslab.github.io/pyfords/page2)
+- [03. 데이터 다루기: numpy & pandas](https://yonseidslab.github.io/pyfords/page3)
+- [04. 시각화: matplotlib, seaborn](https://yonseidslab.github.io/pyfords/page4)
+
 # Intro
 
 파이썬으로 데이터를 다루기 위해 가장 기본적으로 알아야 하는 것이 데이터의 형태입니다. 데이터는 숫자, 문자, 배열, 집합, 순서쌍 등 다양한 형태를 가질 수 있습니다. 파이썬에는 몇 가지 기본적인 자료형들이 정의되어 있으며, 각각의 자료형마다 다른 연산과 조작을 할 수 있습니다. 이번 장의 목표는 **내가 다루는 데이터가 어떤 형태인지를 알고, 자료형에 맞는 연산과 조작을 할 수 있는 능력**을 키우는 것입니다.
@@ -144,6 +150,7 @@ Hello world
 <class 'str'>
 ```
 
+:::warning
 **예제 2-1. 다음 코드의 실행 결과가 True일지 False일지 판단하세요**
 
 ```{python eval=F}
@@ -160,6 +167,7 @@ Hello world
 >>> 365 == "365" # 365 는 "365"와 같다: 거짓이므로 False를 반환합니다.
 False
 ```
+:::
 
 ## 2.2. 자료형의 변환
 
@@ -179,6 +187,7 @@ str() 함수를 사용해서 숫자를 문자열로 바꿔줄 수 있습니다.
 a in b|"a가 b에 포함된다"를 판단|"A" in "ABCDEFG"|True
 a not in b|"a가 b에 포함되지 않는다"를 판단|"A" not in "ABCDEFG"|False
 
+::: warning
 **예제 2-2. 다음 코드의 실행 결과를 판단하세요(True/False/Error)**
 
 ```{python eval=F}
@@ -196,6 +205,7 @@ False
 >>> 1 in "123"
 TypeError: 'in <string>' requires string as left operand, not int
 ```
+:::
 
 ## 2.4. 인덱싱 & 슬라이싱
 
@@ -231,6 +241,7 @@ Python: "Hello world"의 0번 문자는 "H" 입니다.
 "010-5782-xxxx"|7|"010-5782-xxxx"[7]|'2'
 "You need Python."|-1|"You need Python."[-1]|'.'
 
+::: warning
 **예제 2-3. 다음 코드의 실행 결과를 판단하세요**
 
 ```{python eval=F}
@@ -251,6 +262,7 @@ Python: "Hello world"의 0번 문자는 "H" 입니다.
 >>> mystring[-2] != mystring[4]
 False
 ```
+:::
 
 ### 슬라이싱
 
@@ -284,6 +296,7 @@ Python: "Hello world"의 0번부터 4번까지 문자는 "Hello" 입니다.
 [a:]|a번 문자부터 끝까지 슬라이싱|"Avengers: Endgame"[-7:]|'Endgame'
 [:b]|처음부터 b번 문자 직전까지 슬라이싱|"서울특별시 서대문구"[:5]|'서울특별시'
 
+::: warning
 **예제 2-4. 다음 문자열에서 이메일 주소를 뽑아내세요**
 
 ```{python eval=F}
@@ -301,6 +314,7 @@ Python: "Hello world"의 0번부터 4번까지 문자는 "Hello" 입니다.
 >>> mystring[-21:]
 'yonseidslab@naver.com'
 ```
+:::
 
 ## 2.5. 문자열의 메소드
 
@@ -360,6 +374,7 @@ Hello world
 'You,need,R'
 ```
 
+:::warning
 **예제 2-5. a를 b와 같은 문자열로 변형하고 결과를 검증하세요. 단, 문자열 조작하는 과정에는 한 줄의 코드만 사용할 수 있습니다.**
 
 ```{python eval=F}
@@ -389,6 +404,7 @@ True
 >>> b == result
 True
 ```
+:::
 
 ### **split()**
 
@@ -404,6 +420,7 @@ True
 ['one', 'two', 'three', 'four']
 ```
 
+:::warning
 **예제 2-6. 다음 코드의 실행 결과를 예상해보세요**
 
 ```{python eval=F}
@@ -420,6 +437,7 @@ True
 >>> a.replace("@",".").split(".")
 ['yonseidslab', 'gmail', 'com']
 ```
+:::
 
 #### **join()**
 
@@ -453,7 +471,7 @@ a and b|"a와 b가 모두 참이다"를 판단|True and False|False
 a \| b|"a, b 중 최소한 하나가 참이다"를 판단|True \| False|True
 a or b|"a, b 중 최소한 하나가 참이다"를 판단|False or False|False
 
-
+:::warning
 **예제 3.1. 다음 연산의 실행 결과를 판단하세요**
 
 ```{python eval=F}
@@ -471,6 +489,7 @@ False
 >>> ("Python" != "R") and ("Life" == "short")
 False
 ```
+:::
 
 # 4. 변수와 함수
 
@@ -531,7 +550,8 @@ def문의 구조를 일반화하면 다음과 같습니다. def 다음 함수명
 >>> 
 ```
 
-**예제 2-7. 이메일 문자열이 gmail 주소이면 True, 아니면 False를 반환하는 함수를 작성하세요. 다음과 같이 작동하면 됩니다.**
+:::warning
+**예제 4-1. 이메일 문자열이 gmail 주소이면 True, 아니면 False를 반환하는 함수를 작성하세요. 다음과 같이 작동하면 됩니다.**
 
 ```{python eval=F}
 >>> my_function("yonseidslab@gmail.com")
@@ -560,6 +580,7 @@ False
 >>> def my_function(address):
 ...     return "@gmail.com" in address
 ```
+:::
 
 ### 인자와 반환
 
@@ -570,7 +591,8 @@ False
 3. 인자(X)는 있고 반환(Y)가 없는 함수
 4. 인자(X)와 반환(Y)가 모두 없는 함수
 
-**예제 2-8. 다음 함수들이 1,2,3,4 중 어디에 해당하는지 판단해보세요.**
+:::warning
+**예제 4-2. 다음 함수들이 1,2,3,4 중 어디에 해당하는지 판단하세요.**
 
 ```{python eval=F}
 >>> def my_function(x,y):
@@ -589,6 +611,7 @@ False
 2. 인자가 없고 return 절이 없으므로 4에 해당
 3. 인자가 없고 return 절이 있으므로 2에 해당
 4. x, y 두 개의 인자가 있고 return 절이 있으므로 1에 해당
+:::
 
 ### lambda 함수
 
@@ -639,7 +662,8 @@ False
 True
 ```
 
-**예제. 다음 코드의 실행 결과를 판단하세요(True/False)**
+:::warning
+**예제 5-1. 다음 코드의 실행 결과를 판단하세요(True/False)**
 
 ```{python eval=F}
 >>> [1,2,3] not in [1,2,3]
@@ -656,6 +680,7 @@ True
 >>> 1 in [[1,2,3]]
 False
 ```
+:::
 
 ## 5.3. 리스트 인덱싱 & 슬라이싱
 
@@ -701,7 +726,8 @@ False
 True
 ```
 
-**예제. 다음 리스트에서 "Wally"를 추출하세요.**
+:::warning
+**예제 5-2. 다음 리스트에서 "Wally"를 추출하세요.**
 
 ```{python eval=F}
 >>> WhereIsWally = [["wally","Willy Wonka"],[["waly"],"Wally","Wallmart"]]
@@ -717,7 +743,7 @@ True
 'Wally'
 ```
 
-**예제. 다음 주소에서 문자열 인덱싱을 사용하지 않고 동을 추출하세요.**
+**예제 5-3. 다음 주소에서 문자열 인덱싱을 사용하지 않고 동을 추출하세요.**
 
 ```{python eval=F}
 >>> address = "서울특별시 서대문구 신촌동 연세로 50"
@@ -732,6 +758,7 @@ True
 >>> address.split(" ")[2]
 '신촌동'
 ```
+:::
 
 ### 슬라이싱
 
@@ -802,7 +829,8 @@ map 함수는 리스트 내의 요소들에 일괄적으로 함수를 적용하�
 [1, 4, 9]
 ```
 
-**예제. address_list는 주소 문자열을 요소로 갖는 리스트입니다. address_list 각 요소들에서 시/도를 추출하여 리스트를 만드세요. 다음과 같은 결과를 얻으시면 됩니다.**
+:::warning
+**예제 5-4. address_list는 주소 문자열을 요소로 갖는 리스트입니다. address_list 각 요소들에서 시/도를 추출하여 리스트를 만드세요. 다음과 같은 결과를 얻으시면 됩니다.**
 
 ```{python eval=F}
 >>> address_list = [
@@ -841,6 +869,7 @@ map 함수는 리스트 내의 요소들에 일괄적으로 함수를 적용하�
 >>> list(map(my_func, address_list))
 ['서울', '경기도', '부산']
 ```
+:::
 
 # 6. 튜플
 
@@ -967,3 +996,6 @@ dict_keys(['이름', '종'])
 dict_values([['펭수', '뽀로로', '뿡뿡이'], ['펭귄', '펭귄', 'NA']])
 ```
 
+# 참고자료
+
+- 박응용, [점프 투 파이썬](https://wikidocs.net/book/1)
