@@ -13,11 +13,11 @@ reticulate::use_python("C://Users/administrator/Anaconda3/python")
 
 # 1. 목차
 
-데이터사이언스랩 기초 파이썬 스터디 자료입니다. 전체적인 목차는 다음과 같습니다. 주어진 시간이 많지 않기 때문에 깊이있는 내용을 다루기보다는 방학 중 프로젝트를 진행할 수 있는 능력을 키우는 것에 초점이 맞추어져 있습니다.
+데이터사이언스랩 기초 파이썬 스터디 자료입니다. 전체적인 목차는 다음과 같습니다. 주어진 시간이 많지 않기 때문에 깊이있는 내용을 다루기보다는 방학 중 예정된 EDA 프로젝트를 진행할 수 있는 능력을 키우는 것에 초점이 맞추어져 있습니다.
 
 - [00. 데이터 과학을 위한 파이썬](https://yonseidslab.github.io/pyfords/)
 - [01. 자료형과 연산자](https://yonseidslab.github.io/pyfords/page1)
-- [02. 제어문, 객체지향 프로그래밍과 클래스](https://yonseidslab.github.io/pyfords/page2)
+- [02. 제어문, 클래스, 패키지](https://yonseidslab.github.io/pyfords/page2)
 - [03. 데이터 다루기: numpy & pandas](https://yonseidslab.github.io/pyfords/page3)
 - [04. 시각화: matplotlib, seaborn](https://yonseidslab.github.io/pyfords/page4)
 
@@ -32,13 +32,13 @@ reticulate::use_python("C://Users/administrator/Anaconda3/python")
 
 ## 2.2. 환경변수 추가
 
-다운로드를 진행하시다보면 다음과 같이 아나콘다를 환경 변수에 추가할 것인지 묻는 항목이 나옵니다. 추가를 체크하고 진행해주시면 됩니다.
+설치를 진행하시다보면 다음과 같이 아나콘다를 환경 변수에 추가할 것인지 묻는 항목이 나옵니다. 추가를 체크하고 진행해주시면 됩니다.
 
 ![](./assets/figs/envpath.png)
 
 ## 2.3. 설치 점검
 
-설치가 완료되었다면 점검을 해볼 차례입니다. 윈도우 사용자라면 `win+R` 키를 입력한 후 `cmd`를 입력하면 cmd 창을 열 수 있습니다. cmd를 열고, `conda --version`을 입력해주세요. 다음과 같이 버전이 출력된다면 무사히 설치가 완료된 것입니다. 버전이 완전히 같지 않아도 괜찮습니다.
+설치가 완료되었다면 점검을 해보겠습니다. 윈도우 사용자라면 `win+R` 키를 입력한 후 `cmd`를 입력하면 cmd 창을 열 수 있습니다. cmd를 열고, `conda --version`을 입력해주세요. 다음과 같이 버전이 출력된다면 무사히 설치가 완료된 것입니다. 버전이 완전히 같지 않아도 괜찮습니다.
 
 ![](./assets/figs/condaver.png)
 

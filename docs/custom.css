@@ -1,0 +1,25 @@
+.CodeMirror pre {font-family: Consolas; font-size: 10pt; line-height: 140%;}
+
+div.output pre{
+    font-family: Consolas;
+    font-size: 10pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: NanumSquare;
+}
+
+p {
+	font-family: NanumSquare;
+	font-size:12pt;
+	line-height: 160%;
+}
+
+code {
+	font-family: NanumSquare;
+}
+
+table {
+	font-family: NanumSquare;
+	align: left;
+}
