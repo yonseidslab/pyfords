@@ -1555,21 +1555,26 @@ $(document).ready(function () {
 </ul>
 <div id="intro" class="section level1">
 <h1>Intro</h1>
-<p>이번 장에서는 프로그램의 흐름을 제어하는 제어문들, 그리고 객체 지향 프로그래밍과 클래스에 대해 공부합니다. 직선적인 프로그램만으로 데이터를 다루는 데에는 한계가 있습니다. 제어문은 조건, 반복 등을 통해 효율적이고 유연한 프로그래밍을 가능하게 합니다. 앞으로도 계속해서 사용하게 될 문법이므로 조건문과 반복문은 충분히 연습해야 합니다. 객체 지향 프로그래밍과 클래스는 파이썬의 핵심이지만, 아직 깊게 이해할 필요는 없습니다. 이번 장에서는 클래스의 개념과 기본적인 구조를 파악하는 것을 목적으로 합니다.</p>
+<p>이번 장에서는 제어문, 클래스, 패키지에 대해 공부합니다.</p>
+<ul>
+<li><p>직선적인 프로그램만으로 데이터를 다루는 데에는 한계가 있습니다. 제어문은 조건, 반복 등의 흐름 제어를 통해 효율적이고 유연한 프로그래밍을 가능하게 합니다. 앞으로도 계속해서 사용하게 될 문법이므로 조건문과 반복문은 충분히 연습해야 합니다.</p></li>
+<li><p>객체 지향 프로그래밍과 클래스는 파이썬의 핵심이지만, 아직 깊게 이해할 필요는 없습니다. 이번 장에서는 클래스의 개념과 기본적인 구조를 파악하는 것을 목적으로 합니다.</p></li>
+<li><p>패키지 역시 앞으로 파이썬을 사용하면서 계속해서 마주칠 개념입니다. 패키지의 기본적인 개념과 pip, conda를 활용하여 패키지를 설치/삭제하는 방법을 알면 충분합니다.</p></li>
+</ul>
 </div>
 <div id="조건문" class="section level1">
 <h1>1. 조건문</h1>
-<p>조건문은 프로그래밍 흐름에서 가지를 치는 역할을 합니다. 즉 주어진 조건을 판단하여 상황마다 다른 코드가 실행되도록 만드는 것이 조건문의 역할입니다. 파이썬의 조건문은 if, else, elif 의 세 가지 구문으로 이루어집니다. 이 구문들을 차례대로 살펴보겠습니다.</p>
+<p>조건문은 프로그래밍 흐름에서 가지를 치는 역할을 합니다. 즉 주어진 조건을 판단하여 상황마다 다른 코드가 실행되도록 만드는 것이 조건문의 역할입니다. 파이썬의 조건문은 <code>if</code>, <code>else</code>, <code>elif</code> 의 세 가지 구문으로 이루어집니다. 이 구문들을 차례대로 살펴보겠습니다.</p>
 <div id="if" class="section level2">
 <h2>1.1. if</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">if</span> 조건:</a>
 <a class="sourceLine" id="cb1-2" title="2">   조건이 True일 때 실행할 코드 <span class="co"># 들여쓰기 필수!!</span></a></code></pre></div>
-<p><strong>if 문은 조건과 함께 사용하며, 주어진 조건이 True일 때 이하의 코드를 실행합니다. 조건은 True/False로 진리값을 명확하게 판단할 수 있는 연산이어야 합니다.</strong> if 문의 기본적인 구조는 위와 같습니다. if 다음 조건을 걸고 콜론을 적은 후, 다음 줄부터 조건이 참일 때 실행할 코드를 적어주면 됩니다.</p>
+<p><strong><code>if</code> 는 조건과 함께 사용하며, 주어진 조건이 <code>True</code>일 때 이하의 코드를 실행합니다. 조건은 <code>True</code>/<code>False</code>로 진리값을 명확하게 판단할 수 있는 연산이어야 합니다.</strong> <code>if</code> 문의 기본적인 구조는 위와 같습니다. <code>if</code> 다음 조건을 걸고 콜론을 적은 후, 다음 줄부터 조건이 참일 때 실행할 코드를 적어주면 됩니다.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="op">&gt;&gt;&gt;</span> score <span class="op">=</span> <span class="dv">90</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="cf">if</span> score <span class="op">&gt;=</span> <span class="dv">60</span>:</a>
-<a class="sourceLine" id="cb2-3" title="3">...     <span class="bu">print</span>(<span class="st">&quot;Pass&quot;</span>)</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="cf">if</span> score <span class="op">&gt;=</span> <span class="dv">60</span>: <span class="co"># score &gt;= 60: 참이므로 다음 코드 실행 </span></a>
+<a class="sourceLine" id="cb2-3" title="3">...     <span class="bu">print</span>(<span class="st">&quot;Pass&quot;</span>) </a>
 <a class="sourceLine" id="cb2-4" title="4">Pass</a></code></pre></div>
-<p>위는 if 문의 간단한 예시입니다. 첫 줄에서는 score 변수에 90을 할당합니다. if 문에서 score &gt;= 60을 판단하고, 만약 참이라면 “Pass”를 프린트합니다. 90 &gt;= 60 이므로 “Pass” 를 프린트합니다.</p>
+<p>위 예시는 점수가 60점 이상이면 패스를 출력하는 조건문입니다. 첫 줄에서는 <code>score</code> 변수에 <code>90</code>을 할당합니다. <code>if</code> 문에서 <code>score &gt;= 60</code>을 판단하고, 만약 참이라면 <code>&quot;Pass&quot;</code>를 프린트합니다. 조건이 참이므로 다음 코드를 실행하였습니다.</p>
 </div>
 <div id="else" class="section level2">
 <h2>1.2. else</h2>
@@ -1577,17 +1582,21 @@ $(document).ready(function () {
 <a class="sourceLine" id="cb3-2" title="2">   조건이 참일 때 실행할 코드 <span class="co"># 들여쓰기 필수!!</span></a>
 <a class="sourceLine" id="cb3-3" title="3"><span class="cf">else</span>:</a>
 <a class="sourceLine" id="cb3-4" title="4">   조건이 거짓일 때 실행할 코드 <span class="co"># 들여쓰기 필수!!</span></a></code></pre></div>
-<p>if 의 짝은 else입니다. 조건이 참일 때만 조작이 필요하다면, if 문만 사용해도 충분합니다. 하지만 조건이 거짓일 때도 그에 맞는 조작이 필요하다면, else 문을 함께 사용합니다. <strong>if 문 이하의 코드는 조건이 참일 때 실행되고, else 문 이하의 코드는 조건이 거짓일 때 실행됩니다. else 문 다음에는 조건을 붙이지 않습니다!</strong></p>
+<p>조건이 참일 때만 조작이 필요하다면, <code>if</code> 만 사용해도 충분합니다. 하지만 조건이 거짓일 때도 그에 맞는 조작이 필요하다면, <code>else</code> 를 함께 사용합니다. <strong><code>if</code> 이하의 코드는 조건이 참일 때 실행되고, <code>else</code> 이하의 코드는 조건이 거짓일 때 실행됩니다. <code>else</code> 다음에는 조건을 붙이지 않습니다!</strong></p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> pnp(score):</a>
 <a class="sourceLine" id="cb4-2" title="2">...     <span class="cf">if</span> score <span class="op">&gt;=</span> <span class="dv">60</span>:</a>
 <a class="sourceLine" id="cb4-3" title="3">...         <span class="cf">return</span>(<span class="st">&quot;Pass&quot;</span>)</a>
-<a class="sourceLine" id="cb4-4" title="4">...     <span class="cf">else</span>: <span class="co"># score &lt; 60</span></a>
+<a class="sourceLine" id="cb4-4" title="4">...     <span class="cf">else</span>:</a>
 <a class="sourceLine" id="cb4-5" title="5">...         <span class="cf">return</span>(<span class="st">&quot;Non-Pass&quot;</span>)</a>
 <a class="sourceLine" id="cb4-6" title="6"><span class="op">&gt;&gt;&gt;</span> pnp(<span class="dv">60</span>)</a>
 <a class="sourceLine" id="cb4-7" title="7"><span class="co">&#39;Pass&#39;</span></a>
 <a class="sourceLine" id="cb4-8" title="8"><span class="op">&gt;&gt;&gt;</span> pnp(<span class="dv">40</span>)</a>
 <a class="sourceLine" id="cb4-9" title="9"><span class="co">&#39;Non-Pass&#39;</span></a></code></pre></div>
-<p>위의 코드에서는 조건문을 함수 안으로 집어넣었습니다. pnp는 score라는 인자를 받는 함수이며, score가 60보다 크거나 같으면 “Pass”를 반환하고, 그렇지 않으면 “Non-Pass”를 반환합니다. pnp(60)을 실행하면 함수는 60 &gt;= 60을 판단합니다. 이 결과가 참이므로 if 절 이하의 코드인 return(“Pass”)가 실행됩니다. pnp(50) 실행하면 함수는 50 &gt;= 60을 판단합니다. 이 결과가 거짓이므로 프로그램은 if 문 이하의 코드를 건너뛰고, else 절로 넘어갑니다. 따라서 return(“Non-Pass”)가 실행됩니다.</p>
+<p>위의 코드에서는 <code>pnp</code> 라는 함수 안에 조건문을 집어넣었습니다. 함수는 <code>score</code>라는 인자를 받으며, <code>score</code>가 <code>60</code>보다 크거나 같으면 <code>&quot;Pass&quot;</code>를 반환하고, 그렇지 않으면 <code>&quot;Non-Pass&quot;</code>를 반환합니다.</p>
+<ul>
+<li><p><code>pnp(60)</code>을 실행하면 함수는 <code>60 &gt;= 60</code>을 판단합니다. 이 결과가 참이므로 <code>if</code> 이하의 코드인 <code>return(&quot;Pass&quot;)</code>가 실행되고, 함수는 종료됩니다.</p></li>
+<li><p><code>pnp(50)</code>을 실행하면 함수는 <code>50 &gt;= 60</code>을 판단합니다. 결과가 거짓이므로 <code>if</code> 이하의 코드를 건너뛰고, <code>else</code> 로 넘어갑니다. 따라서 <code>return(&quot;Non-Pass&quot;)</code>가 실행됩니다.</p></li>
+</ul>
 </div>
 <div id="elif" class="section level2">
 <h2>1.3. elif</h2>
@@ -1602,7 +1611,7 @@ $(document).ready(function () {
 <a class="sourceLine" id="cb5-9" title="9">.</a>
 <a class="sourceLine" id="cb5-10" title="10"><span class="cf">else</span>:</a>
 <a class="sourceLine" id="cb5-11" title="11">    모든 조건들이 False일 때 실행할 코드</a></code></pre></div>
-<p>패스와 논패스의 이진 분류를 수행하는 프로그램에는 if 와 else 면 충분합니다. 하지만 학생에게 A부터 F까지의 성적을 매기려면 if 와 else 만으로는 힘듭니다. 먼저 학생의 성적이 F인지 아닌지를 판단하고, F가 아닌 경우 D인지 아닌지 판단하고 … 이러한 과정을 A까지 반복해야 합니다. <strong>elif 를 사용하면 이런 다중 분기를 손쉽게 구현할 수 있습니다.</strong> if - elif - else 문의 구조는 위와 같습니다. if 문부터 순차적으로 조건을 판단하고, 거짓이면 다음 elif로 넘어가는 방식입니다.</p>
+<p>학생에게 A부터 F까지의 성적을 매기려고 하는 경우에는, <code>if</code> 와 <code>else</code> 만으로는 힘듭니다. 먼저 학생의 성적이 F인지 아닌지를 판단하고, F가 아닌 경우 D인지 아닌지 판단하고 … 이러한 과정을 A까지 반복해야 합니다. <strong><code>elif</code> 를 사용하면 이런 다중 분기를 손쉽게 구현할 수 있습니다.</strong> <code>elif</code> 를 활용한 조건문의 구조는 위와 같습니다. <code>if</code> 문부터 순차적으로 조건을 판단하고, 거짓이면 다음 <code>elif</code>로 넘어가는 방식입니다.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> grade(score):</a>
 <a class="sourceLine" id="cb6-2" title="2">...     <span class="cf">if</span> score <span class="op">&gt;=</span> <span class="dv">90</span>:</a>
 <a class="sourceLine" id="cb6-3" title="3">...         <span class="cf">return</span>(<span class="st">&quot;A&quot;</span>)</a>
@@ -1626,10 +1635,10 @@ $(document).ready(function () {
 <a class="sourceLine" id="cb6-21" title="21"><span class="op">&gt;&gt;&gt;</span> grade(<span class="dv">50</span>)</a>
 <a class="sourceLine" id="cb6-22" title="22"><span class="co">&#39;F&#39;</span></a>
 <a class="sourceLine" id="cb6-23" title="23"><span class="op">&gt;&gt;&gt;</span>   </a></code></pre></div>
-<p>위의 코드는 점수에 따라 학점을 매기는 함수를 구현한 예시입니다. 가장 먼저 90점 이상인지를 판단하고, 이 결과가 거짓이면 다음 elif 로 넘어가서 80점 이상인지를 판단합니다. 이러한 과정을 60점까지 반복하고 나머지 경우에는 F를 반환합니다.</p>
+<p>위의 코드는 점수에 따라 학점을 매기는 함수를 구현한 예시입니다. 가장 먼저 90점 이상인지를 판단하고, 이 결과가 거짓이면 다음 <code>elif</code> 로 넘어가서 80점 이상인지를 판단합니다. 이러한 과정을 60점까지 반복하고 나머지 경우에는 F를 반환합니다.</p>
 <div class="warning">
-<p><strong>예제 1.1. 주어진 파일 이름 문자열의 확장자가 .csv, .json, .xlsx 중 하나이면 True 아니면 False 를 반환하는 함수를 작성하세요. 이후 이 함수를 filelist 에 매핑하세요.</strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" title="1"><span class="op">&gt;&gt;&gt;</span> filelist <span class="op">=</span> [<span class="st">&quot;data.csv&quot;</span>, <span class="st">&quot;자기소개서.hwp&quot;</span>, <span class="st">&quot;졸업학점계산기.xlsx&quot;</span>, <span class="st">&quot;기말보고서.docx&quot;</span>, <span class="st">&quot;apikey.json&quot;</span>]</a>
+<p><strong>예제 1.1. 주어진 파일 이름 문자열의 확장자가 <code>.csv</code>, <code>.json</code>, <code>.xlsx</code> 중 하나이면 <code>True</code> 아니면 <code>False</code> 를 반환하는 함수를 작성하세요. 이후 이 함수를 <code>filelist</code> 에 매핑하세요.</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" title="1"><span class="op">&gt;&gt;&gt;</span> filelist <span class="op">=</span> [<span class="st">&quot;data.csv&quot;</span>, <span class="st">&quot;자기소개서.hwp&quot;</span>, <span class="st">&quot;졸업학점계산기.xlsx&quot;</span>, <span class="st">&quot;기말보고서.docx&quot;</span>, <span class="st">&quot;apiKey.json&quot;</span>]</a>
 <a class="sourceLine" id="cb7-2" title="2"><span class="op">&gt;&gt;&gt;</span> result <span class="op">=</span> your_code ...</a>
 <a class="sourceLine" id="cb7-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(result)</a>
 <a class="sourceLine" id="cb7-4" title="4">[<span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>]</a></code></pre></div>
@@ -1637,20 +1646,36 @@ $(document).ready(function () {
 <ol style="list-style-type: decimal">
 <li><p>파일의 확장자를 판단하는 함수를 작성합니다.</p>
 <ul>
-<li><p>먼저 파일 이름에서 확장자를 분리해내야 합니다. 확장자는 파일 이름의 가장 마지막에 .확장자 형식으로 붙습니다. 따라서 파일 이름을 “.”을 기준으로 스플릿해준 후에, 결과로 나온 리스트의 마지막 요소를 인덱싱하면 확장자를 추출할 수 있습니다.</p></li>
-<li><p>확장자를 분리해냈으면 이 확장자가 csv, xlsx, json 중 하나에 속하는지 판단하면 됩니다. if - elif - else 를 사용할 수도 있지만, in 연산을 사용해서 한번에 처리할 수도 있습니다. 확장자가 [“csv”,“xlsx”, “json”] 중 하나에 속하면 True, 아니면 False를 반환합니다.</p></li>
+<li><p>먼저 파일 이름에서 확장자를 분리해내야 합니다. 확장자는 파일 이름의 가장 마지막에 <code>.확장자</code> 형식으로 붙습니다. 따라서 파일 이름을 <code>.</code>을 기준으로 스플릿해준 후에, 결과로 나온 리스트의 마지막 요소를 인덱싱하면 확장자를 추출할 수 있습니다.</p></li>
+<li><p>확장자를 분리해냈으면 이 확장자가 <code>csv</code>, <code>xlsx</code>, <code>json</code> 중 하나에 속하는지 판단하면 됩니다. 조건문을 사용할 수도 있지만, <code>in</code> 연산을 사용해서 한번에 처리할 수도 있습니다. 확장자가 <code>[&quot;csv&quot;, &quot;xlsx&quot;, &quot;json&quot;]</code> 중 하나에 속하면 <code>True</code>, 아니면 <code>False</code>를 반환합니다.</p></li>
 </ul></li>
 <li><p>만든 함수를 리스트에 매핑합니다.</p></li>
 </ol>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" title="1"><span class="op">&gt;&gt;&gt;</span> filelist <span class="op">=</span> [<span class="st">&quot;data.csv&quot;</span>, <span class="st">&quot;자기소개서.hwp&quot;</span>, <span class="st">&quot;졸업학점계산기.xlsx&quot;</span>, <span class="st">&quot;기말보고서.docx&quot;</span>, <span class="st">&quot;apikey.json&quot;</span>]</a>
-<a class="sourceLine" id="cb8-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_funcion(filename):</a>
-<a class="sourceLine" id="cb8-3" title="3">...     <span class="cf">if</span> filename.split(<span class="st">&quot;.&quot;</span>)[<span class="op">-</span><span class="dv">1</span>] <span class="kw">in</span> [<span class="st">&quot;csv&quot;</span>,<span class="st">&quot;xlsx&quot;</span>,<span class="st">&quot;json&quot;</span>]:</a>
-<a class="sourceLine" id="cb8-4" title="4">...         <span class="cf">return</span> <span class="va">True</span></a>
-<a class="sourceLine" id="cb8-5" title="5">...     <span class="cf">else</span>:</a>
-<a class="sourceLine" id="cb8-6" title="6">...         <span class="cf">return</span> <span class="va">False</span></a>
-<a class="sourceLine" id="cb8-7" title="7"><span class="op">&gt;&gt;&gt;</span> result <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(my_function,filelist))</a>
-<a class="sourceLine" id="cb8-8" title="8"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(result)</a>
-<a class="sourceLine" id="cb8-9" title="9">[<span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" title="1"><span class="op">&gt;&gt;&gt;</span> filelist <span class="op">=</span> [<span class="st">&quot;data.csv&quot;</span>, <span class="st">&quot;자기소개서.hwp&quot;</span>, <span class="st">&quot;졸업학점계산기.xlsx&quot;</span>, <span class="st">&quot;기말보고서.docx&quot;</span>, <span class="st">&quot;apiKey.json&quot;</span>]</a></code></pre></div>
+<div class="row">
+<div class="col-md-6">
+<p><strong>조건문으로 구현한 함수</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb9-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> myFunction(filename):</a>
+<a class="sourceLine" id="cb9-2" title="2">...     ext <span class="op">=</span> filename.split(<span class="st">&quot;.&quot;</span>)[<span class="op">-</span><span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb9-3" title="3">...     <span class="cf">if</span> ext <span class="op">==</span> <span class="st">&quot;csv&quot;</span>:</a>
+<a class="sourceLine" id="cb9-4" title="4">...         <span class="cf">return</span> <span class="va">True</span></a>
+<a class="sourceLine" id="cb9-5" title="5">...     <span class="cf">elif</span> ext <span class="op">==</span> <span class="st">&quot;xlsx&quot;</span>:</a>
+<a class="sourceLine" id="cb9-6" title="6">...         <span class="cf">return</span> <span class="va">True</span></a>
+<a class="sourceLine" id="cb9-7" title="7">...     <span class="cf">elif</span> ext <span class="op">==</span> <span class="st">&quot;json&quot;</span>:</a>
+<a class="sourceLine" id="cb9-8" title="8">...         <span class="cf">return</span> <span class="va">True</span></a>
+<a class="sourceLine" id="cb9-9" title="9">...     <span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb9-10" title="10">...         <span class="cf">return</span> <span class="va">False</span></a></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><strong><code>in</code> 연산으로 구현한 함수</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb10-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> myFunction(filename):</a>
+<a class="sourceLine" id="cb10-2" title="2">...     ext <span class="op">=</span> filename.split(<span class="st">&quot;.&quot;</span>)[<span class="op">-</span><span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb10-3" title="3">...     <span class="cf">return</span> ext <span class="kw">in</span> [<span class="st">&quot;csv&quot;</span>,<span class="st">&quot;xlsx&quot;</span>,<span class="st">&quot;json&quot;</span>]</a></code></pre></div>
+</div>
+</div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb11-1" title="1"><span class="op">&gt;&gt;&gt;</span> result <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(myFunction,filelist))</a>
+<a class="sourceLine" id="cb11-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(result)</a>
+<a class="sourceLine" id="cb11-3" title="3">[<span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>]</a></code></pre></div>
 </div>
 </div>
 </div>
@@ -1660,122 +1685,128 @@ $(document).ready(function () {
 <h2>2.1. for in 반복문</h2>
 <div id="for-in-반복문의-구조" class="section level3">
 <h3>for in 반복문의 구조</h3>
-<p>for in 반복문은 파이썬에서 가장 흔하게 사용되는 반복문이며, <strong>리스트처럼 일정한 순서와 길이를 갖는 객체의 요소들에 같은 작업을 반복적으로 적용합니다.</strong> 아래 예시 코드를 보겠습니다.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb9-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> 변수 <span class="kw">in</span> 리스트<span class="op">/</span>튜플<span class="op">/</span>...:</a>
-<a class="sourceLine" id="cb9-2" title="2">...    작업 코드 <span class="co"># 들여쓰기 필수!</span></a>
-<a class="sourceLine" id="cb9-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]:</a>
-<a class="sourceLine" id="cb9-4" title="4">...     <span class="bu">print</span>(i)</a>
-<a class="sourceLine" id="cb9-5" title="5"><span class="dv">1</span></a>
-<a class="sourceLine" id="cb9-6" title="6"><span class="dv">2</span></a>
-<a class="sourceLine" id="cb9-7" title="7"><span class="dv">3</span></a></code></pre></div>
-<p>for i in [1,2,3]에서 i는 변수이고, [1,2,3] 은 1, 2, 3을 요소로 갖는 리스트입니다. <strong>반복문 for i in [1,2,3] 에서는 변수 i에 리스트 [1,2,3]의 요소들인 1, 2, 3을 순차적으로 할당하게 됩니다.</strong> 즉 루프의 첫 번째 바퀴에서는 i=1 이 되고, 따라서 print(i)의 결과로 1이 출력됩니다. 루프의 두 번째, 세 번째 바퀴에서는 각각 i=2, i=3이 되고, 따라서 print(i)의 결과로 3이 출력됩니다. def 문으로 함수를 만들 때와 마찬가지로, 콜론 이후의 절에서는 반드시 들여쓰기를 해주어야 합니다. 반복문을 사용하지 않고 코드를 풀어보면 다음과 같습니다.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb10-1" title="1"><span class="op">&gt;&gt;&gt;</span> i <span class="op">=</span> <span class="dv">1</span></a>
-<a class="sourceLine" id="cb10-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(i)</a>
-<a class="sourceLine" id="cb10-3" title="3"><span class="dv">1</span></a>
-<a class="sourceLine" id="cb10-4" title="4"><span class="op">&gt;&gt;&gt;</span> i <span class="op">=</span> <span class="dv">2</span></a>
-<a class="sourceLine" id="cb10-5" title="5"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(i)</a>
-<a class="sourceLine" id="cb10-6" title="6"><span class="dv">2</span></a>
-<a class="sourceLine" id="cb10-7" title="7"><span class="op">&gt;&gt;&gt;</span> i <span class="op">=</span> <span class="dv">3</span></a>
-<a class="sourceLine" id="cb10-8" title="8"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(i)</a>
-<a class="sourceLine" id="cb10-9" title="9"><span class="dv">3</span></a>
-<a class="sourceLine" id="cb10-10" title="10"><span class="op">&gt;&gt;&gt;</span>   </a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb12-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> 변수 <span class="kw">in</span> 리스트<span class="op">/</span>튜플<span class="op">/</span>...:</a>
+<a class="sourceLine" id="cb12-2" title="2">...    작업 코드 <span class="co"># 들여쓰기 필수!</span></a></code></pre></div>
+<p><code>for in</code> 반복문은 파이썬에서 가장 흔하게 사용되는 반복문이며, <strong>리스트처럼 일정한 순서와 길이를 갖는 객체의 요소들에 같은 작업을 반복적으로 적용합니다.</strong> 아래 예시 코드를 보겠습니다.</p>
+<div class="row">
+<div class="col-md-6">
+<p><strong><code>for in</code> 반복문</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb13-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]:</a>
+<a class="sourceLine" id="cb13-2" title="2">...     <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb13-3" title="3"><span class="dv">1</span></a>
+<a class="sourceLine" id="cb13-4" title="4"><span class="dv">2</span></a>
+<a class="sourceLine" id="cb13-5" title="5"><span class="dv">3</span></a></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><strong>반복문을 풀어낸 코드</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb14-1" title="1"><span class="op">&gt;&gt;&gt;</span> i <span class="op">=</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb14-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb14-3" title="3"><span class="dv">1</span></a>
+<a class="sourceLine" id="cb14-4" title="4"><span class="op">&gt;&gt;&gt;</span> i <span class="op">=</span> <span class="dv">2</span></a>
+<a class="sourceLine" id="cb14-5" title="5"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb14-6" title="6"><span class="dv">2</span></a>
+<a class="sourceLine" id="cb14-7" title="7"><span class="op">&gt;&gt;&gt;</span> i <span class="op">=</span> <span class="dv">3</span></a>
+<a class="sourceLine" id="cb14-8" title="8"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb14-9" title="9"><span class="dv">3</span></a></code></pre></div>
+</div>
+<p><code>for i in [1,2,3]</code>에서 <code>i</code>는 변수입니다. <strong>반복문 <code>for i in [1,2,3]</code> 는 변수 <code>i</code>에 리스트 <code>[1,2,3]</code>의 요소들인 <code>1, 2, 3</code>을 순차적으로 할당합니다.</strong> 즉 루프의 첫 번째 바퀴에서는 <code>i=1</code> 이 되고, 따라서 <code>print(i)</code>의 결과로 <code>1</code>이 출력됩니다. 루프의 두 번째, 세 번째 바퀴에서는 각각 <code>i=2</code>, <code>i=3</code>이 되고, 따라서 <code>print(i)</code>의 결과로 <code>2,3</code>이 출력됩니다. 함수를 만들 때와 마찬가지로, 콜론 이후의 절에서는 반드시 들여쓰기를 해주어야 합니다.</p>
 <div class="warning">
 <p><strong>예제 2.1. 다음 코드를 반복문으로 구현해보세요</strong></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb11-1" title="1"><span class="op">&gt;&gt;&gt;</span> number <span class="op">=</span> <span class="dv">100</span></a>
-<a class="sourceLine" id="cb11-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(number <span class="op">&lt;</span> <span class="dv">200</span>)</a>
-<a class="sourceLine" id="cb11-3" title="3"><span class="va">True</span></a>
-<a class="sourceLine" id="cb11-4" title="4"><span class="op">&gt;&gt;&gt;</span> number <span class="op">=</span> <span class="dv">200</span></a>
-<a class="sourceLine" id="cb11-5" title="5"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(number <span class="op">&lt;</span> <span class="dv">200</span>)</a>
-<a class="sourceLine" id="cb11-6" title="6"><span class="va">False</span></a>
-<a class="sourceLine" id="cb11-7" title="7"><span class="op">&gt;&gt;&gt;</span> number <span class="op">=</span> <span class="dv">300</span></a>
-<a class="sourceLine" id="cb11-8" title="8"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(number <span class="op">&lt;</span> <span class="dv">200</span>)</a>
-<a class="sourceLine" id="cb11-9" title="9"><span class="va">False</span></a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb15-1" title="1"><span class="op">&gt;&gt;&gt;</span> number <span class="op">=</span> <span class="dv">100</span></a>
+<a class="sourceLine" id="cb15-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(number <span class="op">&lt;</span> <span class="dv">200</span>)</a>
+<a class="sourceLine" id="cb15-3" title="3"><span class="va">True</span></a>
+<a class="sourceLine" id="cb15-4" title="4"><span class="op">&gt;&gt;&gt;</span> number <span class="op">=</span> <span class="dv">200</span></a>
+<a class="sourceLine" id="cb15-5" title="5"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(number <span class="op">&lt;</span> <span class="dv">200</span>)</a>
+<a class="sourceLine" id="cb15-6" title="6"><span class="va">False</span></a>
+<a class="sourceLine" id="cb15-7" title="7"><span class="op">&gt;&gt;&gt;</span> number <span class="op">=</span> <span class="dv">300</span></a>
+<a class="sourceLine" id="cb15-8" title="8"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(number <span class="op">&lt;</span> <span class="dv">200</span>)</a>
+<a class="sourceLine" id="cb15-9" title="9"><span class="va">False</span></a></code></pre></div>
 <p><strong>풀이</strong></p>
 <p>위 코드에서는 number 변수에 100, 200, 300을 할당하면서 number &lt; 200 연산을 동일하게 수행하고 있습니다. 따라서 100, 200, 300 을 리스트로 만들고 for 문을 적용하면 문제를 해결할 수 있습니다.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb12-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> number <span class="kw">in</span> [<span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">300</span>]:</a>
-<a class="sourceLine" id="cb12-2" title="2">...    <span class="bu">print</span>(number <span class="op">&lt;</span> <span class="dv">200</span>)</a>
-<a class="sourceLine" id="cb12-3" title="3"><span class="va">True</span></a>
-<a class="sourceLine" id="cb12-4" title="4"><span class="va">False</span></a>
-<a class="sourceLine" id="cb12-5" title="5"><span class="va">False</span></a></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb16-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> number <span class="kw">in</span> [<span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">300</span>]:</a>
+<a class="sourceLine" id="cb16-2" title="2">...    <span class="bu">print</span>(number <span class="op">&lt;</span> <span class="dv">200</span>)</a>
+<a class="sourceLine" id="cb16-3" title="3"><span class="va">True</span></a>
+<a class="sourceLine" id="cb16-4" title="4"><span class="va">False</span></a>
+<a class="sourceLine" id="cb16-5" title="5"><span class="va">False</span></a></code></pre></div>
 </div>
 </div>
 <div id="for-i-in-rangen" class="section level3">
 <h3>for i in range(n)</h3>
-<p>for in 반복문은 range(a,b) 함수와 함께 사용되는 경우가 많습니다. range(a,b) 함수는 a부터 b까지의 정수 구간을 생성하는 함수이며, b는 구간에 포함되지 않습니다. range(a)와 같이 쓰면 0부터 a까지의 정수 구간을 생성하며, 역시 a는 구간에 포함되지 않습니다.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb13-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">3</span>):</a>
-<a class="sourceLine" id="cb13-2" title="2">...     <span class="bu">print</span>(i)</a>
-<a class="sourceLine" id="cb13-3" title="3"><span class="dv">1</span></a>
-<a class="sourceLine" id="cb13-4" title="4"><span class="dv">2</span></a>
-<a class="sourceLine" id="cb13-5" title="5"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</a>
-<a class="sourceLine" id="cb13-6" title="6">...     <span class="bu">print</span>(i)</a>
-<a class="sourceLine" id="cb13-7" title="7"><span class="dv">0</span></a>
-<a class="sourceLine" id="cb13-8" title="8"><span class="dv">1</span></a>
-<a class="sourceLine" id="cb13-9" title="9"><span class="dv">2</span></a></code></pre></div>
-<p>‘for 변수 in 리스트’ 와 같은 형태의 반복문에서 반드시 지정한 변수를 활용할 필요는 없습니다. 사실 for i in range(n) 과 같은 형태의 반복문은 변수 i와 관계없는 작업을 단순히 n번 반복하기 위해 사용하기도 합니다. 아래 예시 코드를 보겠습니다. for i in range(3) 이라는 코드는 루프마다 i=0, i=1, i=2을 할당합니다. 하지만 실제 반복문 안에서 실행되는 코드는 print(“Hello world”) 로 i와는 전혀 관계가 없습니다.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb14-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</a>
-<a class="sourceLine" id="cb14-2" title="2">...     <span class="bu">print</span>(<span class="st">&quot;Hello world&quot;</span>)</a>
-<a class="sourceLine" id="cb14-3" title="3">Hello world</a>
-<a class="sourceLine" id="cb14-4" title="4">Hello world</a>
-<a class="sourceLine" id="cb14-5" title="5">Hello world</a></code></pre></div>
+<p><code>for in</code> 반복문은 <code>range(a,b)</code> 함수와 함께 사용되는 경우가 많습니다. <code>range(a,b)</code> 함수는 <code>a</code>부터 <code>b</code>까지의 정수 구간을 생성하는 함수이며, <code>b</code>는 구간에 포함되지 않습니다. <code>range(a)</code>와 같이 쓰면 <code>0</code>부터 <code>a</code>까지의 정수 구간을 생성하며, 역시 <code>a</code>는 구간에 포함되지 않습니다.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb17-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">3</span>):</a>
+<a class="sourceLine" id="cb17-2" title="2">...     <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb17-3" title="3"><span class="dv">1</span></a>
+<a class="sourceLine" id="cb17-4" title="4"><span class="dv">2</span></a>
+<a class="sourceLine" id="cb17-5" title="5"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</a>
+<a class="sourceLine" id="cb17-6" title="6">...     <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb17-7" title="7"><span class="dv">0</span></a>
+<a class="sourceLine" id="cb17-8" title="8"><span class="dv">1</span></a>
+<a class="sourceLine" id="cb17-9" title="9"><span class="dv">2</span></a></code></pre></div>
+<p><code>for 변수 in 리스트</code> 와 같은 형태의 반복문에서 반드시 지정한 변수를 활용할 필요는 없습니다. 반복문은 반복하는 변수 <code>i</code>와 관계없는 작업을 단순히 <code>n</code>번 반복하기 위해 사용하기도 합니다. 아래 예시 코드를 보겠습니다. <code>for i in range(3)</code> 이라는 코드는 루프마다 <code>i=0</code>, <code>i=1</code>, <code>i=2</code>을 할당합니다. 하지만 실제 반복문 안에서 실행되는 코드는 <code>print(&quot;Hello world&quot;)</code> 로 <code>i</code>와는 전혀 관계가 없습니다.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb18-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</a>
+<a class="sourceLine" id="cb18-2" title="2">...     <span class="bu">print</span>(<span class="st">&quot;Hello world&quot;</span>)</a>
+<a class="sourceLine" id="cb18-3" title="3">Hello world</a>
+<a class="sourceLine" id="cb18-4" title="4">Hello world</a>
+<a class="sourceLine" id="cb18-5" title="5">Hello world</a></code></pre></div>
 <div class="warning">
 <p><strong>예제 2.2. for 반복문과 range 함수를 활용하여 1부터 100까지 자연수의 합을 구하세요</strong></p>
 <p><strong>풀이</strong></p>
-<p>이번 문제를 풀기 위해서는 약간의 테크닉이 필요합니다. 먼저 반복문 바깥에 result라는 변수를 만들고 0을 할당합니다. 이후 1부터 100까지의 숫자를 차례대로 result 변수에 더해주면, 1부터 100까지 자연수의 합을 구할 수 있습니다. 반복문 외부에 결과를 저장할 변수를 만들고 루프를 돌면서 변수를 업데이트하는 기법은 자주 쓰이므로 기억해두면 좋습니다.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb15-1" title="1"><span class="op">&gt;&gt;&gt;</span> result <span class="op">=</span> <span class="dv">0</span></a>
-<a class="sourceLine" id="cb15-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">101</span>):</a>
-<a class="sourceLine" id="cb15-3" title="3">...     result <span class="op">=</span> result <span class="op">+</span> i</a>
-<a class="sourceLine" id="cb15-4" title="4"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(result)</a>
-<a class="sourceLine" id="cb15-5" title="5"><span class="dv">5050</span></a></code></pre></div>
+<p>이번 문제를 풀기 위해서는 약간의 테크닉이 필요합니다. 먼저 반복문 바깥에 <code>result</code>라는 변수를 만들고 <code>0</code>을 할당합니다. 이후 <code>1</code>부터 <code>100</code>까지의 숫자를 차례대로 <code>result</code> 변수에 더해주면 합을 구할 수 있습니다. 반복문 외부에 결과를 저장할 변수를 만들고 루프를 돌면서 변수를 업데이트하는 기법은 자주 쓰이므로 기억해두면 좋습니다.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb19-1" title="1"><span class="op">&gt;&gt;&gt;</span> result <span class="op">=</span> <span class="dv">0</span></a>
+<a class="sourceLine" id="cb19-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">101</span>):</a>
+<a class="sourceLine" id="cb19-3" title="3">...     result <span class="op">=</span> result <span class="op">+</span> i</a>
+<a class="sourceLine" id="cb19-4" title="4"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(result)</a>
+<a class="sourceLine" id="cb19-5" title="5"><span class="dv">5050</span></a></code></pre></div>
 <p><strong>예제 2.3. for 반복문과 range 함수를 활용하여 1**2, 2**2, 3**2 … 10000**2을 포함하는 리스트를 만들어보세요.</strong></p>
 <p><strong>풀이</strong></p>
-<p>최종적으로 만들 결과물이 리스트이기 때문에, 반복문 밖에 빈 리스트를 생성합니다. 이후 range(1,100001) 를 이용해 구간을 생성하고, 루프를 돌면서 i**2 를 리스트에 추가해줍니다. 결과의 출력은 생략하겠습니다.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb16-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> []</a>
-<a class="sourceLine" id="cb16-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">100001</span>):</a>
-<a class="sourceLine" id="cb16-3" title="3">...    mylist.append(i<span class="op">**</span><span class="dv">2</span>)</a></code></pre></div>
+<p>최종적으로 만들 결과물이 리스트이기 때문에, 반복문 밖에 빈 리스트를 생성합니다. 이후 <code>range(1,10001)</code> 를 이용해 구간을 생성하고, 루프를 돌면서 <code>i**2</code> 를 리스트에 추가해줍니다. 결과의 출력은 생략하겠습니다.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb20-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> []</a>
+<a class="sourceLine" id="cb20-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10001</span>):</a>
+<a class="sourceLine" id="cb20-3" title="3">...    mylist.append(i<span class="op">**</span><span class="dv">2</span>)</a></code></pre></div>
 </div>
 </div>
 <div id="list-comprehension" class="section level3">
 <h3>List Comprehension</h3>
-<p>위의 예제에서는 빈 리스트에 append 메소드를 반복적하여 리스트를 만들어 보았습니다. 이번에는 List comprehension이라는 방법을 사용하여 리스트를 만들어볼 것입니다. 아래는 지금까지 해왔던 방식으로 0부터 9까지의 숫자를 제곱한 리스트를 만드는 코드입니다.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb17-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> []</a>
-<a class="sourceLine" id="cb17-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</a>
-<a class="sourceLine" id="cb17-3" title="3">...    mylist.append(i<span class="op">**</span><span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb17-4" title="4"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(mylist)</a>
-<a class="sourceLine" id="cb17-5" title="5">[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">36</span>, <span class="dv">49</span>, <span class="dv">64</span>, <span class="dv">81</span>]</a></code></pre></div>
-<p>아래는 List comprehension을 활용한 예시 코드입니다. 지금까지 사용한 반복문들과 달리, 이번에는 <strong>for in 구문이 대괄호 [] 안에서 쓰였으며, for 문이 시작하기 전에 이미 i ** 2와 같이 변수를 활용한 연산이 나옵니다.</strong> 복잡해보일 수 있는 구조이지만, 콜론 뒤에 나오던 연산 과정이 앞으로 당겨졌을 뿐입니다. List comprehension을 사용하면 append를 사용하는 것보다 코드를 더 간결하게 쓸 수 있고, 일반적으로 실행 시간도 단축됩니다.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb18-1" title="1"><span class="op">&gt;&gt;&gt;</span> [연산 <span class="cf">for</span> 변수 <span class="kw">in</span> 리스트] <span class="co"># 리스트 컴프리헨션의 구조</span></a>
-<a class="sourceLine" id="cb18-2" title="2"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [i<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)]</a>
-<a class="sourceLine" id="cb18-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(mylist)</a>
-<a class="sourceLine" id="cb18-4" title="4">[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">36</span>, <span class="dv">49</span>, <span class="dv">64</span>, <span class="dv">81</span>]</a></code></pre></div>
+<p>위의 예제에서는 빈 리스트에 <code>append</code> 메소드를 반복적하여 리스트를 만들어 보았습니다. 이번에는 <strong>List comprehension</strong>이라는 기법을 사용하여 리스트를 만들어볼 것입니다. 아래는 지금까지 해왔던 방식으로 <code>0</code>부터 <code>9</code>까지의 숫자를 제곱한 리스트를 만드는 코드입니다.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb21-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> []</a>
+<a class="sourceLine" id="cb21-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</a>
+<a class="sourceLine" id="cb21-3" title="3">...    mylist.append(i<span class="op">**</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb21-4" title="4"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(mylist)</a>
+<a class="sourceLine" id="cb21-5" title="5">[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">36</span>, <span class="dv">49</span>, <span class="dv">64</span>, <span class="dv">81</span>]</a></code></pre></div>
+<p>아래는 리스트 컴프리헨션을 활용한 예시 코드입니다. <strong>리스트 컴프리헨션은 대괄호 <code>[]</code>안에 연산과 반복문을 함께 적습니다. 반복되는 변수를 활용한 연산이 나오고, 이후에 반복문이 나온다는 점을 유의하세요.</strong> 복잡해보일 수 있는 구조이지만, 콜론 뒤에 나오던 연산 과정이 앞으로 당겨졌을 뿐입니다. 리스트 컴프리헨션을 사용하면 <code>append</code>를 사용하는 것보다 더 간결하고 빠른 코드를 작성할 수 있습니다다.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb22-1" title="1"><span class="op">&gt;&gt;&gt;</span> [연산 <span class="cf">for</span> 변수 <span class="kw">in</span> 리스트] <span class="co"># 리스트 컴프리헨션의 구조</span></a>
+<a class="sourceLine" id="cb22-2" title="2"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [i<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)] <span class="co"># 연산: i ** 2, 반복문: for i in range(10)</span></a>
+<a class="sourceLine" id="cb22-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(mylist)</a>
+<a class="sourceLine" id="cb22-4" title="4">[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">36</span>, <span class="dv">49</span>, <span class="dv">64</span>, <span class="dv">81</span>]</a></code></pre></div>
 <div class="warning">
-<p><strong>예제 2.4. LIst comprehension을 사용하여 구구단 6단 리스트를 만드세요</strong></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb19-1" title="1">[<span class="dv">6</span>, <span class="dv">12</span>, <span class="dv">18</span>, <span class="dv">24</span>, <span class="dv">30</span>, <span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">48</span>, <span class="dv">54</span>]</a></code></pre></div>
+<p><strong>예제 2.4. 리스트 컴프리헨션을 사용하여 구구단 6단 리스트를 만드세요</strong></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb23-1" title="1">[<span class="dv">6</span>, <span class="dv">12</span>, <span class="dv">18</span>, <span class="dv">24</span>, <span class="dv">30</span>, <span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">48</span>, <span class="dv">54</span>]</a></code></pre></div>
 <p><strong>풀이</strong></p>
-<p>구구단은 6*1, 6*2, …, 6*9 와 같이 진행됩니다. 즉 6 * i를 i=1부터 i=9까지 반복하면 구구단 6단을 만들 수 있습니다. 이 때 연산은 6 *i가 되고, 리스트는 [1,2,…,9]가 될 것입니다. 따라서 다음과 같은 코드를 사용하여 구구단 6단의 리스트를 만들 수 있습니다.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb20-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">6</span> <span class="op">*</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>)]</a>
-<a class="sourceLine" id="cb20-2" title="2">[<span class="dv">6</span>, <span class="dv">12</span>, <span class="dv">18</span>, <span class="dv">24</span>, <span class="dv">30</span>, <span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">48</span>, <span class="dv">54</span>]</a></code></pre></div>
+<p>구구단은 6*1, 6*2, …, 6*9 와 같이 진행됩니다. 즉 <code>6 * i</code>를 <code>i=1</code>부터 <code>i=9</code>까지 반복하면 구구단 6단을 만들 수 있습니다. 이 때 연산은 <code>6 * i</code>가 되고, 리스트는 <code>[1,2,...,9]</code>가 될 것입니다. 따라서 다음과 같은 코드를 사용하여 구구단 6단의 리스트를 만들 수 있습니다.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb24-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">6</span> <span class="op">*</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>)]</a>
+<a class="sourceLine" id="cb24-2" title="2">[<span class="dv">6</span>, <span class="dv">12</span>, <span class="dv">18</span>, <span class="dv">24</span>, <span class="dv">30</span>, <span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">48</span>, <span class="dv">54</span>]</a></code></pre></div>
 </div>
 </div>
 </div>
 <div id="while-반복문" class="section level2">
 <h2>2.2. while 반복문</h2>
-<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb21-1" title="1"><span class="cf">while</span> 조건:</a>
-<a class="sourceLine" id="cb21-2" title="2">    조건이 참인 동안 실행할 코드</a></code></pre></div>
-<p>while 반복문은 for in 반복문과 달리, 조건과 함께 사용됩니다. while 이후의 조건이 참인 동안 조건 이후의 코드를 계속해서 수행하게 됩니다.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb22-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">while</span> <span class="va">True</span>:</a>
-<a class="sourceLine" id="cb22-2" title="2">...     <span class="bu">print</span>(<span class="st">&quot;Press Ctrl+C to escape&quot;</span>)</a>
-<a class="sourceLine" id="cb22-3" title="3">...</a>
-<a class="sourceLine" id="cb22-4" title="4">Press Ctrl<span class="op">+</span>C to escape</a>
-<a class="sourceLine" id="cb22-5" title="5">Press Ctrl<span class="op">+</span>C to escape</a>
-<a class="sourceLine" id="cb22-6" title="6">Press Ctrl<span class="op">+</span>C to escape</a>
-<a class="sourceLine" id="cb22-7" title="7">.</a>
-<a class="sourceLine" id="cb22-8" title="8">.</a>
-<a class="sourceLine" id="cb22-9" title="9">.</a></code></pre></div>
-<p>위 예시 코드에서는 조건이 True입니다. 즉 해당 반복문은 사용자가 멈추지 않는 이상 계속해서 반복됩니다. while 반복문은 자주 사용하지는 않지만, 알아둘 필요는 있습니다.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb25-1" title="1"><span class="cf">while</span> 조건:</a>
+<a class="sourceLine" id="cb25-2" title="2">    조건이 참인 동안 실행할 코드</a></code></pre></div>
+<p><code>while</code> 반복문은 <code>for in</code> 반복문과 달리, 조건과 함께 사용됩니다. <code>while</code> 이후의 조건이 참인 동안 조건 이후의 코드를 계속해서 수행하게 됩니다.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb26-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">while</span> <span class="va">True</span>:</a>
+<a class="sourceLine" id="cb26-2" title="2">...     <span class="bu">print</span>(<span class="st">&quot;Press Ctrl+C to escape&quot;</span>)</a>
+<a class="sourceLine" id="cb26-3" title="3">...</a>
+<a class="sourceLine" id="cb26-4" title="4">Press Ctrl<span class="op">+</span>C to escape</a>
+<a class="sourceLine" id="cb26-5" title="5">Press Ctrl<span class="op">+</span>C to escape</a>
+<a class="sourceLine" id="cb26-6" title="6">Press Ctrl<span class="op">+</span>C to escape</a>
+<a class="sourceLine" id="cb26-7" title="7">.</a>
+<a class="sourceLine" id="cb26-8" title="8">.</a>
+<a class="sourceLine" id="cb26-9" title="9">.</a></code></pre></div>
+<p>위 예시 코드에서는 조건이 <code>True</code>입니다. 즉 해당 반복문은 사용자가 멈추지 않는 이상 무한히 반복됩니다. <code>while</code> 반복문은 자주 사용하지는 않지만, 알아둘 필요는 있습니다.</p>
 </div>
 <div id="반복문-안에서의-흐름-제어" class="section level2">
 <h2>2.3. 반복문 안에서의 흐름 제어</h2>
-<p>반복문 안에 추가적으로 흐름을 제어하는 명령어들을 배치할 수 있습니다. continue 는 즉시 다음 바퀴로 넘어가는 명령어이고, break 는 반복을 멈추는 명령어입니다. 역시 자주 쓰이지는 않지만 알아둘 필요는 없습니다.</p>
+<p>반복문 안에 추가적으로 흐름을 제어하는 명령어들을 배치할 수 있습니다. <code>continue</code> 는 즉시 다음 바퀴로 넘어가는 명령어이고, <code>break</code> 는 반복을 멈추는 명령어입니다. 역시 자주 쓰이지는 않지만 알아둘 필요는 없습니다.</p>
 <table>
 <thead>
 <tr class="header">
@@ -1785,34 +1816,42 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td>continue</td>
+<td><code>continue</code></td>
 <td>즉시 다음 바퀴로 넘어감</td>
 </tr>
 <tr class="even">
-<td>break</td>
+<td><code>break</code></td>
 <td>반복 정지, 다음 코드로 넘어감</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb23-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</a>
-<a class="sourceLine" id="cb23-2" title="2">...     <span class="cf">if</span> i <span class="op">&lt;</span> <span class="dv">5</span>:</a>
-<a class="sourceLine" id="cb23-3" title="3">...         <span class="cf">continue</span></a>
-<a class="sourceLine" id="cb23-4" title="4">...     <span class="bu">print</span>(i)</a>
-<a class="sourceLine" id="cb23-5" title="5">...</a>
-<a class="sourceLine" id="cb23-6" title="6"><span class="dv">5</span></a>
-<a class="sourceLine" id="cb23-7" title="7"><span class="dv">6</span></a>
-<a class="sourceLine" id="cb23-8" title="8"><span class="dv">7</span></a>
-<a class="sourceLine" id="cb23-9" title="9"><span class="dv">8</span></a>
-<a class="sourceLine" id="cb23-10" title="10"><span class="dv">9</span></a></code></pre></div>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb24-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</a>
-<a class="sourceLine" id="cb24-2" title="2">...     <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</a>
-<a class="sourceLine" id="cb24-3" title="3">...         <span class="cf">break</span></a>
-<a class="sourceLine" id="cb24-4" title="4">...     <span class="bu">print</span>(i)</a>
-<a class="sourceLine" id="cb24-5" title="5">...</a>
-<a class="sourceLine" id="cb24-6" title="6"><span class="dv">1</span></a>
-<a class="sourceLine" id="cb24-7" title="7"><span class="dv">2</span></a>
-<a class="sourceLine" id="cb24-8" title="8"><span class="dv">3</span></a>
-<a class="sourceLine" id="cb24-9" title="9"><span class="dv">4</span></a></code></pre></div>
+<div class="row">
+<div class="col-md-6">
+<p><strong><code>continue</code></strong></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb27-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</a>
+<a class="sourceLine" id="cb27-2" title="2">...     <span class="cf">if</span> i <span class="op">&lt;</span> <span class="dv">5</span>:</a>
+<a class="sourceLine" id="cb27-3" title="3">...         <span class="cf">continue</span></a>
+<a class="sourceLine" id="cb27-4" title="4">...     <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb27-5" title="5">...</a>
+<a class="sourceLine" id="cb27-6" title="6"><span class="dv">5</span></a>
+<a class="sourceLine" id="cb27-7" title="7"><span class="dv">6</span></a>
+<a class="sourceLine" id="cb27-8" title="8"><span class="dv">7</span></a>
+<a class="sourceLine" id="cb27-9" title="9"><span class="dv">8</span></a>
+<a class="sourceLine" id="cb27-10" title="10"><span class="dv">9</span></a></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><strong><code>break</code></strong></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb28-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</a>
+<a class="sourceLine" id="cb28-2" title="2">...     <span class="cf">if</span> i <span class="op">==</span> <span class="dv">5</span>:</a>
+<a class="sourceLine" id="cb28-3" title="3">...         <span class="cf">break</span></a>
+<a class="sourceLine" id="cb28-4" title="4">...     <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb28-5" title="5">...</a>
+<a class="sourceLine" id="cb28-6" title="6"><span class="dv">1</span></a>
+<a class="sourceLine" id="cb28-7" title="7"><span class="dv">2</span></a>
+<a class="sourceLine" id="cb28-8" title="8"><span class="dv">3</span></a>
+<a class="sourceLine" id="cb28-9" title="9"><span class="dv">4</span></a></code></pre></div>
+</div>
+</div>
 </div>
 </div>
 <div id="객체-지향-프로그래밍과-클래스" class="section level1">
@@ -1820,104 +1859,105 @@ $(document).ready(function () {
 <p>파이썬은 대표적인 객체 지향 프로그래밍 언어이며, 객체 지향과 클래스는 파이썬을 배우면서 언젠가는 짚고 넘어가야 하는 부분입니다. 하지만 객체 지향과 클래스가 단번에 이해할 수 있는 개념은 아닙니다. 사실 프로그래밍을 배운다는 것이 모든 스킬을 선형적으로 습득해가는 과정이 절대 아니기 때문에, 지금 이해가 가지 않는다고 해서 조급해할 필요는 없습니다. 또한 지금은 개발을 목적으로 파이썬을 배우는 것아 아니므로 클래스를 꼭 자유자재로 다룰 수 있어야 하는 것도 아닙니다. 만들어진 클래스의 구조를 이해하고 활용할 수 있는 정도면 충분합니다.</p>
 <div id="클래스-객체-인스턴스" class="section level2">
 <h2>3.1. 클래스, 객체, 인스턴스</h2>
-<p>프로그램은 수많은 명령어들로 이루어집니다. 하지만 객체 지향 프로그래밍에서는 명령어가 아닌 객체들이 프로그램의 중심이 됩니다. 객체란 마치 현실 세계에 존재하는 사물들과 유사한 것입니다. <strong>현실 세계의 사물들은 특정한 속성을 갖고, 스스로 행동하거나 다른 사물들에 의해서 조작될 수 있습니다. 예를 들어 사람은 이름과 나이를 속성으로 가질 수 있고, 인사를 하는 등 행동을 할 수 있습니다.</strong> 인사를 할 수 있는 사람을 간단한 파이썬 프로그램으로 구현해보면 다음과 같습니다. 코드 해설을 모두 이해할 필요는 없고, 다만 우리가 현실세계의 사람을 모방해서 사람과 같은 속성을 갖고, 사람처럼 행동하는 무언가를 만들었다는 사실을 주목해주시면 됩니다.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb25-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> person:</a>
-<a class="sourceLine" id="cb25-2" title="2">...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age): <span class="co"># person 클래스의 속성을 정의</span></a>
-<a class="sourceLine" id="cb25-3" title="3">...         <span class="va">self</span>.name <span class="op">=</span> name</a>
-<a class="sourceLine" id="cb25-4" title="4">...         <span class="va">self</span>.age <span class="op">=</span> age</a>
-<a class="sourceLine" id="cb25-5" title="5">...     <span class="kw">def</span> sayhello(<span class="va">self</span>):</a>
-<a class="sourceLine" id="cb25-6" title="6">...         <span class="bu">print</span>(<span class="st">&quot;Hello!&quot;</span>)</a>
-<a class="sourceLine" id="cb25-7" title="7"><span class="op">&gt;&gt;&gt;</span> superson <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;손흥민&quot;</span>, age<span class="op">=</span><span class="dv">28</span>) <span class="co"># 손흥민을 닮은 객체를 만들어봐요!</span></a>
-<a class="sourceLine" id="cb25-8" title="8"><span class="op">&gt;&gt;&gt;</span> superson.name <span class="co"># 속성</span></a>
-<a class="sourceLine" id="cb25-9" title="9"><span class="co">&#39;손흥민&#39;</span></a>
-<a class="sourceLine" id="cb25-10" title="10"><span class="op">&gt;&gt;&gt;</span> superson.age <span class="co"># 속성</span></a>
-<a class="sourceLine" id="cb25-11" title="11"><span class="dv">28</span></a>
-<a class="sourceLine" id="cb25-12" title="12"><span class="op">&gt;&gt;&gt;</span> superson.sayhello() <span class="co"># 메소드(행동)</span></a>
-<a class="sourceLine" id="cb25-13" title="13">Hello<span class="op">!</span></a></code></pre></div>
-<p>가장 먼저 <code>class person: ...</code> 명령어를 사용해서 person 이라는 클래스를 만들었습니다. <code>superson = person(name=&quot;손흥민&quot;,age=28)</code> 은 이름이 “손흥민” 이고 나이가 28 인 사람을 만들어서 superson이라는 변수에 저장한 것입니다. 이제 파이썬 세상에서 superson 은 이름과 나이를 갖는 사람처럼 취급될 수 있습니다. superson.name, supserson.age 를 통해서 superson의 이름과 나이라는 속성에 접근할 수 있고, superson.sayhello() 를 통해서 인사를 하는 행동을 구현할 수도 있습니다.</p>
+<p>프로그램은 수많은 명령어들로 이루어집니다. 하지만 객체 지향 프로그래밍에서는 명령어가 아닌 객체들이 프로그램의 중심이 됩니다. 객체란 마치 현실 세계에 존재하는 사물들과 유사한 것입니다. 현실 세계의 사물들은 특정한 속성을 갖고, 스스로 행동하거나 다른 사물들에 의해서 조작될 수 있습니다. 예를 들어 사람은 이름과 나이를 속성으로 가질 수 있고, 인사를 하는 등 행동을 할 수 있습니다. 인사를 할 수 있는 사람을 간단한 파이썬 프로그램으로 구현해보면 다음과 같습니다. 코드 해설을 모두 이해할 필요는 없고, 다만 우리가 현실세계의 사람을 모방해서 사람과 같은 속성을 갖고, 사람처럼 행동하는 무언가를 만들었다는 사실을 주목해주시면 됩니다.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb29-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> person:</a>
+<a class="sourceLine" id="cb29-2" title="2">...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age): <span class="co"># person 클래스의 속성을 정의</span></a>
+<a class="sourceLine" id="cb29-3" title="3">...         <span class="va">self</span>.name <span class="op">=</span> name</a>
+<a class="sourceLine" id="cb29-4" title="4">...         <span class="va">self</span>.age <span class="op">=</span> age</a>
+<a class="sourceLine" id="cb29-5" title="5">...     <span class="kw">def</span> sayhello(<span class="va">self</span>):</a>
+<a class="sourceLine" id="cb29-6" title="6">...         <span class="bu">print</span>(<span class="st">&quot;Hello!&quot;</span>)</a>
+<a class="sourceLine" id="cb29-7" title="7"><span class="op">&gt;&gt;&gt;</span> superson <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;손흥민&quot;</span>, age<span class="op">=</span><span class="dv">28</span>) <span class="co"># 손흥민을 닮은 객체를 만들어봐요!</span></a>
+<a class="sourceLine" id="cb29-8" title="8"><span class="op">&gt;&gt;&gt;</span> superson.name <span class="co"># 속성</span></a>
+<a class="sourceLine" id="cb29-9" title="9"><span class="co">&#39;손흥민&#39;</span></a>
+<a class="sourceLine" id="cb29-10" title="10"><span class="op">&gt;&gt;&gt;</span> superson.age <span class="co"># 속성</span></a>
+<a class="sourceLine" id="cb29-11" title="11"><span class="dv">28</span></a>
+<a class="sourceLine" id="cb29-12" title="12"><span class="op">&gt;&gt;&gt;</span> superson.sayhello() <span class="co"># 메소드(행동)</span></a>
+<a class="sourceLine" id="cb29-13" title="13">Hello<span class="op">!</span></a></code></pre></div>
+<p>가장 먼저 <code>class</code> 명령어를 사용해서 <code>person</code> 클래스를 만들었습니다. <code>superson = person(name=&quot;손흥민&quot;,age=28)</code> 은 이름이 <code>&quot;손흥민&quot;</code> 이고 나이가 <code>28</code> 인 사람을 만들어서 <code>superson</code>이라는 변수에 저장한 것입니다. 이제 파이썬 세상에서 <code>superson</code> 은 이름과 나이를 갖는 사람처럼 취급될 수 있습니다. <code>superson.name</code>, <code>supserson.age</code> 를 통해서 <code>superson</code>의 이름과 나이라는 속성에 접근할 수 있고, <code>superson.sayhello()</code> 를 통해서 인사를 하는 행동을 구현할 수도 있습니다.</p>
 <div id="클래스와-객체인스턴스-구분하기" class="section level3">
 <h3>클래스와 객체/인스턴스 구분하기</h3>
 <ul>
 <li>클래스: 객체/인스턴스를 찍어내는 틀이자 객체/인스턴스가 속하는 그룹</li>
 <li>객체/인스턴스: 클래스에 의해 만들어진 존재, 대상</li>
 </ul>
-<p><strong>클래스는 객체가 속하는 그룹이자 객체를 찍어내는 틀입니다.</strong> person 클래스를 구현해놓으면 서로 다른 속성을 갖는 여러 사람들을 손쉽게 만들어낼 수 있습니다. person 클래스는 가지고 서로 다른 이름과 나이를 갖는 객체들을 만드는 예시입니다. 각자 다른 이름과 나이를 갖기는 하지만, 이들은 모두 person 클래스에 속하는 객체들입니다.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb26-1" title="1"><span class="op">&gt;&gt;&gt;</span> supserson <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;손흥민&quot;</span>, age<span class="op">=</span><span class="dv">27</span>)</a>
-<a class="sourceLine" id="cb26-2" title="2"><span class="op">&gt;&gt;&gt;</span> yoonaqueen <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;김연아&quot;</span>, age<span class="op">=</span><span class="dv">29</span>)</a>
-<a class="sourceLine" id="cb26-3" title="3"><span class="op">&gt;&gt;&gt;</span> psy <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;박재상&quot;</span>, age<span class="op">=</span><span class="dv">41</span>)</a></code></pre></div>
-<p><strong>클래스를 사용해서 만들어낸 실제 대상을 객체 혹은 인스턴스라고 부릅니다.</strong> 객체와 인스턴스는 엄밀하게 구분하기도 하지만, 여기에서는 구분 없이 사용하겠습니다. 위의 예제에서 person 클래스를 사용해서 만든 superson, yoonaqueen, psy 가 모두 인스턴스입니다.</p>
+<p><strong>클래스는 객체가 속하는 그룹이자 객체를 찍어내는 틀입니다.</strong> <code>person</code> 클래스를 구현해놓으면 서로 다른 속성을 갖는 여러 사람들을 손쉽게 만들어낼 수 있습니다. 아래는 <code>person</code> 클래스를 가지고 서로 다른 이름과 나이를 갖는 객체들을 만드는 예시입니다. 각자 다른 이름과 나이를 갖기는 하지만, 이들은 모두 <code>person</code> 클래스에 속하며, 일정한 속성과 메소드들을 공유합니다.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb30-1" title="1"><span class="op">&gt;&gt;&gt;</span> supserson <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;손흥민&quot;</span>, age<span class="op">=</span><span class="dv">27</span>)</a>
+<a class="sourceLine" id="cb30-2" title="2"><span class="op">&gt;&gt;&gt;</span> yoonaqueen <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;김연아&quot;</span>, age<span class="op">=</span><span class="dv">29</span>)</a>
+<a class="sourceLine" id="cb30-3" title="3"><span class="op">&gt;&gt;&gt;</span> psy <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;박재상&quot;</span>, age<span class="op">=</span><span class="dv">41</span>)</a></code></pre></div>
+<p><strong>클래스를 사용해서 만들어낸 실제 대상을 객체 혹은 인스턴스라고 부릅니다.</strong> 객체와 인스턴스는 엄밀하게 구분하기도 하지만, 여기에서는 구분 없이 사용하겠습니다. 위의 예제에서 <code>person</code> 클래스를 사용해서 만든 <code>superson</code>, <code>yoonaqueen</code>, <code>psy</code> 가 모두 인스턴스입니다.</p>
 </div>
 </div>
 <div id="클래스-만들기" class="section level2">
 <h2>3.2. 클래스 만들기</h2>
 <div id="class-명령어" class="section level3">
 <h3>class 명령어</h3>
-<p>이제 본격적으로 클래스를 만드는 방법을 다뤄보겠습니다. 우선 아무것도 없는 빈 클래스를 만들어보겠습니다. 클래스를 만들 때는 class 라는 명령어를 사용합니다. <code>class 클래스이름</code> 과 같이 적어주면 클래스를 생성할 수 있습니다. 아무 것도 포함하는 것이 없는 클래스를 만들기 위해 콜론 이후에는 pass 를 적어줍니다. 빈 클래스를 통해서도 인스턴스들을 찍어낼 수 있습니다.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb27-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> person:</a>
-<a class="sourceLine" id="cb27-2" title="2">...     <span class="cf">pass</span></a>
-<a class="sourceLine" id="cb27-3" title="3"><span class="op">&gt;&gt;&gt;</span> superson <span class="op">=</span> person()</a></code></pre></div>
+<p>이제 본격적으로 클래스를 만드는 방법을 다뤄보겠습니다. 우선 아무것도 없는 빈 클래스를 만들어보겠습니다. 클래스를 만들 때는 class 라는 명령어를 사용합니다. <code>class 클래스이름:</code> 과 같이 적어주면 클래스를 생성할 수 있습니다. 아무 것도 포함하는 것이 없는 클래스를 만들기 위해 콜론 이후에는 <code>pass</code> 를 적어줍니다. 빈 클래스를 통해서도 인스턴스들을 찍어낼 수 있습니다.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb31-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> person:</a>
+<a class="sourceLine" id="cb31-2" title="2">...     <span class="cf">pass</span></a>
+<a class="sourceLine" id="cb31-3" title="3"><span class="op">&gt;&gt;&gt;</span> superson <span class="op">=</span> person()</a></code></pre></div>
 </div>
 <div id="클래스에-속성-부여하기" class="section level3">
 <h3>클래스에 속성 부여하기</h3>
-<p>하지만 위와 같은 클래스는 아무 속성도 갖지 않고, 아무런 행동도 할 수 없습니다. 이제부터는 속성을 갖고 행동도 할 수 있는 person 클래스를 만들어보도록 하겠습니다. 클래스에 속성을 부여하기 위해서는, 클래스 안에 <code>__init__</code> 함수를 정의해야 합니다. <strong><code>__init__</code> 함수는 초기화, 혹은 시작을 뜻하며 클래스가 필수적으로 가져야 할 속성들을 정의합니다.</strong> <strong>init</strong> 함수의 기본적인 구조는 다음과 같습니다.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb28-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="fu">__init__</span>(<span class="va">self</span>, 속성1, 속성2, ...):</a>
-<a class="sourceLine" id="cb28-2" title="2">...     <span class="va">self</span>.속성1 <span class="op">=</span> 속성1</a>
-<a class="sourceLine" id="cb28-3" title="3">...     <span class="va">self</span>.속성2 <span class="op">=</span> 속성2</a>
-<a class="sourceLine" id="cb28-4" title="4">...     ...</a></code></pre></div>
-<p><strong><code>__init__</code> 함수는 <code>self</code>, <code>속성</code> 이라는 두 종류의 매개변수를 갖습니다. self 는 클래스에 의해 생성될 인스턴스를 가리키며, 클래스 안에서 정의되는 모든 함수에 반드시 포함되어야 하는 매개변수입니다.</strong> self 이후의 매개변수들은 자신이 원하는 속성들을 표현할 수 있는 변수 이름들을 나열해주시면 됩니다. 만약 person 클래스에 name과 age라는 속성을 정의하고 싶다면 우선 self, name, age라는 세 가지 매개변수를 갖는 <code>__init__</code> 함수를 class 안에 정의해야 합니다. 즉 우선 다음과 같이 써야 합니다.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb29-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> person:</a>
-<a class="sourceLine" id="cb29-2" title="2">...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</a></code></pre></div>
-<p>이제 <code>__init__</code> 함수의 내부를 살펴볼 차례입니다. <code>__init__</code> 함수의 내부 구조는 간단하지만, 처음 보면 당황스러울 수 있습니다. 자신이 정의하려는 속성들을 <code>self.속성 = 속성</code>과 같이 차례로 할당해주면 됩니다. self 는 클래스에 의해 생성될 인스턴스라고 언급하였습니다. 따라서 self.name 코드는 새로 만들 인스턴스의 name 속성에 name 값을 할당하며, self.age 코드는 새로 만들 인스턴스의 age 속성에 age 값을 할당합니다. name 값과 age 값은 사용자가 인스턴스를 생성할 때 지정하기 때문에, 실제로 인스턴스를 생성하는 코드를 함께 봐야 이해하기 쉽습니다. 예를 들어 지금까지 만든 person 클래스로 superson이라는 인스턴스를 만든다면, person 클래스와 <code>__init__</code> 함수 내부에서는 다음과 같은 일이 발생할 것입니다.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb30-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> person:</a>
-<a class="sourceLine" id="cb30-2" title="2">...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</a>
-<a class="sourceLine" id="cb30-3" title="3">...         <span class="va">self</span>.name <span class="op">=</span> name <span class="co"># 인스턴스의 name 속성 = name 에 들어있는 값</span></a>
-<a class="sourceLine" id="cb30-4" title="4">...         <span class="va">self</span>.age <span class="op">=</span> age <span class="co"># 인스턴스의 age 속성 = age 에 들어있는 값</span></a>
-<a class="sourceLine" id="cb30-5" title="5"><span class="op">&gt;&gt;&gt;</span> superson <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;손흥민&quot;</span>, age<span class="op">=</span><span class="dv">28</span>) </a>
-<a class="sourceLine" id="cb30-6" title="6"></a>
-<a class="sourceLine" id="cb30-7" title="7"><span class="co">##################### __init__ 함수 내부에서의 작용 ###########################</span></a>
-<a class="sourceLine" id="cb30-8" title="8"><span class="fu">__init__</span>(<span class="va">self</span><span class="op">=</span>superson, name<span class="op">=</span><span class="st">&quot;손흥민&quot;</span>, age<span class="op">=</span><span class="dv">28</span>):</a>
-<a class="sourceLine" id="cb30-9" title="9">    superson.name <span class="op">=</span> <span class="st">&quot;손흥민&quot;</span> <span class="co"># superson.name 에는 &quot;손흥민&quot; 할당</span></a>
-<a class="sourceLine" id="cb30-10" title="10">    superson.age <span class="op">=</span> <span class="dv">28</span> <span class="co"># superson.age 에는 28 할당</span></a>
-<a class="sourceLine" id="cb30-11" title="11"><span class="co">###############################################################################</span></a>
-<a class="sourceLine" id="cb30-12" title="12"></a>
-<a class="sourceLine" id="cb30-13" title="13"><span class="op">&gt;&gt;&gt;</span> superson.name</a>
-<a class="sourceLine" id="cb30-14" title="14"><span class="co">&#39;손흥민&#39;</span></a>
-<a class="sourceLine" id="cb30-15" title="15"><span class="op">&gt;&gt;&gt;</span> supserson.age</a>
-<a class="sourceLine" id="cb30-16" title="16"><span class="dv">28</span></a></code></pre></div>
+<p>하지만 위와 같은 클래스는 아무 속성도 갖지 않고, 아무런 행동도 할 수 없습니다. 이제부터는 속성을 갖는 <code>person</code> 클래스를 만들어보도록 하겠습니다. 클래스에 속성을 부여하기 위해서는, 클래스 안에 <code>__init__</code> 함수를 정의해야 합니다. <strong><code>__init__</code> 함수는 초기화, 혹은 시작을 뜻하며 클래스가 필수적으로 가져야 할 속성들을 정의합니다.</strong> <strong>init</strong> 함수의 기본적인 구조는 다음과 같습니다.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb32-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="fu">__init__</span>(<span class="va">self</span>, 속성1, 속성2, ...):</a>
+<a class="sourceLine" id="cb32-2" title="2">...     <span class="va">self</span>.속성1 <span class="op">=</span> 속성1</a>
+<a class="sourceLine" id="cb32-3" title="3">...     <span class="va">self</span>.속성2 <span class="op">=</span> 속성2</a>
+<a class="sourceLine" id="cb32-4" title="4">...     ...</a></code></pre></div>
+<p><strong><code>__init__</code> 함수는 <code>self</code>, <code>속성</code> 이라는 두 종류의 매개변수를 갖습니다. <code>self</code> 는 클래스에 의해 생성될 인스턴스를 가리키며, 클래스 안에서 정의되는 모든 함수에 반드시 포함되어야 하는 매개변수입니다.</strong> <code>self</code> 이후의 매개변수들은 자신이 원하는 속성들을 표현할 수 있는 변수 이름들을 나열해주시면 됩니다. 만약 <code>person</code> 클래스에 <code>name</code>과 <code>age</code>라는 속성을 정의하고 싶다면 우선 <code>self</code>, <code>name</code>, <code>age</code>라는 세 가지 매개변수를 갖는 <code>__init__</code> 함수를 클래스 안에 정의해야 합니다. 즉 우선 다음과 같이 써야 합니다.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb33-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> person:</a>
+<a class="sourceLine" id="cb33-2" title="2">...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</a></code></pre></div>
+<p>이제 <code>__init__</code> 함수의 내부를 살펴볼 차례입니다. <code>__init__</code> 함수의 내부 구조는 간단하지만, 처음 보면 당황스러울 수 있습니다. 자신이 정의하려는 속성들을 <code>self.속성 = 속성</code>과 같이 차례로 할당해주면 됩니다. <code>self</code> 는 클래스에 의해 생성될 인스턴스라고 언급하였습니다. 따라서 <code>self.name</code> 코드는 새로 만들 인스턴스의 <code>name</code> 속성에 <code>name</code> 값을 할당하며, <code>self.age</code> 코드는 새로 만들 인스턴스의 <code>age</code> 속성에 <code>age</code> 값을 할당합니다.</p>
+<p><code>name</code> 값과 <code>age</code> 값은 사용자가 인스턴스를 생성할 때 지정하기 때문에, 실제로 인스턴스를 생성하는 코드를 함께 봐야 이해하기 쉽습니다. 예를 들어 지금까지 만든 <code>person</code> 클래스로 <code>superson</code>이라는 인스턴스를 만든다면, <code>person</code> 클래스와 <code>__init__</code> 함수 내부에서는 다음과 같은 일이 발생할 것입니다.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb34-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> person:</a>
+<a class="sourceLine" id="cb34-2" title="2">...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</a>
+<a class="sourceLine" id="cb34-3" title="3">...         <span class="va">self</span>.name <span class="op">=</span> name <span class="co"># 인스턴스의 name 속성 = name 에 들어있는 값</span></a>
+<a class="sourceLine" id="cb34-4" title="4">...         <span class="va">self</span>.age <span class="op">=</span> age <span class="co"># 인스턴스의 age 속성 = age 에 들어있는 값</span></a>
+<a class="sourceLine" id="cb34-5" title="5"><span class="op">&gt;&gt;&gt;</span> superson <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;손흥민&quot;</span>, age<span class="op">=</span><span class="dv">28</span>) </a>
+<a class="sourceLine" id="cb34-6" title="6"></a>
+<a class="sourceLine" id="cb34-7" title="7"><span class="co">################## __init__ 함수 내부에서의 가상의 작용 #######################</span></a>
+<a class="sourceLine" id="cb34-8" title="8"><span class="fu">__init__</span>(<span class="va">self</span><span class="op">=</span>superson, name<span class="op">=</span><span class="st">&quot;손흥민&quot;</span>, age<span class="op">=</span><span class="dv">28</span>):</a>
+<a class="sourceLine" id="cb34-9" title="9">    superson.name <span class="op">=</span> <span class="st">&quot;손흥민&quot;</span> <span class="co"># superson.name 에는 &quot;손흥민&quot; 할당</span></a>
+<a class="sourceLine" id="cb34-10" title="10">    superson.age <span class="op">=</span> <span class="dv">28</span> <span class="co"># superson.age 에는 28 할당</span></a>
+<a class="sourceLine" id="cb34-11" title="11"><span class="co">###############################################################################</span></a>
+<a class="sourceLine" id="cb34-12" title="12"></a>
+<a class="sourceLine" id="cb34-13" title="13"><span class="op">&gt;&gt;&gt;</span> superson.name</a>
+<a class="sourceLine" id="cb34-14" title="14"><span class="co">&#39;손흥민&#39;</span></a>
+<a class="sourceLine" id="cb34-15" title="15"><span class="op">&gt;&gt;&gt;</span> supserson.age</a>
+<a class="sourceLine" id="cb34-16" title="16"><span class="dv">28</span></a></code></pre></div>
 </div>
 <div id="클래스에-메소드-부여하기" class="section level3">
 <h3>클래스에 메소드 부여하기</h3>
-<p>일정한 속성을 갖는 클래스를 생성했다면 이제는 메소드, 즉 행동을 정의해볼 차례입니다. 메소드는 역시 class 안에 함수로 정의하며, 자신이 원하는 이름으로 함수를 만들어주면 됩니다. 반드시 self를 매개변수로 갖는다는 점이 일반적인 함수와 다릅니다.</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb31-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> 메소드명(<span class="va">self</span>, 인자1, 인자2, ...):</a>
-<a class="sourceLine" id="cb31-2" title="2"><span class="op">&gt;&gt;&gt;</span>    연산</a>
-<a class="sourceLine" id="cb31-3" title="3"><span class="op">&gt;&gt;&gt;</span>    <span class="cf">return</span> 결과물</a></code></pre></div>
-<p>간단하게 매개변수 없이 “Hello” 를 프린트하는 sayhello 메소드를 정의해보겠습니다. 메소드는 만들어진 인스턴스 이름 뒤에 점을 짝고 사용하면 됩니다.</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb32-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> person:</a>
-<a class="sourceLine" id="cb32-2" title="2">...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</a>
-<a class="sourceLine" id="cb32-3" title="3">...         <span class="va">self</span>.name <span class="op">=</span> name</a>
-<a class="sourceLine" id="cb32-4" title="4">...         <span class="va">self</span>.age <span class="op">=</span> age</a>
-<a class="sourceLine" id="cb32-5" title="5">...     <span class="kw">def</span> sayhello(<span class="va">self</span>):</a>
-<a class="sourceLine" id="cb32-6" title="6">...         <span class="bu">print</span>(<span class="st">&quot;Hello!&quot;</span>)</a>
-<a class="sourceLine" id="cb32-7" title="7"><span class="op">&gt;&gt;&gt;</span> superson <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;손흥민&quot;</span>, age<span class="op">=</span><span class="dv">28</span>)</a>
-<a class="sourceLine" id="cb32-8" title="8"><span class="op">&gt;&gt;&gt;</span> superson.sayhello()</a>
-<a class="sourceLine" id="cb32-9" title="9">Hello<span class="op">!</span></a></code></pre></div>
-<p>이번에는 매개변수와 반환을 갖는 run 메소드를 정의해보겠습니다. 우선 추가적으로 사람이 1초 동안 달릴 수 있는 거리를 speed 라는 속성으로 정의합니다. <code>__init__</code> 함수에 speed와 관련된 코드를 추가해줍니다. 다음으로 매개변수 t를 받아서 t초 동안 달린 거리를 반환하는 run 메소드를 정의합니다. 인스턴스의 속도는 self.speed에 저장될 것이므로, self.speed * t를 계산하면 해당 인스턴스가 t초 동안 달린 거리를 구할 수 있습니다. 이 결과를 반환값으로 지정합니다.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb33-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> person:</a>
-<a class="sourceLine" id="cb33-2" title="2">...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age, speed):</a>
-<a class="sourceLine" id="cb33-3" title="3">...         <span class="va">self</span>.name <span class="op">=</span> name</a>
-<a class="sourceLine" id="cb33-4" title="4">...         <span class="va">self</span>.age <span class="op">=</span> age</a>
-<a class="sourceLine" id="cb33-5" title="5">...         <span class="va">self</span>.speed <span class="op">=</span> speed <span class="co"># 인스턴스의 속도</span></a>
-<a class="sourceLine" id="cb33-6" title="6">...     <span class="kw">def</span> sayhello(<span class="va">self</span>):</a>
-<a class="sourceLine" id="cb33-7" title="7">...         <span class="bu">print</span>(<span class="st">&quot;Hello!&quot;</span> )</a>
-<a class="sourceLine" id="cb33-8" title="8">...     <span class="kw">def</span> run(<span class="va">self</span>, t):</a>
-<a class="sourceLine" id="cb33-9" title="9">...         <span class="cf">return</span> <span class="va">self</span>.speed <span class="op">*</span> t <span class="co"># 인스턴스의 속도로 t초간 달린 거리</span></a></code></pre></div>
+<p>일정한 속성을 갖는 클래스를 생성했다면 이제는 메소드, 즉 행동을 정의해볼 차례입니다. 메소드는 역시 클래스 안에 함수로 정의하며, 자신이 원하는 이름으로 함수를 만들어주면 됩니다. 반드시 <code>self</code>를 매개변수로 갖는다는 점이 일반적인 함수와 다릅니다.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb35-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> 메소드명(<span class="va">self</span>, 인자1, 인자2, ...):</a>
+<a class="sourceLine" id="cb35-2" title="2"><span class="op">&gt;&gt;&gt;</span>    연산</a>
+<a class="sourceLine" id="cb35-3" title="3"><span class="op">&gt;&gt;&gt;</span>    <span class="cf">return</span> 결과물</a></code></pre></div>
+<p>간단하게 매개변수 없이 <code>&quot;Hello&quot;</code> 를 프린트하는 <code>sayhello</code> 메소드를 정의해보겠습니다. 메소드는 만들어진 인스턴스 이름 뒤에 점을 짝고 사용하면 됩니다.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb36-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> person:</a>
+<a class="sourceLine" id="cb36-2" title="2">...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</a>
+<a class="sourceLine" id="cb36-3" title="3">...         <span class="va">self</span>.name <span class="op">=</span> name</a>
+<a class="sourceLine" id="cb36-4" title="4">...         <span class="va">self</span>.age <span class="op">=</span> age</a>
+<a class="sourceLine" id="cb36-5" title="5">...     <span class="kw">def</span> sayhello(<span class="va">self</span>):</a>
+<a class="sourceLine" id="cb36-6" title="6">...         <span class="bu">print</span>(<span class="st">&quot;Hello!&quot;</span>)</a>
+<a class="sourceLine" id="cb36-7" title="7"><span class="op">&gt;&gt;&gt;</span> superson <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;손흥민&quot;</span>, age<span class="op">=</span><span class="dv">28</span>)</a>
+<a class="sourceLine" id="cb36-8" title="8"><span class="op">&gt;&gt;&gt;</span> superson.sayhello()</a>
+<a class="sourceLine" id="cb36-9" title="9">Hello<span class="op">!</span></a></code></pre></div>
+<p>이번에는 매개변수와 반환을 갖는 <code>run</code> 메소드를 정의해보겠습니다. 우선 추가적으로 사람이 1초 동안 달릴 수 있는 거리를 <code>speed</code> 라는 속성으로 정의합니다. <code>__init__</code> 함수에 <code>speed</code>와 관련된 코드를 추가해줍니다. 다음으로 매개변수 <code>t</code>를 받아서 <code>t</code>초 동안 달린 거리를 반환하는 <code>run</code> 메소드를 정의합니다. 인스턴스의 속도는 <code>self.speed</code>에 저장될 것이므로, <code>self.speed * t</code>를 계산하면 해당 인스턴스가 <code>t</code>초 동안 달린 거리를 구할 수 있습니다. 이 결과를 반환값으로 지정합니다.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb37-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> person:</a>
+<a class="sourceLine" id="cb37-2" title="2">...     <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age, speed):</a>
+<a class="sourceLine" id="cb37-3" title="3">...         <span class="va">self</span>.name <span class="op">=</span> name</a>
+<a class="sourceLine" id="cb37-4" title="4">...         <span class="va">self</span>.age <span class="op">=</span> age</a>
+<a class="sourceLine" id="cb37-5" title="5">...         <span class="va">self</span>.speed <span class="op">=</span> speed <span class="co"># 인스턴스의 속도</span></a>
+<a class="sourceLine" id="cb37-6" title="6">...     <span class="kw">def</span> sayhello(<span class="va">self</span>):</a>
+<a class="sourceLine" id="cb37-7" title="7">...         <span class="bu">print</span>(<span class="st">&quot;Hello!&quot;</span> )</a>
+<a class="sourceLine" id="cb37-8" title="8">...     <span class="kw">def</span> run(<span class="va">self</span>, t):</a>
+<a class="sourceLine" id="cb37-9" title="9">...         <span class="cf">return</span> <span class="va">self</span>.speed <span class="op">*</span> t <span class="co"># 인스턴스의 속도로 t초간 달린 거리</span></a></code></pre></div>
 <p>이제 평범한 사람과 손흥민 선수가 같이 달려보겠습니다. 손흥민 선수는 1초에 100미터를 뛰는 스피드를 가졌고, 평범한 사람은 1초에 10미터를 뛰는 스피드를 가졌습니다. 사실 성인 남성 중에서도 굉장히 잘 뛰는 편인데, 손흥민 선수가 1000미터를 뛸 동안 평범한 사람은 100미터 밖에 뛰지 못했습니다.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb34-1" title="1"><span class="op">&gt;&gt;&gt;</span> superson <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;손흥민&quot;</span>, age<span class="op">=</span><span class="dv">28</span>, speed<span class="op">=</span><span class="dv">100</span>)</a>
-<a class="sourceLine" id="cb34-2" title="2"><span class="op">&gt;&gt;&gt;</span> superson.run(t<span class="op">=</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb34-3" title="3"><span class="dv">1000</span></a>
-<a class="sourceLine" id="cb34-4" title="4"><span class="op">&gt;&gt;&gt;</span> normal_guy <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;김철수&quot;</span>, age<span class="op">=</span><span class="dv">20</span>, speed<span class="op">=</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb34-5" title="5"><span class="op">&gt;&gt;&gt;</span> normal_guy.run(t<span class="op">=</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb34-6" title="6"><span class="dv">100</span></a></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb38-1" title="1"><span class="op">&gt;&gt;&gt;</span> superson <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;손흥민&quot;</span>, age<span class="op">=</span><span class="dv">28</span>, speed<span class="op">=</span><span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb38-2" title="2"><span class="op">&gt;&gt;&gt;</span> superson.run(t<span class="op">=</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb38-3" title="3"><span class="dv">1000</span></a>
+<a class="sourceLine" id="cb38-4" title="4"><span class="op">&gt;&gt;&gt;</span> normal_guy <span class="op">=</span> person(name<span class="op">=</span><span class="st">&quot;김철수&quot;</span>, age<span class="op">=</span><span class="dv">20</span>, speed<span class="op">=</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb38-5" title="5"><span class="op">&gt;&gt;&gt;</span> normal_guy.run(t<span class="op">=</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb38-6" title="6"><span class="dv">100</span></a></code></pre></div>
 </div>
 </div>
 </div>
@@ -1925,25 +1965,25 @@ $(document).ready(function () {
 <h1>3. 패키지</h1>
 <div id="모듈" class="section level2">
 <h2>3.1. 모듈</h2>
-<p>패키지를 다루기 전에, 먼저 모듈이라는 개념에 대해 알아보겠습니다. 모듈은 함수나 변수, 클래스 등을 모아놓은 파일입니다. 즉 모듈은 결국 이미 만들어진 파이썬 코드들입니다. 모듈의 가장 큰 특징은 다른 프로그램에서 손쉽게 재사용할 수 있다는 점입니다. 따라서 다른 사람들이 작성한 코드들을 가져다 쓸 수도 있고, 자신이 작성한 코드를 모듈화해서 보관하였다가 나중에 재사용하는 것도 가능합니다. 일단 간단한 모듈을 만들어보면서 자세히 알아보겠습니다. 모듈은 .ipynb 가 아닌 .py 로 저장할 것이므로 주피터 노트북이 아닌 다른 에디터에서 코드를 작성하시기 바랍니다.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb35-1" title="1"><span class="kw">def</span> add(a,b):</a>
-<a class="sourceLine" id="cb35-2" title="2">    <span class="cf">return</span> a <span class="op">+</span> b</a>
-<a class="sourceLine" id="cb35-3" title="3"><span class="kw">def</span> sub(a,b):</a>
-<a class="sourceLine" id="cb35-4" title="4">    <span class="cf">return</span> a <span class="op">-</span> b</a></code></pre></div>
-<p>위와 같이 덧셈, 뺄셈을 실행하는 간단한 함수 두 개를 정의하고, mod1.py라는 이름으로 주피터 노트북이 실행되고 있는 디렉토리에 저장합니다. 이제 파이썬에서 우리가 작성한 mod1 모듈을 불러와서 사용할 수 있습니다.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb36-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> mod1</a>
-<a class="sourceLine" id="cb36-2" title="2"><span class="op">&gt;&gt;&gt;</span> mod1.add(<span class="dv">3</span>,<span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb36-3" title="3"><span class="dv">7</span></a>
-<a class="sourceLine" id="cb36-4" title="4"><span class="op">&gt;&gt;&gt;</span> mod1.sub(<span class="dv">5</span>,<span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb36-5" title="5"><span class="dv">4</span></a></code></pre></div>
-<p>import 문은 만들어진 모듈을 현재 파이썬 프로그램에 불러오는 구문입니다. import mod1 을 실행하면, mod1 모듈 안에 들어있는 add 함수와 sub 함수를 사용할 수 있게 됩니다. 모듈 안에 들어있는 함수나 클래스를 사용하려면 모듈명.함수명(), 모듈명.클래스멍() 과 같이 모듈 이름 뒤에 점을 찍고 함수를 호출하면 됩니다. 즉 mod1.add(3,4) 는 mod1 모듈 안에 들어있는 add 함수를 실행하는 코드입니다.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb37-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> mod1 <span class="im">as</span> m</a>
-<a class="sourceLine" id="cb37-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> mod1 <span class="im">import</span> add</a></code></pre></div>
-<p>import 문은 다양한 방식으로 사용할 수 있습니다. 첫 줄은 mod1 모듈을 m이라는 변수로 불러오는 코드입니다. import 를 이렇게 실행할 경우, m.add()와 같이 자신이 지정한 변수명으로 모듈을 사용할 수 있습니니다. 둘째 줄은 모듈로부터 특정한 함수만 불러오는 코드입니다. 때에 따라 모듈 전체를 프로그램에 불러올 필요가 없을 수도 있습니다. 이런 경우에는 from 모듈명 import 함수/클래스 와 같이 필요한 함수나 패키지를 특정하여 불러올 수도 있습니다. import를 이렇게 실행한 경우, 모듈명을 생략하고 add()를 사용해서 즉시 mod1 모듈의 add 함수를 사용할 수 있습니다.</p>
+<p>패키지를 다루기 전에, 먼저 모듈이라는 개념에 대해 알아보겠습니다. 모듈은 함수나 변수, 클래스 등을 모아놓은 파일입니다. 즉 모듈은 결국 이미 만들어진 파이썬 코드들입니다. 모듈의 가장 큰 특징은 다른 프로그램에서 손쉽게 재사용할 수 있다는 점입니다. 따라서 다른 사람들이 작성한 코드들을 가져다 쓸 수도 있고, 자신이 작성한 코드를 모듈화해서 보관하였다가 나중에 재사용하는 것도 가능합니다. 일단 간단한 모듈을 만들어보면서 자세히 알아보겠습니다. 모듈은 파이썬 파일 <code>.py</code> 로 저장할 것이므로 주피터 노트북이 아닌 다른 에디터에서 코드를 작성하시기 바랍니다.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb39-1" title="1"><span class="kw">def</span> add(a,b):</a>
+<a class="sourceLine" id="cb39-2" title="2">    <span class="cf">return</span> a <span class="op">+</span> b</a>
+<a class="sourceLine" id="cb39-3" title="3"><span class="kw">def</span> sub(a,b):</a>
+<a class="sourceLine" id="cb39-4" title="4">    <span class="cf">return</span> a <span class="op">-</span> b</a></code></pre></div>
+<p>위와 같이 덧셈, 뺄셈을 실행하는 간단한 함수 두 개를 정의하고, <code>mod1.py</code>라는 이름으로 주피터 노트북이 실행되고 있는 디렉토리에 저장합니다. 이제 파이썬에서 우리가 작성한 <code>mod1</code> 모듈을 불러와서 사용할 수 있습니다.</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb40-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> mod1</a>
+<a class="sourceLine" id="cb40-2" title="2"><span class="op">&gt;&gt;&gt;</span> mod1.add(<span class="dv">3</span>,<span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb40-3" title="3"><span class="dv">7</span></a>
+<a class="sourceLine" id="cb40-4" title="4"><span class="op">&gt;&gt;&gt;</span> mod1.sub(<span class="dv">5</span>,<span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb40-5" title="5"><span class="dv">4</span></a></code></pre></div>
+<p><code>import</code> 문은 만들어진 모듈을 현재 파이썬 프로그램에 불러오는 구문입니다. <code>import mod1</code> 을 실행하면, <code>mod1</code> 모듈 안에 들어있는 <code>add</code> 함수와 <code>sub</code> 함수를 사용할 수 있게 됩니다. 모듈 안에 들어있는 함수나 클래스를 사용하려면 <code>모듈명.함수명()</code>, <code>모듈명.클래스멍()</code> 과 같이 모듈 이름 뒤에 점을 찍고 함수를 호출하면 됩니다. 즉 <code>mod1.add(3,4)</code> 는 <code>mod1</code> 모듈 안에 들어있는 <code>add</code> 함수를 실행하는 코드입니다.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb41-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> mod1 <span class="im">as</span> m</a>
+<a class="sourceLine" id="cb41-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> mod1 <span class="im">import</span> add</a></code></pre></div>
+<p><code>import</code> 는 다양한 방식으로 실행할 수 있습니다. 첫 줄은 <code>mod1</code> 모듈을 <code>m</code>이라는 별칭(aliasing)로 불러오는 코드입니다. 이 경우 <code>m.add()</code>와 같이 자신이 지정한 이름으로 모듈을 사용할 수 있습니니다. 둘째 줄은 모듈로부터 특정한 함수만 불러오는 코드입니다. 때에 따라 모듈 전체를 프로그램에 불러올 필요가 없을 수도 있습니다. 이런 경우에는 <code>from 모듈명 import 함수/클래스</code> 와 같이 필요한 함수나 패키지를 특정하여 불러올 수도 있습니다. 이 경우, 모듈명을 생략하고 <code>add()</code>를 사용해서 즉시 <code>mod1</code> 모듈의 <code>add</code> 함수를 사용할 수 있습니다.</p>
 </div>
 <div id="패키지-1" class="section level2">
 <h2>3.2. 패키지</h2>
-<p>패키지는 계층적인 구조(디렉토리)로 관리되는 모듈들의 모음입니다. 즉 패키지 역시 사실은 파이썬 코드들의 모음입니다. 다음과 같은 구조로 된 패키지를 살펴보겠습니다. 물론 실제 pandas 패키지는 이와 동일하게 생기지는 않았습니다. pandas 패키지의 실제 구조는 <a href="https://github.com/pandas-dev/pandas">판다스 깃허브</a>에서 확인할 수 있습니다.</p>
+<p>패키지는 계층적인 구조(디렉토리)로 관리되는 모듈들의 모음입니다. 즉 패키지 역시 사실은 파이썬 코드들의 모음입니다. 다음과 같은 구조로 된 패키지를 살펴보겠습니다. 물론 실제 <code>pandas</code> 패키지는 이와 동일하게 생기지는 않았습니다. <code>pandas</code> 패키지의 실제 구조는 <a href="https://github.com/pandas-dev/pandas">판다스 깃허브</a>에서 확인할 수 있습니다.</p>
 <pre><code>pandas/
     __init__.py
     core/
@@ -1954,27 +1994,30 @@ $(document).ready(function () {
         __init__.py
         api.py
         html.py</code></pre>
-<p>.py 확장자가 붙은 파일은 파이썬 모듈이고, 확장자가 없고 /가 붙은 파일은 디렉토리 입니다. 즉 가장 상위에 pandas 라는 루트 디렉토리가 존재하고, 이 아래에 _<em>init_</em>.py 파일과 core, io 서브 디렉토리가 존재합니다. 각각의 서브 디렉토리 아래에는 다시 파이썬 모듈들이 들어있습니다. 만약 padnas/core/series.py 안에 들어있는 함수나 클래스에 접근하려면 어떻게 해야 할까요? 모듈에서 했던 것과 똑같이 점을 찍어서 하위 디렉토리로 내려가주면 됩니다.</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb39-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> pandas</a>
-<a class="sourceLine" id="cb39-2" title="2"><span class="op">&gt;&gt;&gt;</span> pandas.core.series.함수명() <span class="co"># pandas/core/series.py 안에 있는 함수 호출</span></a>
-<a class="sourceLine" id="cb39-3" title="3"><span class="op">&gt;&gt;&gt;</span> pandas.core.series.클래스명() <span class="co"># pandas/core/series.py 안에 있는 클래스 호출</span></a></code></pre></div>
+<p><code>.py</code> 확장자가 붙은 파일은 파이썬 모듈이고, 확장자가 없고 /가 붙은 파일은 디렉토리 입니다. 즉 가장 상위에 <code>pandas</code> 라는 루트 디렉토리가 존재하고, 이 아래에 <code>\__init\__.py</code> 파일과 <code>core, io</code> 서브 디렉토리가 존재합니다. 각각의 서브 디렉토리 아래에는 다시 파이썬 모듈들이 들어있습니다. 만약 <code>padnas/core/series.py</code> 안에 들어있는 함수나 클래스에 접근하려면 어떻게 해야 할까요? 모듈에서 했던 것과 똑같이 점을 찍어서 하위 디렉토리로 내려가주면 됩니다.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb43-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> pandas</a>
+<a class="sourceLine" id="cb43-2" title="2"><span class="op">&gt;&gt;&gt;</span> pandas.core.series.함수명() <span class="co"># pandas/core/series.py 안에 있는 함수 호출</span></a>
+<a class="sourceLine" id="cb43-3" title="3"><span class="op">&gt;&gt;&gt;</span> pandas.core.series.클래스명() <span class="co"># pandas/core/series.py 안에 있는 클래스 호출</span></a></code></pre></div>
 <p>여기에서 패키지의 계층적인 구조를 이해하는 것이 목표이며, 직접 패키지를 제작해보지는 않을 것입니다. 만약 직접 패키지를 만들어보고 싶다면 <a href="https://wikidocs.net/1418">점프 투 파이썬</a> 교재를 참고하시기 바랍니다. 모듈과 패키지는 결국 이미 만들어진 파이썬 코드들의 모음이라고 했습니다. 우리는 데이터 분석에 필요한 코드들을 전부 직접 만들어서 사용하지는 않을 것이고, 다른 사람들이 만들어놓은 유용한 도구들을 찾아서 활용하게 될 것입니다. 물론 자신이 직접 유용한 패키지를 개발해서 배포한다면 파이썬 데이터 분석 생태계에 큰 도움이 되겠지만, 지금 당장은 시작하는 입장이므로 만들어진 툴을 잘 활용하는 것에 중점을 두도록 합시다!</p>
 </div>
 <div id="파이썬-패키지-관리자-pip-conda" class="section level2">
 <h2>3.3. 파이썬 패키지 관리자: pip &amp; conda</h2>
 <div id="pip-install" class="section level3">
 <h3>pip install</h3>
-<p>pip는 파이썬의 패키지 관리 시스템입니다. pip를 통해서 다른 사람들이 개발한 패키지를 다운로드하거나, 이미 설치된 패키지를 업그레이드 혹은 삭제할 수도 있습니다. 다음은 pip의 기본적인 패키지 설치/삭제 명령어입니다. pip 명령어는 주피터 노트북 셀 혹은 기타 터미널에서 사용할 수 있습니다.</p>
+<p><code>pip</code>는 파이썬의 패키지 관리 시스템입니다. <code>pip</code>를 통해서 다른 사람들이 개발한 패키지를 다운로드하거나, 이미 설치된 패키지를 업그레이드 혹은 삭제할 수도 있습니다. 다음은 <code>pip</code>의 기본적인 패키지 설치/삭제 명령어입니다. <code>pip</code> 명령어는 주피터 노트북 셀 혹은 기타 터미널에서 사용할 수 있습니다.</p>
 <ul>
-<li>pip install 패키지명</li>
-<li>pip uninstall 패키지명</li>
+<li><code>pip install 패키지명</code></li>
+<li><code>pip uninstall 패키지명</code></li>
 </ul>
-<p>주피터 노트북이나 터미널 창에서 다음 명령어를 실행해보시기 바랍니다. scikit-learn은 파이썬의 대표적인 머신러닝 패키지이며, 딥러닝을 제외한 거의 모든 머신러닝에서 사실상의 표준입니다.</p>
-<pre><code>pip install scikit-learn</code></pre>
+<p>주피터 노트북이나 터미널 창에서 다음 명령어를 실행해보시기 바랍니다. <code>scikit-learn</code>은 파이썬의 대표적인 머신러닝 패키지이며, 딥러닝을 제외한 거의 모든 머신러닝에서 사실상의 표준입니다. 설치된 이후에는 import 문을 사용해서 사이킷 런의 선형회귀 클래스와 판다스, 넘파이를 주피터에 불러와보세요.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb44-1" title="1"><span class="op">&gt;&gt;&gt;</span> pip install scikit<span class="op">-</span>learn</a>
+<a class="sourceLine" id="cb44-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression <span class="co"># 사이킷런의 선형회귀 클래스 불러옴</span></a>
+<a class="sourceLine" id="cb44-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> pandas <span class="im">as</span> pd <span class="co"># pandas 패키지를 pd라는 별칭으로 불러옴</span></a>
+<a class="sourceLine" id="cb44-4" title="4"><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> numpy <span class="im">as</span> np <span class="co"># numpy 패키지를 np라는 별칭으로 불러옴</span></a></code></pre></div>
 </div>
 <div id="conda-install" class="section level3">
 <h3>conda install</h3>
-<p>아나콘다에는 pip install 과 유사한 conda install 이라는 패키지 설치 명령어가 존재합니다. 파이썬으로 개발된 패키지들은 대부분 PyPI(<a href="https://pypi.org/)라는" class="uri">https://pypi.org/)라는</a> 패키지 저장소를 통해 배포됩니다. pip install ~ 명령어는 PyPI를 통해 배포된 패키지들을 다운로드합니다. 반면 conda install ~ 명령어는 Anaconda Repository, Anaconda Cloud를 통해 배포된 패키지들을 다운로드합니다. 대부분의 경우 pip install을 사용하든 conda install을 사용하든 큰 차이가 없습니다. 하지만 pip와 conda의 인스톨 방식에 차이가 있기 때문에 pip로 설치되지 않는 패키지가 conda install을 통해서는 설치되는 경우도 있습니다. pip와 conda의 차이를 정확히 이해하기 위해서는 <a href="https://www.anaconda.com/understanding-conda-and-pip/">Understanding Conda and Pip</a>를 참고하시기 바랍니다.</p>
+<p>아나콘다에는 <code>pip install</code> 과 유사한 <code>conda install</code> 이라는 패키지 설치 명령어가 존재합니다. 파이썬으로 개발된 패키지들은 대부분 <a href="https://pypi.org/">PyPI</a>라는 패키지 저장소를 통해 배포됩니다. <code>pip install</code> 명령어는 PyPI를 통해 배포된 패키지들을 다운로드합니다. 반면 <code>conda install</code> 명령어는 Anaconda Repository, Anaconda Cloud를 통해 배포된 패키지들을 다운로드합니다. 대부분의 경우 <code>pip</code> 를 사용하든 <code>conda</code> 를 사용하든 큰 차이가 없습니다. 하지만 <code>pip</code>와 <code>conda</code>의 인스톨 방식에 차이가 있기 때문에 <code>pip</code>로 설치되지 않는 패키지가 <code>conda</code>를 통해서는 설치되는 경우도 있습니다. <code>pip</code>와 <code>conda</code>의 차이를 정확히 이해하기 위해서는 <a href="https://www.anaconda.com/understanding-conda-and-pip/">Understanding Conda and Pip</a>를 참고하시기 바랍니다.</p>
 </div>
 </div>
 </div>

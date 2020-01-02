@@ -1535,10 +1535,12 @@ $(document).ready(function () {
       <li><a href="#문자열-연산자">2.3. 문자열 연산자</a></li>
       <li><a href="#인덱싱-슬라이싱">2.4. 인덱싱 &amp; 슬라이싱</a></li>
       <li><a href="#문자열의-메소드">2.5. 문자열의 메소드</a></li>
+      <li><a href="#문자열-포매팅">2.6. 문자열 포매팅</a></li>
       </ul></li>
       <li><a href="#불리언">3. 불리언</a><ul>
       <li><a href="#불리언-자료형">3.1. 불리언 자료형</a></li>
       <li><a href="#논리-연산자">3.2. 논리 연산자</a></li>
+      <li><a href="#any-all">3.3. any, all</a></li>
       </ul></li>
       <li><a href="#변수와-함수">4. 변수와 함수</a><ul>
       <li><a href="#변수">4.1. 변수</a></li>
@@ -1549,7 +1551,7 @@ $(document).ready(function () {
       <li><a href="#리스트-연산자">5.2. 리스트 연산자</a></li>
       <li><a href="#리스트-인덱싱-슬라이싱">5.3. 리스트 인덱싱 &amp; 슬라이싱</a></li>
       <li><a href="#리스트-메소드">5.4. 리스트 메소드</a></li>
-      <li><a href="#리스트의-요소들에-함수-적용하기-map">5.5 리스트의 요소들에 함수 적용하기: map()</a></li>
+      <li><a href="#리스트의-요소들에-함수-적용하기-map">5.5. 리스트의 요소들에 함수 적용하기: map</a></li>
       </ul></li>
       <li><a href="#튜플">6. 튜플</a></li>
       <li><a href="#셋">7. 셋</a><ul>
@@ -1581,32 +1583,60 @@ $(document).ready(function () {
 <h2>기본적인 파이썬 자료형</h2>
 <p>다음은 파이썬에서 사용되는 기본적인 자료형들의 예시입니다. 자세한 내용은 앞으로 차근차근 다룰 예정이니 눈으로만 봐두시면 됩니다.</p>
 <ul>
-<li>입력 코드는 &gt;&gt;&gt; 로 표기하였습니다.</li>
-<li>#표시가 붙은 부분은 코드에 대한 주석으로, 실제 실행되는 파이썬 코드가 아닙니다.</li>
+<li><code>&gt;&gt;&gt;</code> 표시가 붙은 부분은 파이썬 코드입니다.</li>
+<li><code>#</code> 표시가 붙은 부분은 코드에 대한 주석으로, 실제 실행되는 파이썬 코드가 아닙니다.</li>
 </ul>
+<div class="row">
+<div class="col-md-6">
 <p><strong>숫자</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="op">&gt;&gt;&gt;</span> a<span class="op">=</span><span class="dv">365</span> <span class="co"># 정수</span></a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="op">&gt;&gt;&gt;</span> b<span class="op">=</span><span class="fl">3.14</span> <span class="co"># 소수</span></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="op">&gt;&gt;&gt;</span> c<span class="op">=</span><span class="fl">1.25</span> <span class="co">#소수</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="dv">365</span> <span class="co"># 정수</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="fl">3.14</span> <span class="co"># 소수</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="op">&gt;&gt;&gt;</span> c <span class="op">=</span> <span class="fl">1.25</span> <span class="co">#소수</span></a></code></pre></div>
+</div>
+<div class="col-md-6">
 <p><strong>문자열</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="op">&gt;&gt;&gt;</span> d<span class="op">=</span><span class="st">&#39;Hello world!&#39;</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="op">&gt;&gt;&gt;</span> e<span class="op">=</span><span class="st">&quot;DataScience Lab&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="op">&gt;&gt;&gt;</span> d <span class="op">=</span> <span class="st">&#39;Hello world!&#39;</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="op">&gt;&gt;&gt;</span> e <span class="op">=</span> <span class="st">&quot;DataScience Lab&quot;</span></a></code></pre></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
 <p><strong>불리언</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" title="1"><span class="op">&gt;&gt;&gt;</span> f<span class="op">=</span><span class="va">True</span></a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="op">&gt;&gt;&gt;</span> g<span class="op">=</span><span class="va">False</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" title="1"><span class="op">&gt;&gt;&gt;</span> f <span class="op">=</span> <span class="va">True</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="op">&gt;&gt;&gt;</span> g <span class="op">=</span> <span class="va">False</span></a></code></pre></div>
+</div>
+<div class="col-md-6">
 <p><strong>리스트</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" title="1"><span class="op">&gt;&gt;&gt;</span> h<span class="op">=</span>[<span class="fl">1.1</span>, <span class="fl">2.2</span>, <span class="fl">3.3</span>, <span class="fl">4.4</span>, <span class="fl">5.5</span>]</a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="op">&gt;&gt;&gt;</span> i<span class="op">=</span>[<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>,<span class="st">&quot;d&quot;</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" title="1"><span class="op">&gt;&gt;&gt;</span> h <span class="op">=</span> [<span class="fl">1.1</span>, <span class="fl">2.2</span>, <span class="fl">3.3</span>, <span class="fl">4.4</span>, <span class="fl">5.5</span>]</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="op">&gt;&gt;&gt;</span> i <span class="op">=</span> [<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>,<span class="st">&quot;d&quot;</span>]</a></code></pre></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
 <p><strong>튜플</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" title="1"><span class="op">&gt;&gt;&gt;</span> j<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb5-2" title="2"><span class="op">&gt;&gt;&gt;</span> k<span class="op">=</span>(<span class="va">True</span>,<span class="va">False</span>,<span class="va">False</span>,<span class="va">True</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" title="1"><span class="op">&gt;&gt;&gt;</span> j <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="op">&gt;&gt;&gt;</span> k <span class="op">=</span> (<span class="va">True</span>,<span class="va">False</span>,<span class="va">False</span>,<span class="va">True</span>)</a></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><strong>셋</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" title="1"><span class="op">&gt;&gt;&gt;</span> l <span class="op">=</span> {<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>}</a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="op">&gt;&gt;&gt;</span> m <span class="op">=</span> {<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>}</a></code></pre></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
 <p><strong>딕셔너리</strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" title="1"><span class="op">&gt;&gt;&gt;</span> l<span class="op">=</span>{<span class="st">&quot;김연아&quot;</span>:<span class="st">&quot;피겨&quot;</span>, <span class="st">&quot;손흥민&quot;</span>:<span class="st">&quot;축구&quot;</span>, <span class="st">&quot;박찬호&quot;</span>:<span class="st">&quot;야구&quot;</span>}</a>
-<a class="sourceLine" id="cb6-2" title="2"><span class="op">&gt;&gt;&gt;</span> m<span class="op">=</span>{<span class="dv">1</span>:<span class="st">&quot;짜장면&quot;</span>, <span class="dv">2</span>:<span class="st">&quot;짬뽕&quot;</span>}   </a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" title="1"><span class="op">&gt;&gt;&gt;</span> n <span class="op">=</span> {<span class="st">&quot;김연아&quot;</span>:<span class="st">&quot;피겨&quot;</span>, <span class="st">&quot;손흥민&quot;</span>:<span class="st">&quot;축구&quot;</span>}</a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="op">&gt;&gt;&gt;</span> o <span class="op">=</span> {<span class="dv">1</span>:<span class="st">&quot;짜장면&quot;</span>, <span class="dv">2</span>:<span class="st">&quot;짬뽕&quot;</span>}   </a></code></pre></div>
+</div>
+<div class="col-md-6">
+
+</div>
+</div>
 </div>
 <div id="기본적인-함수와-연산자" class="section level2">
 <h2>기본적인 함수와 연산자</h2>
-<p>다음은 간단한 함수들과 연산자들입니다. 앞으로도 계속 사용할 명령어들이므로 꼭 직접 코딩해보시기 바랍니다. 특히, 비교연산자 ==와 할당연산자 =의 차이에 유의하세요! 할당연산자 =는 두 대상이 같은지 비교하는 연산자가 아니라, 변수에 값을 할당하는 할당연산자입니다. <strong>즉 a=5은 “a는 5와 같다”가 아니라, “a에 5를 할당하라”는 명령입니다!</strong></p>
+<p>다음은 이번 장에서 사용할 간단한 함수 및 연산자들입니다. <strong>비교연산자 <code>==</code>와 할당연산자 <code>=</code>의 차이에 유의하시기 바랍니다.</strong> 할당연산자 <code>=</code>는 두 대상이 같은지 비교하는 연산자가 아니라, 변수에 값을 할당하는 할당연산자입니다. 즉 <code>a=5</code>은 “a는 5와 같다”가 아니라, “a에 5를 할당하라”는 명령입니다!</p>
 <table>
 <thead>
 <tr class="header">
@@ -1618,33 +1648,39 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td>print()</td>
+<td><code>print</code></td>
 <td>대상을 출력</td>
-<td>print(“Hello world!”)</td>
-<td>Hello world!</td>
+<td><code>print(&quot;Hello world!&quot;)</code></td>
+<td><code>Hello world!</code></td>
 </tr>
 <tr class="even">
-<td>type()</td>
+<td><code>type</code></td>
 <td>대상의 자료형을 반환</td>
-<td>type(5)</td>
-<td>int</td>
+<td><code>type(5)</code></td>
+<td><code>int</code></td>
 </tr>
 <tr class="odd">
-<td>==</td>
-<td>“두 대상이 같다”를 판단</td>
-<td>‘Python’==‘R’</td>
-<td>False</td>
+<td><code>len</code></td>
+<td>대상의 길이를 반환</td>
+<td><code>len(&quot;abc&quot;)</code></td>
+<td><code>3</code></td>
 </tr>
 <tr class="even">
-<td>!=</td>
-<td>“두 대상이 같지 않다”를 판단</td>
-<td>‘Python’!=‘R’</td>
-<td>True</td>
+<td><code>==</code></td>
+<td>“두 대상이 같다”를 판단</td>
+<td><code>&#39;Python&#39;==&#39;R&#39;</code></td>
+<td><code>False</code></td>
 </tr>
 <tr class="odd">
-<td>=</td>
+<td><code>!=</code></td>
+<td>“두 대상이 같지 않다”를 판단</td>
+<td><code>&#39;Python&#39;!=&#39;R&#39;</code></td>
+<td><code>True</code></td>
+</tr>
+<tr class="even">
+<td><code>=</code></td>
 <td>왼쪽 변수에 오른쪽 값을 할당</td>
-<td>a=5</td>
+<td><code>a=5</code></td>
 <td></td>
 </tr>
 </tbody>
@@ -1655,15 +1691,23 @@ $(document).ready(function () {
 <h1>1. 숫자</h1>
 <div id="정수와-소수" class="section level2">
 <h2>1.1. 정수와 소수</h2>
-<p>파이썬의 숫자는 <strong>정수</strong>와 <strong>소수</strong>로 나뉘며, 각각 <strong>int</strong>와 <strong>float</strong>으로 표기합니다. 아래는 정수 2와 소수 3.14의 자료형을 확인하는 코드와 결과입니다. 2의 자료형은 int, 3.14의 자료형은 float임을 확인할 수 있습니다.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb7-2" title="2"><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;int&#39;</span><span class="op">&gt;</span></a></code></pre></div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="fl">3.14</span>)</a>
-<a class="sourceLine" id="cb8-2" title="2"><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;float&#39;</span><span class="op">&gt;</span></a></code></pre></div>
+<p>파이썬의 숫자는 <strong>정수</strong>와 <strong>소수</strong>로 나뉘며, 각각 <strong><code>int</code></strong>와 <strong><code>float</code></strong>으로 표기합니다. 아래는 정수 <code>2</code>와 소수 <code>3.14</code>의 자료형을 확인하는 코드와 결과입니다.</p>
+<div class="row">
+<div class="col-md-6">
+<p><strong>정수</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;int&#39;</span><span class="op">&gt;</span></a></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><strong>소수</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb9-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="fl">3.14</span>)</a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;float&#39;</span><span class="op">&gt;</span></a></code></pre></div>
+</div>
+</div>
 </div>
 <div id="자료형의-변환" class="section level2">
 <h2>1.2. 자료형의 변환</h2>
-<p><strong>int() 함수는 숫자나 문자열을 정수 자료형으로 바꿔주고, float() 함수는 숫자나 문자열을 소수 자료형으로 바꿔줍니다.</strong> 소수점을 가진 숫자 혹은 문자열을 정수로 변환하면 소수점 아래는 버림됩니다.</p>
+<p><strong><code>int</code> 함수는 숫자나 문자열을 정수 자료형으로 바꿔주고, <code>float</code> 함수는 숫자나 문자열을 소수 자료형으로 바꿔줍니다.</strong> 소수점을 가진 숫자 혹은 문자열을 정수로 변환하면 소수점 아래는 버림됩니다.</p>
 <table>
 <thead>
 <tr class="header">
@@ -1675,23 +1719,23 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td>int(x)</td>
-<td>x를 정수로 변환</td>
-<td>int(4.8)</td>
-<td>4</td>
+<td><code>int</code></td>
+<td>대상을 정수로 변환</td>
+<td><code>int(4.8)</code></td>
+<td><code>4</code></td>
 </tr>
 <tr class="even">
-<td>float(x)</td>
-<td>x를 소수로 변환</td>
-<td>float(“3”)</td>
-<td>3.0</td>
+<td><code>float</code></td>
+<td>대상을 소수로 변환</td>
+<td><code>float(&quot;3&quot;)</code></td>
+<td><code>3.0</code></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="파이썬으로-계산하기" class="section level2">
 <h2>1.2 파이썬으로 계산하기</h2>
-<p>숫자들 간에는 정수와 소수 구분 없이 다음의 연산이 가능합니다. 번거롭더라도 최소한 사칙연산 코드는 따라 쳐보면서 파이썬에 익숙해지시기 바랍니다! 사칙연산을 제외한 연산자들은 사용하는 빈도가 많지 않으니, 이런 연산이 있다고만 알아두시면 됩니다.</p>
+<p>숫자들 간에는 정수와 소수 구분 없이 다음의 연산이 가능합니다. 사칙연산과 제곱을 제외한 연산자들은 사용하는 빈도가 많지 않으니, 이런 연산이 있다고만 알아두시면 됩니다.</p>
 <table>
 <thead>
 <tr class="header">
@@ -1704,95 +1748,111 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td>a + b</td>
+<td><code>a + b</code></td>
 <td>덧셈</td>
-<td>1+1</td>
-<td>2</td>
-<td>int</td>
+<td><code>1+1</code></td>
+<td><code>2</code></td>
+<td><code>int</code></td>
 </tr>
 <tr class="even">
-<td>a - b</td>
+<td><code>a - b</code></td>
 <td>뺄셈</td>
-<td>3-2.5</td>
-<td>0.5</td>
-<td>float</td>
+<td><code>3-2.5</code></td>
+<td><code>0.5</code></td>
+<td><code>float</code></td>
 </tr>
 <tr class="odd">
-<td>a * b</td>
+<td><code>a * b</code></td>
 <td>곱셉</td>
-<td>2*4.5</td>
-<td>9.0</td>
-<td>float</td>
+<td><code>2*4.5</code></td>
+<td><code>9.0</code></td>
+<td><code>float</code></td>
 </tr>
 <tr class="even">
-<td>a / b</td>
+<td><code>a / b</code></td>
 <td>나눗셈</td>
-<td>0.9/0.3</td>
-<td>3.0</td>
-<td>float</td>
+<td><code>0.9/0.3</code></td>
+<td><code>3.0</code></td>
+<td><code>float</code></td>
 </tr>
 <tr class="odd">
-<td>a // b</td>
-<td>나눗셈의 몫</td>
-<td>8//3</td>
-<td>2</td>
-<td>int</td>
+<td><code>a ** b</code></td>
+<td>a의 b제곱</td>
+<td><code>5**2</code></td>
+<td><code>25</code></td>
+<td><code>int</code></td>
 </tr>
 <tr class="even">
-<td>a % b</td>
-<td>나눗셈의 나머지</td>
-<td>8%3</td>
-<td>2</td>
-<td>int</td>
+<td><code>a // b</code></td>
+<td>a를 b로 나눌 때의 몫</td>
+<td><code>8//3</code></td>
+<td><code>2</code></td>
+<td><code>int</code></td>
 </tr>
 <tr class="odd">
-<td>a ** b</td>
-<td>a의 b제곱</td>
-<td>5**2</td>
-<td>25</td>
-<td>int</td>
+<td><code>a % b</code></td>
+<td>a를 b로 나눌 때의 나머지</td>
+<td><code>8%3</code></td>
+<td><code>2</code></td>
+<td><code>int</code></td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb9-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb9-2" title="2"><span class="dv">2</span></a>
-<a class="sourceLine" id="cb9-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="dv">3</span> <span class="op">-</span> <span class="fl">2.5</span>)</a>
-<a class="sourceLine" id="cb9-4" title="4"><span class="fl">0.5</span></a>
-<a class="sourceLine" id="cb9-5" title="5"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="dv">2</span> <span class="op">*</span> <span class="fl">4.5</span>)</a>
-<a class="sourceLine" id="cb9-6" title="6"><span class="fl">9.0</span></a>
-<a class="sourceLine" id="cb9-7" title="7"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="fl">0.9</span><span class="op">/</span> <span class="fl">0.3</span>)</a>
-<a class="sourceLine" id="cb9-8" title="8"><span class="fl">3.0</span></a></code></pre></div>
+<div class="row">
+<div class="col-md-6">
+<p><strong>덧셈</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb10-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="dv">2</span></a></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><strong>뺄셈</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb11-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="dv">3</span> <span class="op">-</span> <span class="fl">2.5</span>)</a>
+<a class="sourceLine" id="cb11-2" title="2"><span class="fl">0.5</span></a></code></pre></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<p><strong>곱셈</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb12-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="dv">2</span> <span class="op">*</span> <span class="fl">4.5</span>)</a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="fl">9.0</span></a></code></pre></div>
+</div>
+<div class="col-md-6">
+<p><strong>나눗셈</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb13-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="fl">0.9</span><span class="op">/</span> <span class="fl">0.3</span>)</a>
+<a class="sourceLine" id="cb13-2" title="2"><span class="fl">3.0</span></a></code></pre></div>
+</div>
+</div>
 </div>
 </div>
 <div id="문자열" class="section level1">
 <h1>2. 문자열</h1>
 <div id="hello-world" class="section level2">
 <h2>2.1. Hello World</h2>
-<p>문자열은 말 그대로 문자들의 나열을 의미하며, str로 표기합니다. 작은 따옴표(’’), 혹은 큰 따옴표(&quot;“) 안에 원하는 내용을 적어주면 문자열 데이터를 만들 수 있습니다. 둘 중 무엇을 사용하든 상관은 없습니다. 프로그래밍 언어를 배울 때는”Hello World&quot;를 출력해보는 것이 관례입니다. 다같이 인사해보세요!</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb10-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="st">&quot;Hello world&quot;</span>)</a>
-<a class="sourceLine" id="cb10-2" title="2">Hello world</a>
-<a class="sourceLine" id="cb10-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="st">&quot;Hello world&quot;</span>)</a>
-<a class="sourceLine" id="cb10-4" title="4"><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;str&#39;</span><span class="op">&gt;</span></a></code></pre></div>
+<p>문자열은 말 그대로 문자들의 나열을 의미하며, <code>str</code>로 표기합니다. 작은 따옴표 <code>&#39;&#39;</code>, 혹은 큰 따옴표 <code>&quot;&quot;</code> 를 사용해서 만들 수 있습니다. 둘 중 무엇을 사용하든 상관은 없습니다. 프로그래밍 언어를 배울 때는 <code>&quot;Hello World&quot;</code>를 출력해보는 것이 관례입니다. 다같이 인사해보세요!</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb14-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="st">&quot;Hello world&quot;</span>)</a>
+<a class="sourceLine" id="cb14-2" title="2">Hello world</a>
+<a class="sourceLine" id="cb14-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="st">&quot;Hello world&quot;</span>)</a>
+<a class="sourceLine" id="cb14-4" title="4"><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;str&#39;</span><span class="op">&gt;</span></a></code></pre></div>
 <div class="warning">
-<p><strong>예제 2-1. 다음 코드의 실행 결과가 True일지 False일지 판단하세요</strong></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb11-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="dv">365</span> <span class="op">==</span> <span class="st">&quot;365&quot;</span></a></code></pre></div>
+<p><strong>예제 2-1. 다음 코드의 실행 결과가 <code>True</code>일지 <code>False</code>일지 판단하세요</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb15-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="dv">365</span> <span class="op">==</span> <span class="st">&quot;365&quot;</span></a></code></pre></div>
 <p><strong>풀이</strong></p>
-<p>숫자도 따옴표로 감싸면 문자열이 됩니다. 즉 365는 숫자이고, “365”는 문자열입니다. type(“365”)를 실행해본 결과 “365”는 문자열임을 알 수 있습니다. 이후 문자열 “365”와 숫자 365가 같은지 테스트해보면, 양쪽의 자료형이 다르기 때문이 결과는 False입니다.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb12-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="st">&quot;365&quot;</span>)</a>
-<a class="sourceLine" id="cb12-2" title="2"><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;str&#39;</span><span class="op">&gt;</span></a>
-<a class="sourceLine" id="cb12-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="dv">365</span> <span class="op">==</span> <span class="st">&quot;365&quot;</span> <span class="co"># 365 는 &quot;365&quot;와 같다: 거짓이므로 False를 반환합니다.</span></a>
-<a class="sourceLine" id="cb12-4" title="4"><span class="va">False</span></a></code></pre></div>
+<p><code>365</code>는 숫자이고, <code>&quot;365&quot;</code>는 따옴표로 둘러싸여 있으므로 문자열입니다. 문자열 <code>&quot;365&quot;</code>와 숫자 <code>365</code>가 같은지 테스트해보면, 양쪽의 자료형이 다르기 때문에 <code>False</code>가 반환됩니다.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb16-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="st">&quot;365&quot;</span>)</a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;str&#39;</span><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb16-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="dv">365</span> <span class="op">==</span> <span class="st">&quot;365&quot;</span> <span class="co"># 365 는 &quot;365&quot;와 같다: 거짓이므로 False를 반환합니다.</span></a>
+<a class="sourceLine" id="cb16-4" title="4"><span class="va">False</span></a></code></pre></div>
 </div>
 </div>
 <div id="자료형의-변환-1" class="section level2">
 <h2>2.2. 자료형의 변환</h2>
-<p>str() 함수를 사용해서 숫자를 문자열로 바꿔줄 수 있습니다.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb13-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">str</span>(<span class="fl">3.14</span>)</a>
-<a class="sourceLine" id="cb13-2" title="2"><span class="co">&#39;3.14&#39;</span></a></code></pre></div>
+<p><code>str</code> 함수를 사용해서 숫자를 문자열로 바꿔줄 수 있습니다.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb17-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">str</span>(<span class="fl">3.14</span>)</a>
+<a class="sourceLine" id="cb17-2" title="2"><span class="co">&#39;3.14&#39;</span></a></code></pre></div>
 </div>
 <div id="문자열-연산자" class="section level2">
 <h2>2.3. 문자열 연산자</h2>
-<p>문자열에 정의되는 기본적인 연산은 다음과 같습니다. 특히 in 과 not in 연산은 문자열 뿐 아니라 리스트 등의 자료형에서도 자주 쓰이는 연산이니 알아두면 좋습니다.</p>
+<p><code>in</code> 과 <code>not in</code> 연산은 문자열 뿐 아니라 리스트 등의 자료형에서도 자주 쓰이는 연산이니 알아두면 좋습니다.</p>
 <table>
 <thead>
 <tr class="header">
@@ -1804,34 +1864,46 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td>a in b</td>
-<td>“a가 b에 포함된다”를 판단</td>
-<td>“A” in “ABCDEFG”</td>
-<td>True</td>
+<td><code>a + b</code></td>
+<td>a 문자열과 b 문자열을 합침</td>
+<td><code>&quot;A&quot; + &quot;B&quot;</code></td>
+<td><code>&quot;AB&quot;</code></td>
 </tr>
 <tr class="even">
-<td>a not in b</td>
+<td><code>a * b</code></td>
+<td>a 문자열을 b 회 반복</td>
+<td><code>&quot;A&quot; * 3</code></td>
+<td><code>&quot;AAA&quot;</code></td>
+</tr>
+<tr class="odd">
+<td><code>a in b</code></td>
+<td>“a가 b에 포함된다”를 판단</td>
+<td><code>&quot;A&quot; in &quot;ABCDEFG&quot;</code></td>
+<td><code>True</code></td>
+</tr>
+<tr class="even">
+<td><code>a not in b</code></td>
 <td>“a가 b에 포함되지 않는다”를 판단</td>
-<td>“A” not in “ABCDEFG”</td>
-<td>False</td>
+<td><code>&quot;A&quot; not in &quot;ABCDEFG&quot;</code></td>
+<td><code>False</code></td>
 </tr>
 </tbody>
 </table>
 <div class="warning">
 <p><strong>예제 2-2. 다음 코드의 실행 결과를 판단하세요(True/False/Error)</strong></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb14-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Data&quot;</span> <span class="kw">in</span> <span class="st">&quot;DatascienceLab&quot;</span></a>
-<a class="sourceLine" id="cb14-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="kw">in</span> <span class="st">&quot;123&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb18-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Data&quot;</span> <span class="kw">in</span> <span class="st">&quot;DatascienceLab&quot;</span></a>
+<a class="sourceLine" id="cb18-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="kw">in</span> <span class="st">&quot;123&quot;</span></a></code></pre></div>
 <p><strong>풀이</strong></p>
-<p>“DatascienceLab”이 “Data”라는 문자열을 포함하기 때문에 첫 줄의 실행 결과는 False입니다. 1은 숫자이고, “123”은 문자열이기 때문에 둘째 줄의 결과는 에러입니다. 숫자와 문자열 간에는 in과 not in이라는 관계 연산이 정의되지 않습니다.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb15-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Data&quot;</span> <span class="kw">not</span> <span class="kw">in</span> <span class="st">&quot;DatascienceLab&quot;</span></a>
-<a class="sourceLine" id="cb15-2" title="2"><span class="va">False</span></a>
-<a class="sourceLine" id="cb15-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="kw">in</span> <span class="st">&quot;123&quot;</span></a>
-<a class="sourceLine" id="cb15-4" title="4"><span class="pp">TypeError</span>: <span class="st">&#39;in &lt;string&gt;&#39;</span> requires string <span class="im">as</span> left operand, <span class="kw">not</span> <span class="bu">int</span></a></code></pre></div>
+<p><code>&quot;DatascienceLab&quot;</code>이 <code>&quot;Data&quot;</code>라는 문자열을 포함하기 때문에 첫 줄의 실행 결과는 <code>False</code>입니다. <code>1</code>은 숫자이고, <code>&quot;123&quot;</code>은 문자열이기 때문에 둘째 줄의 결과는 에러입니다. 숫자와 문자열 간에는 <code>in</code>과 <code>not in</code>이라는 관계 연산이 정의되지 않습니다.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb19-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Data&quot;</span> <span class="kw">not</span> <span class="kw">in</span> <span class="st">&quot;DatascienceLab&quot;</span></a>
+<a class="sourceLine" id="cb19-2" title="2"><span class="va">False</span></a>
+<a class="sourceLine" id="cb19-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="kw">in</span> <span class="st">&quot;123&quot;</span></a>
+<a class="sourceLine" id="cb19-4" title="4"><span class="pp">TypeError</span>: <span class="st">&#39;in &lt;string&gt;&#39;</span> requires string <span class="im">as</span> left operand, <span class="kw">not</span> <span class="bu">int</span></a></code></pre></div>
 </div>
 </div>
 <div id="인덱싱-슬라이싱" class="section level2">
 <h2>2.4. 인덱싱 &amp; 슬라이싱</h2>
-<p>문자열은 <strong>문자를 순서대로 나열한 데이터입니다.</strong> 따라서 <strong>문자열을 구성하는 하나하나의 문자에 순서대로 번호를 매길 수 있으며, 이 번호를 인덱스라고 부릅니다.</strong> 아래 그림은 “Hello World”라는 문자열에 앞쪽부터 번호를 매긴 결과입니다. 파이썬의 인덱스는 0부터 시작하기 때문에, 가장 먼저 나온 문자인 “H”의 인덱스는 0이 됩니다. 그 이후 순차적으로 1, 2, … 10 까지의 번호가 매겨졌습니다. 공백 역시 문자열에 포함된다는 사실을 유의해주세요! 파이썬의 인덱스는 뒤에서부터 부여할 수도 있습니다. 인덱스를 뒤에서부터 매기면 -1, -2, … 와 같이 음수가 됩니다.</p>
+<p><strong>문자열은 문자를 순서대로 나열한 데이터입니다.문자열을 구성하는 하나하나의 문자에 순서대로 번호를 매길 수 있으며, 이 번호를 인덱스라고 부릅니다.</strong> 아래 그림은 <code>&quot;Hello World&quot;</code>라는 문자열에 앞쪽부터 번호를 매긴 결과입니다. 파이썬의 인덱스는 <code>0</code>부터 시작하기 때문에, 가장 먼저 나온 문자인 <code>&quot;H&quot;</code>의 인덱스는 <code>0</code>이 됩니다. 그 이후 순차적으로 <code>1, 2, ... 10</code> 까지의 번호가 매겨졌습니다. 공백 역시 문자열에 포함된다는 사실을 유의해주세요! 파이썬의 인덱스는 뒤에서부터 부여할 수도 있습니다. 인덱스를 뒤에서부터 매기면 <code>-1, -2, ...</code> 와 같이 음수가 됩니다.</p>
 <table>
 <thead>
 <tr class="header">
@@ -1887,11 +1959,11 @@ $(document).ready(function () {
 <p>You: “Hello world”의 0번 문자를 찾아줘!</p>
 <p>Python: “Hello world”의 0번 문자는 “H” 입니다.</p>
 </blockquote>
-<p>그렇다면 “Hello world”의 0번 문자를 찾아줘!’라는 명령을 어떻게 파이썬에 전달할 수 있을까요? 문자열 바로 뒤에 대괄호[]를 적고, 대괄호 안에 원하는 인덱스 숫자를 넣어주면 됩니다. 실제 파이썬 코드를 실행하면 다음과 같은 결과를 얻을 수 있습니다. 예시 코드들을 따라 쳐보면서 인덱싱의 문법에 익숙해지시기 바랍니다. 실행 결과의 자료형은 당연하게도 문자열입니다!</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb16-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Hello world&quot;</span>[<span class="dv">0</span>]</a>
-<a class="sourceLine" id="cb16-2" title="2"><span class="co">&#39;H&#39;</span></a>
-<a class="sourceLine" id="cb16-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="st">&quot;Hello world&quot;</span>[<span class="dv">0</span>])</a>
-<a class="sourceLine" id="cb16-4" title="4"><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;str&#39;</span><span class="op">&gt;</span></a></code></pre></div>
+<p>그렇다면 <code>&quot;Hello world&quot;</code>의 0번 문자를 찾아줘!’라는 명령을 어떻게 파이썬에 전달할 수 있을까요? 문자열 바로 뒤에 대괄호<code>[]</code>를 적고, 대괄호 안에 원하는 인덱스 숫자를 넣어주면 됩니다. 실제 파이썬 코드를 실행하면 다음과 같은 결과를 얻을 수 있습니다.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb20-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Hello world&quot;</span>[<span class="dv">0</span>]</a>
+<a class="sourceLine" id="cb20-2" title="2"><span class="co">&#39;H&#39;</span></a>
+<a class="sourceLine" id="cb20-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(<span class="st">&quot;Hello world&quot;</span>[<span class="dv">0</span>]) <span class="co"># 문자열 인덱싱의 결과 &gt; 문자열</span></a>
+<a class="sourceLine" id="cb20-4" title="4"><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;str&#39;</span><span class="op">&gt;</span></a></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1903,60 +1975,60 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td>“Python”</td>
-<td>0</td>
-<td>“Python”[0]</td>
-<td>‘P’</td>
+<td><code>&quot;Python&quot;</code></td>
+<td><code>0</code></td>
+<td><code>&quot;Python&quot;[0]</code></td>
+<td><code>&#39;P&#39;</code></td>
 </tr>
 <tr class="even">
-<td>“DataScience Lab”</td>
-<td>12</td>
-<td>“DataScience Lab”[12]</td>
-<td>‘L’</td>
+<td><code>&quot;DataScience Lab&quot;</code></td>
+<td><code>12</code></td>
+<td><code>&quot;DataScience Lab&quot;[12]</code></td>
+<td><code>&#39;L&#39;</code></td>
 </tr>
 <tr class="odd">
-<td>“010-5782-xxxx”</td>
-<td>7</td>
-<td>“010-5782-xxxx”[7]</td>
-<td>‘2’</td>
+<td><code>&quot;010-5782-xxxx&quot;</code></td>
+<td><code>7</code></td>
+<td><code>&quot;010-5782-xxxx&quot;[7]</code></td>
+<td><code>&#39;2&#39;</code></td>
 </tr>
 <tr class="even">
-<td>“You need Python.”</td>
-<td>-1</td>
-<td>“You need Python.”[-1]</td>
-<td>‘.’</td>
+<td><code>&quot;You need Python.&quot;</code></td>
+<td><code>-1</code></td>
+<td><code>&quot;You need Python.&quot;[-1]</code></td>
+<td><code>&#39;.&#39;</code></td>
 </tr>
 </tbody>
 </table>
 <div class="warning">
 <p><strong>예제 2-3. 다음 코드의 실행 결과를 판단하세요</strong></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb17-1" title="1"><span class="op">&gt;&gt;&gt;</span> mystring <span class="op">=</span> <span class="st">&quot;Python is too slow&quot;</span></a>
-<a class="sourceLine" id="cb17-2" title="2"><span class="op">&gt;&gt;&gt;</span> mystring[<span class="op">-</span><span class="dv">2</span>] <span class="op">!=</span> mystring[<span class="dv">4</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb21-1" title="1"><span class="op">&gt;&gt;&gt;</span> mystring <span class="op">=</span> <span class="st">&quot;Python is too slow&quot;</span></a>
+<a class="sourceLine" id="cb21-2" title="2"><span class="op">&gt;&gt;&gt;</span> mystring[<span class="op">-</span><span class="dv">2</span>] <span class="op">!=</span> mystring[<span class="dv">4</span>]</a></code></pre></div>
 <p><strong>풀이</strong></p>
-<p>“Python is too slow”라는 문자열을 mystring이라는 변수에 할당했습니다. 따라서 mystring[-2]는 ’o’이고, ’mystring[4]’도 ’o’입니다. 두 값이 같으므로 != 연산의 결과는 False입니다.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb18-1" title="1"><span class="op">&gt;&gt;&gt;</span> mystring <span class="op">=</span> <span class="st">&quot;Python is too slow&quot;</span></a>
-<a class="sourceLine" id="cb18-2" title="2"><span class="op">&gt;&gt;&gt;</span> mystring[<span class="op">-</span><span class="dv">2</span>]</a>
-<a class="sourceLine" id="cb18-3" title="3"><span class="co">&#39;o&#39;</span></a>
-<a class="sourceLine" id="cb18-4" title="4"><span class="op">&gt;&gt;&gt;</span> mystring[<span class="dv">4</span>]</a>
-<a class="sourceLine" id="cb18-5" title="5"><span class="co">&#39;o&#39;</span></a>
-<a class="sourceLine" id="cb18-6" title="6"><span class="op">&gt;&gt;&gt;</span> mystring[<span class="op">-</span><span class="dv">2</span>] <span class="op">!=</span> mystring[<span class="dv">4</span>]</a>
-<a class="sourceLine" id="cb18-7" title="7"><span class="va">False</span></a></code></pre></div>
+<p><code>&quot;Python is too slow&quot;</code>라는 문자열을 <code>mystring</code>이라는 변수에 할당했습니다. 따라서 <code>mystring[-2]</code>와 <code>&#39;mystring[4]&#39;</code>는 모두 <code>&#39;o&#39;</code>입니다. 두 값이 같으므로 <code>!=</code> 연산의 결과는 <code>False</code>입니다.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb22-1" title="1"><span class="op">&gt;&gt;&gt;</span> mystring <span class="op">=</span> <span class="st">&quot;Python is too slow&quot;</span></a>
+<a class="sourceLine" id="cb22-2" title="2"><span class="op">&gt;&gt;&gt;</span> mystring[<span class="op">-</span><span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb22-3" title="3"><span class="co">&#39;o&#39;</span></a>
+<a class="sourceLine" id="cb22-4" title="4"><span class="op">&gt;&gt;&gt;</span> mystring[<span class="dv">4</span>]</a>
+<a class="sourceLine" id="cb22-5" title="5"><span class="co">&#39;o&#39;</span></a>
+<a class="sourceLine" id="cb22-6" title="6"><span class="op">&gt;&gt;&gt;</span> mystring[<span class="op">-</span><span class="dv">2</span>] <span class="op">!=</span> mystring[<span class="dv">4</span>] <span class="co"># 두 값이 같지 않다: 거짓이므로 False 반환</span></a>
+<a class="sourceLine" id="cb22-7" title="7"><span class="va">False</span></a></code></pre></div>
 </div>
 </div>
 <div id="슬라이싱" class="section level3">
 <h3>슬라이싱</h3>
-<p>슬라이싱은 말 그대로 잘라내기 입니다. 일정 구간에 걸쳐서 인덱싱을 실행한다고 생각하시면 편합니다. 역시 대화로 표현하면 다음과 같습니다.</p>
+<p><strong>슬라이싱은 말 그대로 문자열의 일정 구간을 잘라내는 조작입니다.</strong> 일정 구간에 걸쳐서 인덱싱을 실행한다고 생각하시면 편합니다. 역시 대화로 표현하면 다음과 같습니다.</p>
 <blockquote>
 <p>You: “Hello world”의 0번부터 4번까지의 문자를 찾아줘!</p>
 <p>Python: “Hello world”의 0번부터 4번까지 문자는 “Hello” 입니다.</p>
 </blockquote>
-<p>슬라이싱을 할 때는, [a:b]와 같이 대괄호 안에 구간을 입력해주면 됩니다. 구간을 입력할 때는 주의사항이 있습니다. 예시와 함께 보겠습니다.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb19-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Hello world&quot;</span>[<span class="dv">0</span>:<span class="dv">4</span>]</a>
-<a class="sourceLine" id="cb19-2" title="2"><span class="co">&#39;Hell&#39;</span></a></code></pre></div>
-<p>[0:4]의 구간을 입력했으므로 0, 1, 2, 3, 4번 문자가 출력되어야 할 것 같은데, 이상하게 ’Hell’까지만 출력되었습니다. 이는 슬라이싱에서 구간 [a:b]가 a 이상 b 미만으로 해석되기 때문입니다. 즉 0번부터 4번까지를 슬라이싱 하려면 구간을 [0:5]와 같이 입력해야 합니다. 코드를 수정하면 정상적으로 실행되는 것을 볼 수 있습니다.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb20-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Hello world&quot;</span>[<span class="dv">0</span>:<span class="dv">5</span>]</a>
-<a class="sourceLine" id="cb20-2" title="2"><span class="co">&#39;Hello&#39;</span></a></code></pre></div>
-<p>슬라이싱의 구간 표현법을 정리하면 다음과 같습니다.</p>
+<p>슬라이싱을 할 때는, <code>[a:b]</code>와 같이 대괄호 안에 구간을 입력해주면 됩니다. 구간을 입력할 때는 주의사항이 있습니다. 예시와 함께 보겠습니다.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb23-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Hello world&quot;</span>[<span class="dv">0</span>:<span class="dv">4</span>]</a>
+<a class="sourceLine" id="cb23-2" title="2"><span class="co">&#39;Hell&#39;</span></a></code></pre></div>
+<p><code>[0:4]</code>의 구간을 입력했으므로 0, 1, 2, 3, 4번 문자가 출력되어야 할 것 같은데, 이상하게 <code>&#39;Hell&#39;</code>까지만 출력되었습니다. 이는 구간 <code>[a:b]</code>가 a는 포함하지만, b는 포함하지 않기 때문입니다. 즉 0번부터 4번까지를 슬라이싱 하려면 구간을 <code>[0:5]</code>와 같이 입력해야 합니다.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb24-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Hello world&quot;</span>[<span class="dv">0</span>:<span class="dv">5</span>]</a>
+<a class="sourceLine" id="cb24-2" title="2"><span class="co">&#39;Hello&#39;</span></a></code></pre></div>
+<p>슬라이싱의 구간 표현법을 정리하면 다음과 같습니다. 콜론 <code>:</code> 양쪽의 숫자를 생략하면 끝까지 슬라이싱합니다.</p>
 <table>
 <thead>
 <tr class="header">
@@ -1968,178 +2040,170 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td>[a:b]</td>
+<td><code>[a:b]</code></td>
 <td>a번 문자부터 b번 문자 직전까지 슬라이싱</td>
-<td>‘www.naver.com’[4:9]</td>
-<td>‘naver’</td>
+<td><code>&#39;www.naver.com&#39;[4:9]</code></td>
+<td><code>&#39;naver&#39;</code></td>
 </tr>
 <tr class="even">
-<td>[:]</td>
+<td><code>[:]</code></td>
 <td>문자열의 전 구간을 슬라이싱</td>
-<td>“Super Awesome Code”[:]</td>
-<td>‘Super Awesome Code’</td>
+<td><code>&quot;Super Awesome Code&quot;[:]</code></td>
+<td><code>&#39;Super Awesome Code&#39;</code></td>
 </tr>
 <tr class="odd">
-<td>[a:]</td>
+<td><code>[a:]</code></td>
 <td>a번 문자부터 끝까지 슬라이싱</td>
-<td>“Avengers: Endgame”[-7:]</td>
-<td>‘Endgame’</td>
+<td><code>&quot;Avengers: Endgame&quot;[-7:]</code></td>
+<td><code>&#39;Endgame&#39;</code></td>
 </tr>
 <tr class="even">
-<td>[:b]</td>
+<td><code>[:b]</code></td>
 <td>처음부터 b번 문자 직전까지 슬라이싱</td>
-<td>“서울특별시 서대문구”[:5]</td>
-<td>‘서울특별시’</td>
+<td><code>&quot;서울특별시 서대문구&quot;[:5]</code></td>
+<td><code>&#39;서울특별시&#39;</code></td>
 </tr>
 </tbody>
 </table>
 <div class="warning">
 <p><strong>예제 2-4. 다음 문자열에서 이메일 주소를 뽑아내세요</strong></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb21-1" title="1"><span class="op">&gt;&gt;&gt;</span> mystring <span class="op">=</span> <span class="st">&quot;학회|데이터사이언스랩|yonseidslab.github.io|yonseidslab@naver.com&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb25-1" title="1"><span class="op">&gt;&gt;&gt;</span> mystring <span class="op">=</span> <span class="st">&quot;학회|데이터사이언스랩|yonseidslab.github.io|yonseidslab@naver.com&quot;</span></a></code></pre></div>
 <p><strong>풀이</strong></p>
-<p>이메일 주소가 가장 뒤에 위치하므로 인덱스를 뒤쪽부터 세는게 편해 보입니다. -21번 인덱스부터 끝까지 슬라이싱하면 이메일 주소를 뽑아낼 수 있습니다.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb22-1" title="1"><span class="op">&gt;&gt;&gt;</span> mystring <span class="op">=</span> <span class="st">&quot;학회|데이터사이언스랩|yonseidslab.github.io|yonseidslab@naver.com&quot;</span></a>
-<a class="sourceLine" id="cb22-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(<span class="st">&quot;yonseidslab@naver.com&quot;</span>)</a>
-<a class="sourceLine" id="cb22-3" title="3"><span class="dv">21</span></a>
-<a class="sourceLine" id="cb22-4" title="4"><span class="op">&gt;&gt;&gt;</span> mystring[<span class="op">-</span><span class="dv">21</span>:]</a>
-<a class="sourceLine" id="cb22-5" title="5"><span class="co">&#39;yonseidslab@naver.com&#39;</span></a></code></pre></div>
+<p>이메일 주소가 가장 뒤에 위치하므로 인덱스를 뒤쪽부터 세는게 편해 보입니다. <code>len</code> 함수를 활용하여 문자열의 길이를 파악하였습니다. 음수 인덱스를 활용하여 <code>-21</code>번 인덱스부터 끝까지 슬라이싱하면 이메일 주소를 뽑아낼 수 있습니다.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb26-1" title="1"><span class="op">&gt;&gt;&gt;</span> mystring <span class="op">=</span> <span class="st">&quot;학회|데이터사이언스랩|yonseidslab.github.io|yonseidslab@naver.com&quot;</span></a>
+<a class="sourceLine" id="cb26-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(<span class="st">&quot;yonseidslab@naver.com&quot;</span>) <span class="co"># len 함수는 문자열의 길이를 반환합니다.</span></a>
+<a class="sourceLine" id="cb26-3" title="3"><span class="dv">21</span></a>
+<a class="sourceLine" id="cb26-4" title="4"><span class="op">&gt;&gt;&gt;</span> mystring[<span class="op">-</span><span class="dv">21</span>:]</a>
+<a class="sourceLine" id="cb26-5" title="5"><span class="co">&#39;yonseidslab@naver.com&#39;</span></a></code></pre></div>
 </div>
 </div>
 </div>
 <div id="문자열의-메소드" class="section level2">
 <h2>2.5. 문자열의 메소드</h2>
-<p>메소드는 일종의 함수이며, 대상 뒤에 점 .을 찍고 사용할 수 있습니다.</p>
+<p>메소드는 일종의 함수이며, 대상 뒤에 점 <code>.</code> 을 찍고 사용할 수 있습니다. 함수이므로 반드시 <code>()</code> 와 함께 사용합니다.</p>
 <table>
-<colgroup>
-<col width="25%"></col>
-<col width="25%"></col>
-<col width="25%"></col>
-<col width="25%"></col>
-</colgroup>
 <thead>
 <tr class="header">
 <th>메소드</th>
 <th>기능</th>
-<th>예시</th>
-<th>결과</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>strip()</td>
-<td>문자열 양쪽의 공백을 제거</td>
-<td>&quot; Hello world &quot;.strip()</td>
-<td>“Hello world”</td>
+<td><code>s.strip()</code></td>
+<td><code>s</code> 문자열 양쪽의 공백을 제거</td>
 </tr>
 <tr class="even">
-<td>replace()</td>
-<td>문자열 내의 특정 문자를 다른 문자로 교체</td>
-<td>“You need Python”.replace(“Python”, “R”)</td>
-<td>“You need R”</td>
+<td><code>s.replace(a,b)</code></td>
+<td><code>s</code> 문자열 내의 <code>a</code> 문자열을 <code>b</code> 문자열로 교체</td>
 </tr>
 <tr class="odd">
-<td>split()</td>
-<td>특정 문자를 기준으로 문자열을 쪼갬</td>
-<td>“one,two,three,four”.split(“,”)</td>
-<td>[‘one’,‘two’,‘three’,’four]</td>
+<td><code>a.split(b)</code></td>
+<td><code>b</code> 문자를 기준으로 <code>a</code> 문자열을 쪼갬</td>
 </tr>
 <tr class="even">
-<td>join()</td>
-<td>특정 문자열을 삽입</td>
-<td>“/”.join(“ABCDE”)</td>
-<td>“A,B,C,D,E”</td>
+<td><code>a.join(b)</code></td>
+<td><code>b</code> 문자열 사이사이에 <code>a</code> 문자열을 삽입</td>
 </tr>
 </tbody>
 </table>
 <div id="strip" class="section level3">
-<h3><strong>strip()</strong></h3>
-<p><strong>strip() 메소드는 문자열 양쪽의 공백을 모두 제거합니다. 원하는 문자열 뒤에 점을 찍어서 “문자열”.strip()과 같이 적어주면 됩니다. </strong> 문자열 &quot; Hello world “는 양쪽에 공백이 있고, 가운데에도 한 칸의 공백이 있습니다. 양 옆의 공백만 지우고, 가운데의 공백은 남기기 위해서 strip() 메소드를 활용할 수 있습니다.” Hello world &quot;를 변수 s에 할당하고, s.strip()을 실행한 결과, 양쪽의 공백만 지워지고 가운데 공백은 잘 남아있는 것을 확인할 수 있습니다.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb23-1" title="1"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> <span class="st">&quot;   Hello world   &quot;</span></a>
-<a class="sourceLine" id="cb23-2" title="2"><span class="op">&gt;&gt;&gt;</span> s.strip()</a>
-<a class="sourceLine" id="cb23-3" title="3"><span class="co">&#39;Hello world&#39;</span></a></code></pre></div>
-<p>사실 s.strip()은 s를 실제로 변화시키는 것이 아니라, 변화한 상태를 일시적으로 보여주는 것입니다. s를 출력해보면 양쪽의 공백이 그대로 남아있습니다. 공백을 제거한 결과를 s에 저장하고 싶다면, s=s.strip()과 같이 다시 할당을 해주어야 합니다. 처음 s = s.strip()과 같은 식을 마주하면 당황스러울 것입니다. 하지만 =는 같음을 뜻하는 연산자가 아니고, 할당을 뜻하는 연산자입니다. 즉 <strong>s=s.strip()이라는 코드는 “s.strip()을 실행하고 이 결과를 s에 할당하라”</strong>는 의미입니다.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb24-1" title="1"><span class="op">&gt;&gt;&gt;</span> s</a>
-<a class="sourceLine" id="cb24-2" title="2"><span class="co">&#39;   Hello world   &#39;</span></a>
-<a class="sourceLine" id="cb24-3" title="3"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> s.strip() <span class="co"># s.strip()을 실행하고 이 결과를 s에 할당하라</span></a>
-<a class="sourceLine" id="cb24-4" title="4"><span class="op">&gt;&gt;&gt;</span> s   </a>
-<a class="sourceLine" id="cb24-5" title="5"><span class="co">&#39;Hello world&#39;</span></a></code></pre></div>
-<p><strong>탭을 의미하는 \t 문자열과 개행을 의미하는 \n 문자열 역시 공백으로 인식됩니다.</strong> 아래 예제에서는 왼쪽에 \n, 오른쪽에 \t 세 개를 사용해서 ’Hello world’를 감싸주었습니다. 이 결과를 변수 s에 할당하고 s.strip()을 실행한 결과, ’Hello world’만 남아있는 것을 확인할 수 있습니다. \t와 \n이 공백으로 인식되어 지워졌기 때문입니다.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb25-1" title="1"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> <span class="st">&quot;</span><span class="ch">\n\n\n</span><span class="st">Hello world</span><span class="ch">\t\t\t</span><span class="st">&quot;</span></a>
-<a class="sourceLine" id="cb25-2" title="2"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> s.strip()</a>
-<a class="sourceLine" id="cb25-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(s)</a>
-<a class="sourceLine" id="cb25-4" title="4">Hello world</a></code></pre></div>
+<h3><strong>strip</strong></h3>
+<p><strong><code>strip</code> 메소드는 문자열 양쪽의 공백을 모두 제거합니다. 원하는 문자열 뒤에 점을 찍어서 <code>&quot;문자열&quot;.strip()</code>과 같이 적어주면 됩니다. </strong> 문자열 <code>&quot;   Hello world   &quot;</code>는 양쪽에 공백이 있고, 가운데에도 한 칸의 공백이 있습니다. <code>strip</code> 메소드를 활용하면 가운데의 띄어쓰기는 남겨두고 양 쪽의 공백만을 제거할 수 있습니다.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb27-1" title="1"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> <span class="st">&quot;   Hello world   &quot;</span> <span class="co"># 문자열을 변수로 할당</span></a>
+<a class="sourceLine" id="cb27-2" title="2"><span class="op">&gt;&gt;&gt;</span> s.strip() <span class="co"># 양쪽의 공백 제거, 띄어쓰기는 남아있음</span></a>
+<a class="sourceLine" id="cb27-3" title="3"><span class="co">&#39;Hello world&#39;</span></a></code></pre></div>
+<p>사실 <code>s.strip()</code>은 s를 실제로 변화시키는 것이 아니라, 변화한 상태를 일시적으로 보여주는 것입니다. <code>s</code>를 출력해보면 양쪽의 공백이 그대로 남아있습니다. 공백을 제거한 결과를 <code>s</code>에 저장하고 싶다면, <code>s = s.strip()</code>과 같이 다시 할당을 해주어야 합니다. <code>=</code> 는 수학적인 의미의 등호가 아니라, 할당을 뜻하는 연산자이므로, <strong><code>s = s.strip()</code>이라는 코드는 “<code>s.strip()</code>을 실행하고 이 결과를 s에 할당하라”</strong>는 의미입니다. s 와 s.strip() 이 같다는 의미가 아닙니다!</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb28-1" title="1"><span class="op">&gt;&gt;&gt;</span> s</a>
+<a class="sourceLine" id="cb28-2" title="2"><span class="co">&#39;   Hello world   &#39;</span></a>
+<a class="sourceLine" id="cb28-3" title="3"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> s.strip() <span class="co"># s.strip()을 실행하고 이 결과를 s에 할당</span></a>
+<a class="sourceLine" id="cb28-4" title="4"><span class="op">&gt;&gt;&gt;</span> s   </a>
+<a class="sourceLine" id="cb28-5" title="5"><span class="co">&#39;Hello world&#39;</span></a></code></pre></div>
+<p><strong>탭을 의미하는 <code>\t</code> 문자열과 개행을 의미하는 <code>\n</code> 문자열 역시 공백으로 인식됩니다.</strong> 아래 예시 코드를 보면, <code>strip</code> 메소드가 <code>\t</code>와 <code>\n</code>을 공백으로 인식하여 삭제하였음을 확인할 수 있습니다.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb29-1" title="1"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> <span class="st">&quot;</span><span class="ch">\n\n\n</span><span class="st">Hello world</span><span class="ch">\t\t\t</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb29-2" title="2"><span class="op">&gt;&gt;&gt;</span> s.strip()</a>
+<a class="sourceLine" id="cb29-3" title="3"><span class="co">&#39;Hello world&#39;</span></a></code></pre></div>
 </div>
 <div id="replace" class="section level3">
-<h3><strong>replace()</strong></h3>
-<p><strong>replace() 메소드는 문자열 내의 특정 문자를 다른 문자로 모두 교체합니다. s.replace(“교체할 문자”,“새 문자”)와 같이 적어주면 됩니다.</strong> 아래는 “You need Python” 에서 “Python”을 “R”로 바꾸어준 예제입니다. 먼저 ’You need Python’라는 문자열을 s라는 변수에 할당하였습니다. s.replace(“Python”,“R”) 은 s에 할당된 문자열 “You need Python”에서 ’Python’을 ’R’로 바꾸어주는 코드입니다. 역시 s.replace(“Python”,“R”)를 실행하는것만으로는 s에 할당된 값이 변화하지 않으며, s를 변화시키고 싶다면 s=s.replace(“Python”,“R”)과 같이 다시 할당을 해주어야 합니다.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb26-1" title="1"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> <span class="st">&#39;You need Python&#39;</span> <span class="co"># 문자열을 변수 s에 할당</span></a>
-<a class="sourceLine" id="cb26-2" title="2"><span class="op">&gt;&gt;&gt;</span> s.replace(<span class="st">&quot;Python&quot;</span>, <span class="st">&quot;R&quot;</span>) <span class="co"># s에서 Python -&gt; R로 교체</span></a>
-<a class="sourceLine" id="cb26-3" title="3"><span class="co">&#39;You need R&#39;</span></a>
-<a class="sourceLine" id="cb26-4" title="4"><span class="op">&gt;&gt;&gt;</span> s <span class="co"># s는 변화하지 않음</span></a>
-<a class="sourceLine" id="cb26-5" title="5"><span class="co">&#39;You need Python&#39;</span></a>
-<a class="sourceLine" id="cb26-6" title="6"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> s.replace(<span class="st">&quot;Python&quot;</span>, <span class="st">&quot;R&quot;</span>) <span class="co"># Python을 R로 교체한 후 이 결과를 s에 할당</span></a>
-<a class="sourceLine" id="cb26-7" title="7"><span class="op">&gt;&gt;&gt;</span> s</a>
-<a class="sourceLine" id="cb26-8" title="8"><span class="co">&#39;You need R&#39;</span></a>
-<a class="sourceLine" id="cb26-9" title="9"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> s.replace(<span class="st">&quot; &quot;</span>, <span class="st">&quot;,&quot;</span>) <span class="co"># 모든 &quot; &quot;를 &quot;,&quot;로 교체</span></a>
-<a class="sourceLine" id="cb26-10" title="10"><span class="op">&gt;&gt;&gt;</span> s</a>
-<a class="sourceLine" id="cb26-11" title="11"><span class="co">&#39;You,need,R&#39;</span></a></code></pre></div>
+<h3><strong>replace</strong></h3>
+<p><strong><code>replace</code> 메소드는 문자열 내의 특정 문자를 다른 문자로 모두 교체합니다. <code>s.replace(a,b)</code>와 같이 적어주면 <code>s</code> 문자열 내의 <code>a</code> 문자열을 모두 <code>b</code> 문자열로 교체합니다.</strong> 아래는 문자열 <code>&quot;You need Python&quot;</code> 에서 <code>&quot;Python&quot;</code>을 <code>&quot;R&quot;</code>로 바꾸어준 예제입니다. 역시 <code>s.replace(&quot;Python&quot;,&quot;R&quot;)</code>를 실행하는것만으로는 변수에 할당된 값이 변화하지 않습니다.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb30-1" title="1"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> <span class="st">&#39;You need Python&#39;</span> <span class="co"># 문자열을 변수 s에 할당</span></a>
+<a class="sourceLine" id="cb30-2" title="2"><span class="op">&gt;&gt;&gt;</span> s.replace(<span class="st">&quot;Python&quot;</span>, <span class="st">&quot;R&quot;</span>) <span class="co"># s에서 Python -&gt; R로 교체</span></a>
+<a class="sourceLine" id="cb30-3" title="3"><span class="co">&#39;You need R&#39;</span></a>
+<a class="sourceLine" id="cb30-4" title="4"><span class="op">&gt;&gt;&gt;</span> s <span class="co"># s는 변화하지 않음</span></a>
+<a class="sourceLine" id="cb30-5" title="5"><span class="co">&#39;You need Python&#39;</span></a>
+<a class="sourceLine" id="cb30-6" title="6"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> s.replace(<span class="st">&quot;Python&quot;</span>, <span class="st">&quot;R&quot;</span>) <span class="co"># Python을 R로 교체한 후 이 결과를 s에 할당</span></a>
+<a class="sourceLine" id="cb30-7" title="7"><span class="op">&gt;&gt;&gt;</span> s</a>
+<a class="sourceLine" id="cb30-8" title="8"><span class="co">&#39;You need R&#39;</span></a>
+<a class="sourceLine" id="cb30-9" title="9"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> s.replace(<span class="st">&quot; &quot;</span>, <span class="st">&quot;,&quot;</span>) <span class="co"># 모든 &quot; &quot;를 &quot;,&quot;로 교체</span></a>
+<a class="sourceLine" id="cb30-10" title="10"><span class="op">&gt;&gt;&gt;</span> s</a>
+<a class="sourceLine" id="cb30-11" title="11"><span class="co">&#39;You,need,R&#39;</span></a></code></pre></div>
 <div class="warning">
 <p><strong>예제 2-5. a를 b와 같은 문자열로 변형하고 결과를 검증하세요. 단, 문자열 조작하는 과정에는 한 줄의 코드만 사용할 수 있습니다.</strong></p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb27-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">&quot;   C GO Java Python PHP   &quot;</span></a>
-<a class="sourceLine" id="cb27-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="st">&quot;C|GO|Java|Python|PHP&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb31-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">&quot;   C GO Java Python PHP   &quot;</span></a>
+<a class="sourceLine" id="cb31-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="st">&quot;C|GO|Java|Python|PHP&quot;</span></a></code></pre></div>
 <p><strong>풀이</strong></p>
-<p><strong>1) 문자열의 양쪽 공백을 제거해준 후, 2) 중간중간의 공백을 “|”로 교체</strong>해주면 문제를 해결할 수 있습니다. 얼핏 보면 다음과 같이 두 줄의 코드가 필요할 것 같습니다. 먼저 양쪽의 공백을 지운 결과를 tmp라는 임시 변수에 저장합니다. 이후 tmp에서 공백을 “|”로 교체하고 이 결과를 result라는 변수에 최종적으로 저장합니다. b와 result를 비교해보면 두 값이 같다는 사실을 알 수 있습니다.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb28-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">&quot;   C GO Java Python PHP   &quot;</span></a>
-<a class="sourceLine" id="cb28-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="st">&quot;C|GO|Java|Python|PHP&quot;</span></a>
-<a class="sourceLine" id="cb28-3" title="3"><span class="op">&gt;&gt;&gt;</span> tmp <span class="op">=</span> a.strip()</a>
-<a class="sourceLine" id="cb28-4" title="4"><span class="op">&gt;&gt;&gt;</span> result <span class="op">=</span> tmp.replace(<span class="st">&quot; &quot;</span>,<span class="st">&quot;|&quot;</span>)</a>
-<a class="sourceLine" id="cb28-5" title="5"><span class="op">&gt;&gt;&gt;</span> b <span class="op">==</span> result</a>
-<a class="sourceLine" id="cb28-6" title="6"><span class="va">True</span></a></code></pre></div>
-<p>위의 코드가 틀린 것은 아니지만, tmp라는 임시 변수를 사용하지 않고 코드를 더 간소화할 수 있습니다. 아래 풀이에서는 <strong>메소드 체이닝, 즉 메소드를 연결하는 코드를 통해서 두 번의 조작을 한 줄의 코드로 끝냈습니다.</strong> a.strip()의 결과는 양쪽 공백이 제거된 “C GO Jave Python PHP” 입니다. a.strip().replace(&quot; “,”|“)는 결국”C GO Jave Python PHP“.replace(” “,”|&quot;)과 같은 코드가 되는 것입니다. 내가 적은 코드의 결과를 상상할 수 있는 능력이 발달하면, 자연스레 메소드 체이닝에 익숙해지게 될 것입니다.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb29-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">&quot;   C GO Java Python PHP   &quot;</span></a>
-<a class="sourceLine" id="cb29-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="st">&quot;C|GO|Java|Python|PHP&quot;</span></a>
-<a class="sourceLine" id="cb29-3" title="3"><span class="op">&gt;&gt;&gt;</span> result <span class="op">=</span> a.strip().replace(<span class="st">&quot; &quot;</span>,<span class="st">&quot;|&quot;</span>)</a>
-<a class="sourceLine" id="cb29-4" title="4"><span class="op">&gt;&gt;&gt;</span> b <span class="op">==</span> result</a>
-<a class="sourceLine" id="cb29-5" title="5"><span class="va">True</span></a></code></pre></div>
+<p><strong>1) 문자열의 양쪽 공백을 제거해준 후, 2) 중간중간의 공백을 <code>|</code>로 교체</strong>해주면 문제를 해결할 수 있습니다. 얼핏 보면 다음과 같이 두 줄의 코드가 필요할 것 같습니다. 먼저 양쪽의 공백을 지운 결과를 <code>tmp</code>라는 임시 변수에 저장합니다. 이후 <code>tmp</code>에서 공백을 <code>|</code>로 교체하고 이 결과를 <code>result</code>라는 변수에 최종적으로 저장합니다. <code>b</code>와 <code>result</code>를 비교해보면 두 값이 같다는 사실을 알 수 있습니다.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb32-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">&quot;   C GO Java Python PHP   &quot;</span></a>
+<a class="sourceLine" id="cb32-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="st">&quot;C|GO|Java|Python|PHP&quot;</span></a>
+<a class="sourceLine" id="cb32-3" title="3"><span class="op">&gt;&gt;&gt;</span> tmp <span class="op">=</span> a.strip()</a>
+<a class="sourceLine" id="cb32-4" title="4"><span class="op">&gt;&gt;&gt;</span> result <span class="op">=</span> tmp.replace(<span class="st">&quot; &quot;</span>,<span class="st">&quot;|&quot;</span>)</a>
+<a class="sourceLine" id="cb32-5" title="5"><span class="op">&gt;&gt;&gt;</span> b <span class="op">==</span> result</a>
+<a class="sourceLine" id="cb32-6" title="6"><span class="va">True</span></a></code></pre></div>
+<p>위의 코드가 틀린 것은 아니지만, <code>tmp</code>라는 임시 변수를 사용하지 않고 코드를 더 간소화할 수 있습니다. 아래 풀이에서는 <strong>메소드 체이닝, 즉 메소드를 연결하는 코드를 통해서 두 번의 조작을 한 줄의 코드로 끝냈습니다.</strong> <code>a.strip()</code>의 결과는 양쪽 공백이 제거된 <code>&quot;C GO Jave Python PHP&quot;</code> 입니다. 따라서 <code>a.strip().replace(&quot; &quot;,&quot;|&quot;)</code>는 결국 <code>&quot;C GO Jave Python PHP&quot;.replace(&quot; &quot;,&quot;|&quot;)</code>와 같습니다.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb33-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">&quot;   C GO Java Python PHP   &quot;</span></a>
+<a class="sourceLine" id="cb33-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="st">&quot;C|GO|Java|Python|PHP&quot;</span></a>
+<a class="sourceLine" id="cb33-3" title="3"><span class="op">&gt;&gt;&gt;</span> result <span class="op">=</span> a.strip().replace(<span class="st">&quot; &quot;</span>,<span class="st">&quot;|&quot;</span>)</a>
+<a class="sourceLine" id="cb33-4" title="4"><span class="op">&gt;&gt;&gt;</span> b <span class="op">==</span> result</a>
+<a class="sourceLine" id="cb33-5" title="5"><span class="va">True</span></a></code></pre></div>
 </div>
 </div>
 <div id="split" class="section level3">
-<h3><strong>split()</strong></h3>
-<p><strong>split() 메소드는 특정 문자를 기준으로 문자열을 쪼개어 리스트를 반환합니다. s.split(“기준문자”)와 같이 적어주면 됩니다.</strong> 아무런 문자도 주어지지 않는다면 공백을 기준으로 문자열을 쪼갭니다. 역시 쪼갠 결과를 저장하려면 다시 할당을 해주어야 합니다.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb30-1" title="1"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> <span class="st">&quot;Hello world&quot;</span></a>
-<a class="sourceLine" id="cb30-2" title="2"><span class="op">&gt;&gt;&gt;</span> s.split(<span class="st">&quot; &quot;</span>) <span class="co"># &quot; &quot; 를 기준으로 문자열을 쪼갬 &gt; 이 결과를 리스트로 반환</span></a>
-<a class="sourceLine" id="cb30-3" title="3">[<span class="st">&#39;Hello&#39;</span>, <span class="st">&#39;world&#39;</span>]</a>
-<a class="sourceLine" id="cb30-4" title="4"><span class="op">&gt;&gt;&gt;</span></a>
-<a class="sourceLine" id="cb30-5" title="5"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> <span class="st">&quot;one/two/three/four&quot;</span></a>
-<a class="sourceLine" id="cb30-6" title="6"><span class="op">&gt;&gt;&gt;</span> s.split(<span class="st">&quot;/&quot;</span>)</a>
-<a class="sourceLine" id="cb30-7" title="7">[<span class="st">&#39;one&#39;</span>, <span class="st">&#39;two&#39;</span>, <span class="st">&#39;three&#39;</span>, <span class="st">&#39;four&#39;</span>]</a></code></pre></div>
+<h3><strong>split</strong></h3>
+<p><strong><code>split</code> 메소드는 특정 문자를 기준으로 문자열을 쪼개어 리스트를 반환합니다. <code>s.split(a)</code>와 같이 적어주면 a 문자열을 기준으로 s 문자열을 쪼개어 리스트를 반환합니다.</strong> 아무런 문자도 주어지지 않는다면 공백을 기준으로 문자열을 쪼갭니다.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb34-1" title="1"><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> <span class="st">&quot;Hello world&quot;</span></a>
+<a class="sourceLine" id="cb34-2" title="2"><span class="op">&gt;&gt;&gt;</span> s.split(<span class="st">&quot; &quot;</span>) <span class="co"># &quot; &quot; 를 기준으로 문자열을 쪼갬 &gt; 이 결과를 리스트로 반환</span></a>
+<a class="sourceLine" id="cb34-3" title="3">[<span class="st">&#39;Hello&#39;</span>, <span class="st">&#39;world&#39;</span>]</a></code></pre></div>
+<pre class="pytrhon"><code>&gt;&gt;&gt; s = &quot;one/two/three/four&quot;
+&gt;&gt;&gt; s.split(&quot;/&quot;) # &quot;/&quot; 를 기준으로 문자열을 쪼갬 &gt; 이 결과를 리스트로 반환
+[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;, &#39;four&#39;]</code></pre>
 <div class="warning">
 <p><strong>예제 2-6. 다음 코드의 실행 결과를 예상해보세요</strong></p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb31-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">&quot;yonseidslab@gmail.com&quot;</span></a>
-<a class="sourceLine" id="cb31-2" title="2"><span class="op">&gt;&gt;&gt;</span> a.replace(<span class="st">&quot;@&quot;</span>,<span class="st">&quot;.&quot;</span>).split(<span class="st">&quot;.&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb36-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">&quot;yonseidslab@gmail.com&quot;</span></a>
+<a class="sourceLine" id="cb36-2" title="2"><span class="op">&gt;&gt;&gt;</span> a.replace(<span class="st">&quot;@&quot;</span>,<span class="st">&quot;.&quot;</span>).split(<span class="st">&quot;.&quot;</span>)</a></code></pre></div>
 <p><strong>풀이</strong></p>
-<p>문자열에서 “@”를 “.”으로 교체해준 후, “.”을 기준으로 나누었으므로 결과는 다음과 같습니다.</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb32-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">&quot;yonseidslab@gmail.com&quot;</span></a>
-<a class="sourceLine" id="cb32-2" title="2"><span class="op">&gt;&gt;&gt;</span> a.replace(<span class="st">&quot;@&quot;</span>,<span class="st">&quot;.&quot;</span>).split(<span class="st">&quot;.&quot;</span>)</a>
-<a class="sourceLine" id="cb32-3" title="3">[<span class="st">&#39;yonseidslab&#39;</span>, <span class="st">&#39;gmail&#39;</span>, <span class="st">&#39;com&#39;</span>]</a></code></pre></div>
+<p>문자열에서 <code>@</code>를 <code>.</code>으로 교체해준 후, <code>.</code>을 기준으로 나누었으므로 결과는 다음과 같습니다.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb37-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">&quot;yonseidslab@gmail.com&quot;</span></a>
+<a class="sourceLine" id="cb37-2" title="2"><span class="op">&gt;&gt;&gt;</span> a.replace(<span class="st">&quot;@&quot;</span>,<span class="st">&quot;.&quot;</span>).split(<span class="st">&quot;.&quot;</span>)</a>
+<a class="sourceLine" id="cb37-3" title="3">[<span class="st">&#39;yonseidslab&#39;</span>, <span class="st">&#39;gmail&#39;</span>, <span class="st">&#39;com&#39;</span>]</a></code></pre></div>
 </div>
 <div id="join" class="section level4">
-<h4><strong>join()</strong></h4>
-<p><strong>join() 메소드는 문자열 사이사이에 다른 문자를 삽입합니다. “삽입할 문자”.join(문자열)과 같이 적어주면 됩니다.</strong> join 메소드는 문자열보다는 리스트에 대해 사용하는 경우가 많습니다</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb33-1" title="1"><span class="op">&gt;&gt;&gt;</span> alphabet <span class="op">=</span> <span class="st">&quot;ABCDEFG&quot;</span></a>
-<a class="sourceLine" id="cb33-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;|&quot;</span>.join(alphabet)</a>
-<a class="sourceLine" id="cb33-3" title="3"><span class="co">&#39;A|B|C|D|E|F|G&#39;</span></a></code></pre></div>
+<h4><strong>join</strong></h4>
+<p><strong><code>join</code> 메소드는 문자열 사이사이에 다른 문자를 삽입합니다. <code>a.join(b)</code>와 같이 적어주면 b 문자열 사이사이에 a 문자열을 삽입한니다.</strong> <code>join</code> 메소드는 문자열보다는 리스트에 대해 사용하는 경우가 많습니다</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb38-1" title="1"><span class="op">&gt;&gt;&gt;</span> alphabet <span class="op">=</span> <span class="st">&quot;ABCDEFG&quot;</span></a>
+<a class="sourceLine" id="cb38-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;|&quot;</span>.join(alphabet)</a>
+<a class="sourceLine" id="cb38-3" title="3"><span class="co">&#39;A|B|C|D|E|F|G&#39;</span></a></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb39-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>]</a>
+<a class="sourceLine" id="cb39-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;,&#39;</span>.join(mylist)</a>
+<a class="sourceLine" id="cb39-3" title="3"><span class="co">&#39;a,b,c&#39;</span></a></code></pre></div>
 </div>
 </div>
+</div>
+<div id="문자열-포매팅" class="section level2">
+<h2>2.6. 문자열 포매팅</h2>
+<p>문자열 포매팅은 문자열 안에 변수를 포함하는 기능입니다. 유사한 패턴의 문자열에서 특정 부분만 변형해서 사용해야 하는 경우, 문자열 포매팅이 유용합니다. 여기에서는 <code>f</code> 포매팅에 대해서 배워보겠습니다. <code>f</code> 포매팅을 사용할 때는 문자열을 감싼 따옴표 앞에 <code>f</code>를 적어줍니다. 이후 변수를 사용할 위치에 중괄호<code>{}</code>를 쓰고, 중괄호 안에 원하는 변수를 입력해주면 됩니다.</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb40-1" title="1"><span class="op">&gt;&gt;&gt;</span> ID <span class="op">=</span> <span class="st">&quot;yonseidslab&quot;</span></a>
+<a class="sourceLine" id="cb40-2" title="2"><span class="op">&gt;&gt;&gt;</span> address <span class="op">=</span> <span class="ss">f&quot;</span><span class="sc">{ID}</span><span class="ss">@gmail.com&quot;</span></a>
+<a class="sourceLine" id="cb40-3" title="3"><span class="op">&gt;&gt;&gt;</span> address</a></code></pre></div>
 </div>
 </div>
 <div id="불리언" class="section level1">
 <h1>3. 불리언</h1>
 <div id="불리언-자료형" class="section level2">
 <h2>3.1. 불리언 자료형</h2>
-<p>불리언은 참/거짓을 나타내는 자료형이며, 각각 True, False로 씁니다. 크게 주의할 것은 없고, 파이썬에서 0이 False를 의미한다는 것은 알고 넘어가면 좋습니다.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb34-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="dv">0</span> <span class="op">==</span> <span class="va">False</span></a>
-<a class="sourceLine" id="cb34-2" title="2"><span class="va">True</span></a></code></pre></div>
+<p>불리언은 참/거짓을 나타내는 자료형이며, 각각 <code>True</code>, <code>False</code>로 씁니다. 크게 주의할 것은 없고, 파이썬에서 <code>0</code>이 <code>False</code>를 의미한다는 것은 알고 넘어가면 좋습니다.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb41-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="dv">0</span> <span class="op">==</span> <span class="va">False</span></a>
+<a class="sourceLine" id="cb41-2" title="2"><span class="va">True</span></a></code></pre></div>
 </div>
 <div id="논리-연산자" class="section level2">
 <h2>3.2. 논리 연산자</h2>
@@ -2155,54 +2219,87 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td>a &amp; b</td>
+<td><code>a &amp; b</code></td>
 <td>“a와 b가 모두 참이다”를 판단</td>
-<td>True &amp; True</td>
-<td>True</td>
+<td><code>True &amp; True</code></td>
+<td><code>True</code></td>
 </tr>
 <tr class="even">
-<td>a and b</td>
+<td><code>a and b</code></td>
 <td>“a와 b가 모두 참이다”를 판단</td>
-<td>True and False</td>
-<td>False</td>
+<td><code>True and False</code></td>
+<td><code>False</code></td>
 </tr>
 <tr class="odd">
-<td>a | b</td>
+<td><code>a | b</code></td>
 <td>“a, b 중 최소한 하나가 참이다”를 판단</td>
-<td>True | False</td>
-<td>True</td>
+<td><code>True | False</code></td>
+<td><code>True</code></td>
 </tr>
 <tr class="even">
-<td>a or b</td>
+<td><code>a or b</code></td>
 <td>“a, b 중 최소한 하나가 참이다”를 판단</td>
-<td>False or False</td>
-<td>False</td>
+<td><code>False or False</code></td>
+<td><code>False</code></td>
 </tr>
 </tbody>
 </table>
 <div class="warning">
 <p><strong>예제 3.1. 다음 연산의 실행 결과를 판단하세요</strong></p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb35-1" title="1"><span class="op">&gt;&gt;&gt;</span> (<span class="dv">10</span> <span class="op">&lt;</span> <span class="dv">10</span>) <span class="kw">or</span> (<span class="dv">10</span> <span class="op">&gt;</span> <span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb35-2" title="2"><span class="op">&gt;&gt;&gt;</span> (<span class="st">&quot;Python&quot;</span> <span class="op">!=</span> <span class="st">&quot;R&quot;</span>) <span class="kw">and</span> (<span class="st">&quot;Life&quot;</span> <span class="op">==</span> <span class="st">&quot;short&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb42-1" title="1"><span class="op">&gt;&gt;&gt;</span> (<span class="dv">10</span> <span class="op">&lt;</span> <span class="dv">10</span>) <span class="kw">or</span> (<span class="dv">10</span> <span class="op">&gt;</span> <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb42-2" title="2"><span class="op">&gt;&gt;&gt;</span> (<span class="st">&quot;Python&quot;</span> <span class="op">!=</span> <span class="st">&quot;R&quot;</span>) <span class="kw">and</span> (<span class="st">&quot;Life&quot;</span> <span class="op">==</span> <span class="st">&quot;short&quot;</span>)</a></code></pre></div>
 <p><strong>풀이</strong></p>
-<p>첫 줄은 두 개의 (10 &lt; 10)과 (10 &gt; 10) 이라는 두 개의 명제로 이루어져 있습니다. 두 명제 모두 거짓이므로 False or False가 되고, 결과는 False입니다. 둘째 줄은 (“Python” != “R”)과 (“Life”==“short”) 라는 두 개의 명제로 이루어져 있습니다. 첫 명제는 참이지만 둘째 명제는 거짓이므로 True and False가 되고, 결과는 False입니다.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb36-1" title="1"><span class="op">&gt;&gt;&gt;</span> (<span class="dv">10</span> <span class="op">&lt;</span> <span class="dv">10</span>) <span class="kw">or</span> (<span class="dv">10</span> <span class="op">&gt;</span> <span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb36-2" title="2"><span class="va">False</span></a>
-<a class="sourceLine" id="cb36-3" title="3"><span class="op">&gt;&gt;&gt;</span> (<span class="st">&quot;Python&quot;</span> <span class="op">!=</span> <span class="st">&quot;R&quot;</span>) <span class="kw">and</span> (<span class="st">&quot;Life&quot;</span> <span class="op">==</span> <span class="st">&quot;short&quot;</span>)</a>
-<a class="sourceLine" id="cb36-4" title="4"><span class="va">False</span></a></code></pre></div>
+<p>첫 줄은 <code>(10 &lt; 10)</code>과 <code>(10 &gt; 10)</code> 이라는 두 개의 명제로 이루어져 있습니다. 두 명제 모두 거짓이므로 <code>False or False</code>가 되고, 결과는 <code>False</code>입니다. 둘째 줄은 <code>(&quot;Python&quot; != &quot;R&quot;)</code>과 <code>(&quot;Life&quot;==&quot;short&quot;)</code> 라는 두 개의 명제로 이루어져 있습니다. 첫 명제는 참이지만 둘째 명제는 거짓이므로 <code>True and False</code>가 되고, 결과는 <code>False</code>입니다.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb43-1" title="1"><span class="op">&gt;&gt;&gt;</span> (<span class="dv">10</span> <span class="op">&lt;</span> <span class="dv">10</span>) <span class="kw">or</span> (<span class="dv">10</span> <span class="op">&gt;</span> <span class="dv">10</span>) <span class="co">#  False or False: 따라서 False</span></a>
+<a class="sourceLine" id="cb43-2" title="2"><span class="va">False</span></a>
+<a class="sourceLine" id="cb43-3" title="3"><span class="op">&gt;&gt;&gt;</span> (<span class="st">&quot;Python&quot;</span> <span class="op">!=</span> <span class="st">&quot;R&quot;</span>) <span class="kw">and</span> (<span class="st">&quot;Life&quot;</span> <span class="op">==</span> <span class="st">&quot;short&quot;</span>) <span class="co"># True and False: 따라서 False</span></a>
+<a class="sourceLine" id="cb43-4" title="4"><span class="va">False</span></a></code></pre></div>
 </div>
+</div>
+<div id="any-all" class="section level2">
+<h2>3.3. any, all</h2>
+<p><code>any</code> 함수와 <code>all</code> 함수는 파이썬의 컬렉션들에 적용할 수 있는 함수입니다. 컬렉션이란 여러 요소들을 모아놓은 자료형으로, 뒤에서 배울 리스트가 대표적인 파이썬의 컬렉션입니다.</p>
+<table>
+<thead>
+<tr class="header">
+<th>함수</th>
+<th>기능</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>any</code></td>
+<td>대상이 True를 하나라도 포함하면 True, 아니면 False를 반환</td>
+</tr>
+<tr class="even">
+<td><code>all</code></td>
+<td>대상이 True만을 포함하면 True, 아니면 False를 반환</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb44-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [<span class="va">True</span>, <span class="va">False</span>, <span class="va">False</span>]</a>
+<a class="sourceLine" id="cb44-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">any</span>(mylist) <span class="co"># 리스트가 True를 포함하므로 True</span></a>
+<a class="sourceLine" id="cb44-3" title="3"><span class="va">True</span></a>
+<a class="sourceLine" id="cb44-4" title="4"><span class="op">&gt;&gt;&gt;</span> <span class="bu">all</span>(mylist) <span class="co"># 리스트가 False를 포함하므로 False</span></a>
+<a class="sourceLine" id="cb44-5" title="5"><span class="va">False</span></a></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb45-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb45-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">any</span>(mylist) <span class="co"># 리스트가 1과 2를 포함하므로 True</span></a>
+<a class="sourceLine" id="cb45-3" title="3"><span class="va">True</span></a>
+<a class="sourceLine" id="cb45-4" title="4"><span class="op">&gt;&gt;&gt;</span> <span class="bu">all</span>(mylist) <span class="co"># 리스트가 0을 포함하므로 False</span></a>
+<a class="sourceLine" id="cb45-5" title="5"><span class="va">False</span></a></code></pre></div>
 </div>
 </div>
 <div id="변수와-함수" class="section level1">
 <h1>4. 변수와 함수</h1>
 <div id="변수" class="section level2">
 <h2>4.1. 변수</h2>
-<p>변수는 정보를 담는 공간입니다. 우리가 x=3 이라는 할당을 시행하면 컴퓨터는 메모리 어딘가에 3이라는 정보를 기록하고, x라는 라벨을 붙입니다. 이후 코드에서 x라는 변수를 사용하면, 컴퓨터는 x라는 라벨이 붙은 정보를 찾아 계산에 사용하게 되는 것입니다. 변수가 메모리 어디에 저장되어 있는지는 id() 함수를 사용하면 알 수 있습니다.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb37-1" title="1"><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">3</span></a>
-<a class="sourceLine" id="cb37-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">id</span>(x)</a>
-<a class="sourceLine" id="cb37-3" title="3"><span class="dv">140714598900176</span></a></code></pre></div>
+<p>변수는 정보를 담는 공간입니다. 우리가 <code>x=3</code> 이라는 할당을 시행하면 컴퓨터는 메모리 어딘가에 3이라는 정보를 기록하고, x라는 라벨을 붙입니다. 이후 코드에서 x라는 변수를 사용하면, 컴퓨터는 x라는 라벨이 붙은 정보를 찾아 계산에 사용하게 되는 것입니다. 변수가 메모리 어디에 저장되어 있는지는 <code>id</code> 함수를 사용하면 알 수 있습니다.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb46-1" title="1"><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">3</span></a>
+<a class="sourceLine" id="cb46-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">id</span>(x)</a>
+<a class="sourceLine" id="cb46-3" title="3"><span class="dv">140714598900176</span></a></code></pre></div>
 <ul>
 <li>변수는 숫자로 시작할 수 없다</li>
+<li>파이썬 예약어(키워드)는 변수로 사용할 수 없다</li>
 <li>하나의 변수명에는 하나의 객체가 대응한다</li>
 </ul>
 </div>
@@ -2210,86 +2307,92 @@ $(document).ready(function () {
 <h2>4.2. 함수</h2>
 <div id="함수의-구조" class="section level3">
 <h3>함수의 구조</h3>
-<p>우리가 흔히 알고 있는 함수는 y = f(x)와 같은 형태입니다. x라는 입력이 들어가면, f(x)라는 함수값이 출력됩니다. 파이썬의 함수 역시 이와 유사하게 작동합니다. <strong>파이썬에서는 x를 인자(argument) 또는 매개변수(parameter)라고 부르고, y를 반환(return)이라고 부릅니다.</strong> 간단한 함수를 만들어보면서 파이썬 함수의 구조를 살펴보도록 하겠습니다.</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb38-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> add(x,y):</a>
-<a class="sourceLine" id="cb38-2" title="2">...     result <span class="op">=</span> x <span class="op">+</span> y</a>
-<a class="sourceLine" id="cb38-3" title="3">...     <span class="cf">return</span> result</a>
-<a class="sourceLine" id="cb38-4" title="4"><span class="op">&gt;&gt;&gt;</span> add(x<span class="op">=</span><span class="dv">4</span>,y<span class="op">=</span><span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb38-5" title="5"><span class="dv">9</span></a></code></pre></div>
-<p>위 함수는 x와 y라는 두 개의 인자를 받아서 더하고, 이 결과를 반환하는 함수입니다. x=4, y=5를 전달하여 함수를 실행하면 다음과 같은 일이 발생할 것입니다.</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb39-1" title="1">...    result <span class="op">=</span> <span class="dv">4</span> <span class="op">+</span> <span class="dv">5</span></a>
-<a class="sourceLine" id="cb39-2" title="2">...    <span class="cf">return</span> result</a></code></pre></div>
-<p>하지만 함수를 실행한 후 result를 출력하면 변수 result가 선언되지 않았다는 에러가 발생합니다. <strong>함수 안에서 사용되는 변수는 지역 변수(local variables)로, 함수 안에서만 유효하기 때문입니다.</strong> 따라서 함수의 실행 결과를 저장하려면 이를 별도의 변수에 할당해주어야 합니다.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb40-1" title="1"><span class="op">&gt;&gt;&gt;</span> add(<span class="dv">4</span>,<span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb40-2" title="2"><span class="dv">9</span></a>
-<a class="sourceLine" id="cb40-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(result)</a>
-<a class="sourceLine" id="cb40-4" title="4">Traceback (most recent call last):</a>
-<a class="sourceLine" id="cb40-5" title="5">  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></a>
-<a class="sourceLine" id="cb40-6" title="6"><span class="pp">NameError</span>: name <span class="st">&#39;result&#39;</span> <span class="kw">is</span> <span class="kw">not</span> defined</a>
-<a class="sourceLine" id="cb40-7" title="7"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> add(<span class="dv">4</span>,<span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb40-8" title="8"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(a)</a>
-<a class="sourceLine" id="cb40-9" title="9"><span class="dv">9</span></a></code></pre></div>
-<p>def문의 구조를 일반화하면 다음과 같습니다. def 다음 함수명을 적고, 괄호 안에 필요한 인자들을 적어줍니다. 이후 인자들을 변수처럼 활용하여 계산을 진행하면 됩니다. <strong>계산이 끝나면 반드시 return 절에 반환할 결과물을 적어줘야 합니다!!</strong></p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb41-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> 함수명(인자1,인자2,...):</a>
-<a class="sourceLine" id="cb41-2" title="2">...    인자들을 활용한 계산 <span class="co"># return 나올 때까지 들여쓰기 필수!!!! 스페이스 네 개</span></a>
-<a class="sourceLine" id="cb41-3" title="3">...    <span class="cf">return</span> 결과물</a>
-<a class="sourceLine" id="cb41-4" title="4"><span class="op">&gt;&gt;&gt;</span> </a></code></pre></div>
+<div class="figure">
+<img src="data:image/png;base64,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" alt="위키백과" />
+<p class="caption">위키백과</p>
+</div>
+<p>우리가 흔히 알고 있는 함수는 y = f(x)와 같은 형태입니다. x라는 입력이 들어가면, f(x)라는 함수값이 출력됩니다. 파이썬의 함수 역시 이와 유사하게 작동합니다. <strong>파이썬에서는 x를 인자(argument) 또는 매개변수(parameter)라고 부르고, y를 반환(return)이라고 부릅니다.</strong></p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb47-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> 함수명(매개변수1,매개변수2,...):</a>
+<a class="sourceLine" id="cb47-2" title="2">...    매개변수들을 활용한 계산 <span class="co"># 들여쓰기 필수!!!! 스페이스 네 개 !!!!</span></a>
+<a class="sourceLine" id="cb47-3" title="3">...    <span class="cf">return</span> 결과물</a></code></pre></div>
+<p>파이썬의 함수는 <code>def</code> 문을 통해 만들 수 있으며, <code>def</code> 문의 구조를 일반화하면 위와 같습니다. <code>def</code> 다음 함수명을 적고, 괄호 안에 필요한 매개변수들을 적어줍니다. 이후 다음 줄로 넘어가 들여쓰기(스페이스 네 개)된 상태에서 계산을 진행하면 됩니다. 대부분의 편집기에서는 자동으로 들여쓰기를 적용해줍니다. <strong>계산이 끝나면 <code>return</code> 절에 반환할 결과물을 적어줍니다.</strong></p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb48-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> add(x,y): <span class="co"># def 함수이름(매개변수1, 매개변수2):</span></a>
+<a class="sourceLine" id="cb48-2" title="2">...     result <span class="op">=</span> x <span class="op">+</span> y </a>
+<a class="sourceLine" id="cb48-3" title="3">...     <span class="cf">return</span> result <span class="co"># return 결과물</span></a>
+<a class="sourceLine" id="cb48-4" title="4"><span class="op">&gt;&gt;&gt;</span> add(x<span class="op">=</span><span class="dv">4</span>,y<span class="op">=</span><span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb48-5" title="5"><span class="dv">9</span></a>
+<a class="sourceLine" id="cb48-6" title="6"><span class="op">&gt;&gt;&gt;</span> add(<span class="dv">4</span>,<span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb48-7" title="7"><span class="dv">9</span></a></code></pre></div>
+<p><code>add</code> 함수는 <code>x</code>와 <code>y</code>라는 두 개의 인자를 받아서 더하고, 이 결과를 반환합니다. 함수를 사용할 때는 함수 이름을 적고, 등호 <code>=</code>를 사용해서 필요한 인자들을 전달해줍니다. 인자를 순서대로 전달했다면, 매개변수명을 생략할 수 있습니다.</p>
+<p><strong>함수 안에서 사용되는 변수들은 지역 변수(local variable)로, 함수 안에서만 유효합니다.</strong> 즉 함수 밖에서는 함수 안의 변수들에 접근할 수 없습니다. 예를 들어 우리가 만든 <code>add</code> 함수에 <code>x=4, y=5</code>를 전달하고 실행하면 함수 안에서는 다음과 같은 일이 일어날 것입니다.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb49-1" title="1">...    result <span class="op">=</span> <span class="dv">4</span> <span class="op">+</span> <span class="dv">5</span></a>
+<a class="sourceLine" id="cb49-2" title="2">...    <span class="cf">return</span> result</a></code></pre></div>
+<p>하지만 함수를 실행한 후 <code>result</code>를 출력하면 변수 <code>result</code>가 선언되지 않았다는 에러가 발생합니다. 함수 안에서 사용되는 변수는 지역 변수(local variables)로, 함수 안에서만 유효하기 때문입니다. 따라서 함수의 실행 결과를 저장하려면 이를 별도의 변수에 할당해주어야 합니다.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb50-1" title="1"><span class="op">&gt;&gt;&gt;</span> add(x<span class="op">=</span><span class="dv">4</span>,y<span class="op">=</span><span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb50-2" title="2"><span class="dv">9</span></a>
+<a class="sourceLine" id="cb50-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(result)</a>
+<a class="sourceLine" id="cb50-4" title="4">Traceback (most recent call last):</a>
+<a class="sourceLine" id="cb50-5" title="5">  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb50-6" title="6"><span class="pp">NameError</span>: name <span class="st">&#39;result&#39;</span> <span class="kw">is</span> <span class="kw">not</span> defined</a>
+<a class="sourceLine" id="cb50-7" title="7"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> add(<span class="dv">4</span>,<span class="dv">5</span>) <span class="co"># 인자를 순서대로 전달할 때에는 매개변수명을 생략할 수 있습니다</span></a>
+<a class="sourceLine" id="cb50-8" title="8"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(a)</a>
+<a class="sourceLine" id="cb50-9" title="9"><span class="dv">9</span></a></code></pre></div>
 <div class="warning">
-<p><strong>예제 4-1. 이메일 문자열이 gmail 주소이면 True, 아니면 False를 반환하는 함수를 작성하세요. 다음과 같이 작동하면 됩니다.</strong></p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb42-1" title="1"><span class="op">&gt;&gt;&gt;</span> my_function(<span class="st">&quot;yonseidslab@gmail.com&quot;</span>)</a>
-<a class="sourceLine" id="cb42-2" title="2"><span class="va">True</span></a>
-<a class="sourceLine" id="cb42-3" title="3"><span class="op">&gt;&gt;&gt;</span> my_function(<span class="st">&quot;yonseidslab@naver.com&quot;</span>)</a>
-<a class="sourceLine" id="cb42-4" title="4"><span class="va">False</span></a></code></pre></div>
+<p><strong>예제 4-1. 이메일 문자열이 gmail 주소이면 <code>True</code>, 아니면 <code>False</code>를 반환하는 함수를 작성하세요. 다음과 같이 작동하면 됩니다.</strong></p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb51-1" title="1"><span class="op">&gt;&gt;&gt;</span> my_function(<span class="st">&quot;yonseidslab@gmail.com&quot;</span>)</a>
+<a class="sourceLine" id="cb51-2" title="2"><span class="va">True</span></a>
+<a class="sourceLine" id="cb51-3" title="3"><span class="op">&gt;&gt;&gt;</span> my_function(<span class="st">&quot;yonseidslab@naver.com&quot;</span>)</a>
+<a class="sourceLine" id="cb51-4" title="4"><span class="va">False</span></a></code></pre></div>
 <p><strong>풀이</strong></p>
-<p>주어진 문자열에 “<span class="citation">@gmail.com</span>”이 포함되는지를 판단하면 되는 문제입니다. 함수의 이름을 my_function으로 정하고, address라는 인자를 받도록 했습니다. 이제부터 address는 어떤 문자열을 가리키는 변수라고 상상하면서 코딩을 해주면 됩니다. “<span class="citation">@gmail.com</span>” in address는 address 문자열에 “<span class="citation">@gmail.com</span>”이 포함되는지 판단하는 코드가 됩니다. 따라서 “<span class="citation">@gmail.com</span>”이 포함되면 True, 아니면 False를 반환할 것입니다. 이 결과를 result라는 변수에 저장하고, return result로 결과를 반환합니다.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb43-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_function(address):</a>
-<a class="sourceLine" id="cb43-2" title="2">...     result <span class="op">=</span> <span class="st">&quot;@gmail.com&quot;</span> <span class="kw">in</span> address</a>
-<a class="sourceLine" id="cb43-3" title="3">...     <span class="cf">return</span> result</a>
-<a class="sourceLine" id="cb43-4" title="4"><span class="op">&gt;&gt;&gt;</span> my_function(<span class="st">&quot;yonseidslab@gmail.com&quot;</span>)</a>
-<a class="sourceLine" id="cb43-5" title="5"><span class="va">True</span></a>
-<a class="sourceLine" id="cb43-6" title="6"><span class="op">&gt;&gt;&gt;</span> my_function(<span class="st">&quot;yonseidslab@naver.com&quot;</span>)</a>
-<a class="sourceLine" id="cb43-7" title="7"><span class="va">False</span></a></code></pre></div>
+<p>주어진 문자열에 <code>&quot;@gmail.com&quot;</code>이 포함되는지를 판단하면 되는 문제입니다. 함수의 이름을 <code>my_function</code>으로 정하고, <code>address</code>라는 매개변수로 문자열을 받았습니다. 이제부터 <code>address</code>는 어떤 문자열을 가리키는 변수라고 상상하면서 코딩을 해주면 됩니다. <code>in</code> 연산을 통해 <code>address</code>에 <code>&quot;@gmail.com&quot;</code>이 포함되는지 판단할 수 있습니다. 이 결과를 <code>result</code>라는 변수에 저장하고, <code>return result</code>로 결과를 반환합니다.</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb52-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_function(address):</a>
+<a class="sourceLine" id="cb52-2" title="2">...     result <span class="op">=</span> <span class="st">&quot;@gmail.com&quot;</span> <span class="kw">in</span> address <span class="co"># in 연산: @gmail.com 포함하면 True, 아니면 False</span></a>
+<a class="sourceLine" id="cb52-3" title="3">...     <span class="cf">return</span> result</a>
+<a class="sourceLine" id="cb52-4" title="4"><span class="op">&gt;&gt;&gt;</span> my_function(address<span class="op">=</span><span class="st">&quot;yonseidslab@gmail.com&quot;</span>)</a>
+<a class="sourceLine" id="cb52-5" title="5"><span class="va">True</span></a>
+<a class="sourceLine" id="cb52-6" title="6"><span class="op">&gt;&gt;&gt;</span> my_function(<span class="st">&quot;yonseidslab@naver.com&quot;</span>) <span class="co"># 인자를 순서대로 전달할 경우에는 매개변수 생략 가능</span></a>
+<a class="sourceLine" id="cb52-7" title="7"><span class="va">False</span></a></code></pre></div>
 <p>연산이 간단할 때에는 다음과 같이 적는 것도 가능합니다. 한 줄의 코드로 끝나는 연산이기 때문에 별도의 변수를 사용하지 않고 즉시 반환하였습니다.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb44-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_function(address):</a>
-<a class="sourceLine" id="cb44-2" title="2">...     <span class="cf">return</span> <span class="st">&quot;@gmail.com&quot;</span> <span class="kw">in</span> address</a></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb53-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_function(address):</a>
+<a class="sourceLine" id="cb53-2" title="2">...     <span class="cf">return</span> <span class="st">&quot;@gmail.com&quot;</span> <span class="kw">in</span> address</a></code></pre></div>
 </div>
 </div>
 <div id="인자와-반환" class="section level3">
 <h3>인자와 반환</h3>
 <p>사실 파이썬의 함수는 일반적인 함수와 달리 x와 y가 없이도 작동할 수 있습니다. 즉 파이썬의 함수는 다음과 같은 네 가지 경우로 구분할 수 있습니다.</p>
 <ol style="list-style-type: decimal">
-<li>인자(X)와 반환(Y)이 있는 함수</li>
-<li>인자(X)는 없고 반환(Y)가 있는 함수</li>
-<li>인자(X)는 있고 반환(Y)가 없는 함수</li>
-<li>인자(X)와 반환(Y)가 모두 없는 함수</li>
+<li>매개변수와 반환이 모두 있는 함수</li>
+<li>매개변수가 없고 반환이 있는 함수</li>
+<li>매개변수가 있고 반환이 없는 함수</li>
+<li>매개변수와 반환이 모두 없는 함수</li>
 </ol>
 <div class="warning">
 <p><strong>예제 4-2. 다음 함수들이 1,2,3,4 중 어디에 해당하는지 판단하세요.</strong></p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb45-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_function(x,y):</a>
-<a class="sourceLine" id="cb45-2" title="2">...     <span class="bu">print</span>(x<span class="op">+</span>y)</a>
-<a class="sourceLine" id="cb45-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_function2():</a>
-<a class="sourceLine" id="cb45-4" title="4">...     <span class="bu">print</span>(<span class="st">&quot;Hello world&quot;</span>)</a>
-<a class="sourceLine" id="cb45-5" title="5"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_function3():</a>
-<a class="sourceLine" id="cb45-6" title="6">...     <span class="cf">return</span>(<span class="st">&quot;Hello world&quot;</span>)</a>
-<a class="sourceLine" id="cb45-7" title="7"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_function4(x,y):</a>
-<a class="sourceLine" id="cb45-8" title="8">...     <span class="cf">return</span>(<span class="st">&quot;Hello world&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb54-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_function(x,y):</a>
+<a class="sourceLine" id="cb54-2" title="2">...     <span class="bu">print</span>(x<span class="op">+</span>y)</a>
+<a class="sourceLine" id="cb54-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_function2():</a>
+<a class="sourceLine" id="cb54-4" title="4">...     <span class="bu">print</span>(<span class="st">&quot;Hello world&quot;</span>)</a>
+<a class="sourceLine" id="cb54-5" title="5"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_function3():</a>
+<a class="sourceLine" id="cb54-6" title="6">...     <span class="cf">return</span>(<span class="st">&quot;Hello world&quot;</span>)</a>
+<a class="sourceLine" id="cb54-7" title="7"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> my_function4(x,y):</a>
+<a class="sourceLine" id="cb54-8" title="8">...     <span class="cf">return</span>(<span class="st">&quot;Hello world&quot;</span>)</a></code></pre></div>
 <p><strong>풀이</strong></p>
 <ol style="list-style-type: decimal">
-<li>x, y 두 개의 인자가 있지만 return 절이 없으므로 3에 해당</li>
-<li>인자가 없고 return 절이 없으므로 4에 해당</li>
-<li>인자가 없고 return 절이 있으므로 2에 해당</li>
-<li>x, y 두 개의 인자가 있고 return 절이 있으므로 1에 해당</li>
+<li>x, y 두 개의 매개변수가 있지만 <code>return</code>이 없으므로 3에 해당</li>
+<li>매개변수가 없고 <code>return</code>이 없으므로 4에 해당</li>
+<li>매개변수가 없고 <code>return</code>이 있으므로 2에 해당</li>
+<li>x, y 두 개의 매개변수가 있고 <code>return</code>이 있으므로 1에 해당</li>
 </ol>
 </div>
 </div>
 <div id="lambda-함수" class="section level3">
 <h3>lambda 함수</h3>
-<p>지금까지는 def문을 통해서 함수를 만드는 방법을 배웠습니다. 하지만 한 줄 정도의 간단한 함수를 만들 때는 lambda문을 사용하는 것이 편리합니다. lambda문을 활용하면 좀 더 간단한 표현으로 함수를 만들 수 있습니다. lambda 뒤에 괄호를 사용하지 않고 인자를 나열해준 후, 콜론 다음에 계산식을 적어주면 됩니다. lambda문에서는 return을 사용하지 않으며, 콜론 이후 코드의 실행 결과가 즉시 반환됩니다. 이를 변수에 할당하면 해당 변수명으로 함수가 생성됩니다.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb46-1" title="1"><span class="op">&gt;&gt;&gt;</span> add <span class="op">=</span> <span class="kw">lambda</span> x,y: x<span class="op">+</span>y</a>
-<a class="sourceLine" id="cb46-2" title="2"><span class="op">&gt;&gt;&gt;</span> add(<span class="dv">4</span>,<span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb46-3" title="3"><span class="dv">9</span></a></code></pre></div>
-<p>ladmba 문의 구조를 일반화하면 다음과 같습니다.</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb47-1" title="1"><span class="op">&gt;&gt;&gt;</span> 함수명 <span class="op">=</span> <span class="kw">lambda</span> 인자1, 인자2, ...: 계산식</a></code></pre></div>
+<p>지금까지는 <code>def</code> 문을 통해서 함수를 만드는 방법을 배웠습니다. 하지만 한 줄 정도의 간단한 함수를 만들 때는 <code>lambda</code> 문을 사용하는 것이 편리합니다. <code>lambda</code> 뒤에 괄호를 사용하지 않고 매개변수들을 나열해준 후, 콜론 다음에 계산식을 적어주면 됩니다. <code>lambda</code> 문에서는 <code>return</code>을 사용하지 않으며, 콜론 이후 코드의 실행 결과가 즉시 반환됩니다. <code>lambda</code> 문을 변수에 할당하면 해당 변수명으로 함수가 생성됩니다.</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb55-1" title="1"><span class="op">&gt;&gt;&gt;</span> add <span class="op">=</span> <span class="kw">lambda</span> x,y: x<span class="op">+</span>y</a>
+<a class="sourceLine" id="cb55-2" title="2"><span class="op">&gt;&gt;&gt;</span> add(<span class="dv">4</span>,<span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb55-3" title="3"><span class="dv">9</span></a></code></pre></div>
+<p><code>lambda</code> 문의 구조를 일반화하면 다음과 같습니다.</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb56-1" title="1"><span class="op">&gt;&gt;&gt;</span> 함수명 <span class="op">=</span> <span class="kw">lambda</span> 매개변수1, 매개변수2, ...: 계산식</a></code></pre></div>
 </div>
 </div>
 </div>
@@ -2297,13 +2400,13 @@ $(document).ready(function () {
 <h1>5. 리스트</h1>
 <div id="리스트-생성" class="section level2">
 <h2>5.1. 리스트 생성</h2>
-<p>리스트는 [요소1, 요소2, 요소3, …]과 같이 여러 요소들을 묶어놓은 자료형입니다. 대괄호 혹은 list() 함수를 사용해서 리스트를 생성할 수 있습니다. 각 요소들은 쉼표 ,로 구분합니다. 리스트는 거의 모든 자료형을 요소로 가질 수 있으며, 요소들의 자료형이 모두 같을 필요도 없습니다. 다음은 모두 리스트의 예시입니다.</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb48-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> [] <span class="co"># 빈 리스트</span></a>
-<a class="sourceLine" id="cb48-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>] <span class="co"># 숫자 리스트</span></a>
-<a class="sourceLine" id="cb48-3" title="3"><span class="op">&gt;&gt;&gt;</span> c <span class="op">=</span> [<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>,<span class="st">&#39;d&#39;</span>,<span class="st">&#39;e&#39;</span>] <span class="co"># 문자열 리스트</span></a>
-<a class="sourceLine" id="cb48-4" title="4"><span class="op">&gt;&gt;&gt;</span> d <span class="op">=</span> [<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="st">&#39;d&#39;</span>,<span class="va">False</span>] <span class="co"># 여러 자료형을 포함한 리스트</span></a>
-<a class="sourceLine" id="cb48-5" title="5"><span class="op">&gt;&gt;&gt;</span> e <span class="op">=</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]] <span class="co"># 리스트의 리스트</span></a>
-<a class="sourceLine" id="cb48-6" title="6"><span class="op">&gt;&gt;&gt;</span> f <span class="op">=</span> <span class="bu">list</span>([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]) <span class="co"># list() 함수를 사용해서 리스트 생성</span></a></code></pre></div>
+<p>리스트는 <code>[요소1, 요소2, 요소3, ...]</code>과 같이 여러 요소들을 묶어놓은 자료형입니다. 대괄호 혹은 <code>list</code> 함수를 사용해서 리스트를 생성할 수 있습니다. 각 요소들은 쉼표 ,로 구분합니다. 리스트는 거의 모든 자료형을 요소로 가질 수 있으며, 요소들의 자료형이 모두 같을 필요도 없습니다. 다음은 모두 리스트의 예시입니다.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb57-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> [] <span class="co"># 빈 리스트</span></a>
+<a class="sourceLine" id="cb57-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>] <span class="co"># 숫자 리스트</span></a>
+<a class="sourceLine" id="cb57-3" title="3"><span class="op">&gt;&gt;&gt;</span> c <span class="op">=</span> [<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>,<span class="st">&#39;d&#39;</span>,<span class="st">&#39;e&#39;</span>] <span class="co"># 문자열 리스트</span></a>
+<a class="sourceLine" id="cb57-4" title="4"><span class="op">&gt;&gt;&gt;</span> d <span class="op">=</span> [<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="st">&#39;d&#39;</span>,<span class="va">False</span>] <span class="co"># 여러 자료형을 포함한 리스트</span></a>
+<a class="sourceLine" id="cb57-5" title="5"><span class="op">&gt;&gt;&gt;</span> e <span class="op">=</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]] <span class="co"># 리스트의 리스트</span></a>
+<a class="sourceLine" id="cb57-6" title="6"><span class="op">&gt;&gt;&gt;</span> f <span class="op">=</span> <span class="bu">list</span>([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]) <span class="co"># list() 함수를 사용해서 리스트 생성</span></a></code></pre></div>
 </div>
 <div id="리스트-연산자" class="section level2">
 <h2>5.2. 리스트 연산자</h2>
@@ -2318,52 +2421,52 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td>+</td>
+<td><code>+</code></td>
 <td>두 리스트를 합침</td>
-<td>[1,2,3] + [4,5,6]</td>
-<td>[1,2,3,4,5,6]</td>
+<td><code>[1,2,3] + [4,5,6]</code></td>
+<td><code>[1,2,3,4,5,6]</code></td>
 </tr>
 <tr class="even">
-<td>*</td>
+<td><code>*</code></td>
 <td>리스트의 요소들을 반복</td>
-<td>[1,2,3]*2</td>
-<td>[1,2,3,1,2,3]</td>
+<td><code>[1,2,3]*2</code></td>
+<td><code>[1,2,3,1,2,3]</code></td>
 </tr>
 <tr class="odd">
-<td>a in b</td>
+<td><code>a in b</code></td>
 <td>“a 요소가 b 리스트 안에 포함된다”를 판단</td>
-<td>1 in [1,2,3]</td>
-<td>True</td>
+<td><code>1 in [1,2,3]</code></td>
+<td><code>True</code></td>
 </tr>
 <tr class="even">
-<td>a not in b</td>
+<td><code>a not in b</code></td>
 <td>“a 요소가 b 리스트 안에 포함되지 않는다”를 판단</td>
-<td>1 not in [1,2,3]</td>
-<td>False</td>
+<td><code>1 not in [1,2,3]</code></td>
+<td><code>False</code></td>
 </tr>
 </tbody>
 </table>
-<p>in 연산자와 not in 연산자는 기억하고 넘어가시기 바랍니다.</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb49-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Apple&quot;</span> <span class="kw">not</span> <span class="kw">in</span> [<span class="st">&quot;Apple&quot;</span>, <span class="st">&quot; Banana&quot;</span>, <span class="st">&quot;code&quot;</span>]</a>
-<a class="sourceLine" id="cb49-2" title="2"><span class="va">False</span></a>
-<a class="sourceLine" id="cb49-3" title="3"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>] <span class="kw">in</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]]</a>
-<a class="sourceLine" id="cb49-4" title="4"><span class="va">True</span></a></code></pre></div>
+<p><code>in</code> 연산자와 <code>not in</code> 연산자는 기억하고 넘어가시기 바랍니다.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb58-1" title="1"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Apple&quot;</span> <span class="kw">not</span> <span class="kw">in</span> [<span class="st">&quot;Apple&quot;</span>, <span class="st">&quot; Banana&quot;</span>, <span class="st">&quot;code&quot;</span>]</a>
+<a class="sourceLine" id="cb58-2" title="2"><span class="va">False</span></a>
+<a class="sourceLine" id="cb58-3" title="3"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>] <span class="kw">in</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]]</a>
+<a class="sourceLine" id="cb58-4" title="4"><span class="va">True</span></a></code></pre></div>
 <div class="warning">
 <p><strong>예제 5-1. 다음 코드의 실행 결과를 판단하세요(True/False)</strong></p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb50-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>] <span class="kw">not</span> <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</a>
-<a class="sourceLine" id="cb50-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="kw">in</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]]</a></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb59-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>] <span class="kw">not</span> <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb59-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="kw">in</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]]</a></code></pre></div>
 <p><strong>풀이</strong></p>
-<p>첫 줄은 ’[1,2,3]은 [1,2,3]의 요소가 아니다’를 판단하는 코드입니다. [1,2,3]의 요소는 1, 2, 3 이므로 [1,2,3]은 [1,2,3]의 요소가 아니고, 결과는 True입니다. 두 번째 줄은 ’1은 [[1,2,3]]’의 요소이다’를 판단하는 코드입니다. [[1,2,3]]의 요소는 [1,2,3]뿐이므로 결과는 False입니다.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb51-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>] <span class="kw">not</span> <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</a>
-<a class="sourceLine" id="cb51-2" title="2"><span class="va">True</span></a>
-<a class="sourceLine" id="cb51-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="kw">in</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]]</a>
-<a class="sourceLine" id="cb51-4" title="4"><span class="va">False</span></a></code></pre></div>
+<p><code>[1,2,3]</code>의 요소는 <code>1, 2, 3</code> 이므로 <code>[1,2,3]</code>은 <code>[1,2,3]</code>의 요소가 아닙니다. 따라서 첫 줄의 결과는 <code>True</code>입니다. [[1,2,3]]의 요소는 [1,2,3]뿐이므로 결과는 False입니다.</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb60-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>] <span class="kw">not</span> <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb60-2" title="2"><span class="va">True</span></a>
+<a class="sourceLine" id="cb60-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="kw">in</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]]</a>
+<a class="sourceLine" id="cb60-4" title="4"><span class="va">False</span></a></code></pre></div>
 </div>
 </div>
 <div id="리스트-인덱싱-슬라이싱" class="section level2">
 <h2>5.3. 리스트 인덱싱 &amp; 슬라이싱</h2>
 <p>리스트는 요소들의 순차적인 배열입니다. 따라서 문자열과 마찬가지로, 각각의 요소들에 번호를 매길 수 있습니다. 번호를 매기는 방식 역시 문자열과 동일합니다. 즉 앞에서부터 0, 1, 2 … 순으로 인덱스가 붙고, 뒤에서부터 -1,-2,-3 … 순으로 인덱스가 붙습니다. 예를 들면 다음과 같습니다.</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb52-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="st">&quot;Life&quot;</span>, <span class="st">&quot;is&quot;</span>, <span class="st">&quot;short&quot;</span>, <span class="st">&quot;you&quot;</span>, <span class="st">&quot;need&quot;</span>, <span class="st">&quot;Python&quot;</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb61-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="st">&quot;Life&quot;</span>, <span class="st">&quot;is&quot;</span>, <span class="st">&quot;short&quot;</span>, <span class="st">&quot;you&quot;</span>, <span class="st">&quot;need&quot;</span>, <span class="st">&quot;Python&quot;</span>]</a></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -2411,70 +2514,70 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td>[0.25, 0.5, 0.75, 1.0]</td>
-<td>1</td>
-<td>[0.25, 0.5, 0.75, 1.0][1]</td>
-<td>0.5</td>
+<td><code>[0.25, 0.5, 0.75, 1.0]</code></td>
+<td><code>1</code></td>
+<td><code>[0.25, 0.5, 0.75, 1.0][1]</code></td>
+<td><code>0.5</code></td>
 </tr>
 <tr class="even">
-<td>[“You”, “need”, “Python”]</td>
-<td>-1</td>
-<td>[“You”, “need”, “Python”][-1]</td>
-<td>‘Python’</td>
+<td><code>[&quot;You&quot;, &quot;need&quot;, &quot;Python&quot;]</code></td>
+<td><code>-1</code></td>
+<td><code>[&quot;You&quot;, &quot;need&quot;, &quot;Python&quot;][-1]</code></td>
+<td><code>&#39;Python&#39;</code></td>
 </tr>
 <tr class="odd">
-<td>[[1,2,3],[4,5,6],[7,8,9]]</td>
-<td>2</td>
-<td>[[1,2,3],[4,5,6],[7,8,9]][2]</td>
-<td>[7,8,9]</td>
+<td><code>[[1,2,3],[4,5,6],[7,8,9]]</code></td>
+<td><code>2</code></td>
+<td><code>[[1,2,3],[4,5,6],[7,8,9]][2]</code></td>
+<td><code>[7,8,9]</code></td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb53-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">1.0</span>][<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb53-2" title="2"><span class="fl">0.5</span></a>
-<a class="sourceLine" id="cb53-3" title="3"><span class="op">&gt;&gt;&gt;</span> [<span class="st">&quot;You&quot;</span>, <span class="st">&quot;need&quot;</span>, <span class="st">&quot;Python&quot;</span>][<span class="op">-</span><span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb53-4" title="4"><span class="co">&#39;Python&#39;</span></a>
-<a class="sourceLine" id="cb53-5" title="5"><span class="op">&gt;&gt;&gt;</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>],[<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>],[<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>]][<span class="dv">2</span>]</a>
-<a class="sourceLine" id="cb53-6" title="6">[<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb62-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">1.0</span>][<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb62-2" title="2"><span class="fl">0.5</span></a>
+<a class="sourceLine" id="cb62-3" title="3"><span class="op">&gt;&gt;&gt;</span> [<span class="st">&quot;You&quot;</span>, <span class="st">&quot;need&quot;</span>, <span class="st">&quot;Python&quot;</span>][<span class="op">-</span><span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb62-4" title="4"><span class="co">&#39;Python&#39;</span></a>
+<a class="sourceLine" id="cb62-5" title="5"><span class="op">&gt;&gt;&gt;</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>],[<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>],[<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>]][<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb62-6" title="6">[<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</a></code></pre></div>
 <p>인덱싱을 사용하여 개별 요소를 추출하였다면, 해당 요소에 대해 다시 조작을 가하는 것도 가능합니다. 아래는 리스트에서 개별 요소를 추출한 후, 해당 요소에 대해 다시 인덱싱/슬라이싱을 적용한 예제입니다.</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb54-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [<span class="st">&quot;Life&quot;</span>, <span class="st">&quot;is&quot;</span>, <span class="st">&quot;short&quot;</span>, <span class="st">&quot;you&quot;</span>, <span class="st">&quot;need&quot;</span>, <span class="st">&quot;Python&quot;</span>] <span class="co"># 리스트 생성</span></a>
-<a class="sourceLine" id="cb54-2" title="2"><span class="op">&gt;&gt;&gt;</span> element <span class="op">=</span> mylist[<span class="dv">0</span>] <span class="co"># 0번 요소인 &quot;Life&quot; 추출</span></a>
-<a class="sourceLine" id="cb54-3" title="3"><span class="op">&gt;&gt;&gt;</span> element[:<span class="dv">2</span>] <span class="co"># &quot;Life&quot;에서 2번 문자까지 슬라이싱</span></a>
-<a class="sourceLine" id="cb54-4" title="4"><span class="co">&#39;Li&#39;</span></a>
-<a class="sourceLine" id="cb54-5" title="5"><span class="op">&gt;&gt;&gt;</span> element[:<span class="dv">2</span>] <span class="op">==</span> mylist[<span class="dv">0</span>][:<span class="dv">2</span>] <span class="co"># 위 과정을 붙여서 쓴 코드</span></a>
-<a class="sourceLine" id="cb54-6" title="6"><span class="va">True</span></a></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb63-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [<span class="st">&quot;Life&quot;</span>, <span class="st">&quot;is&quot;</span>, <span class="st">&quot;short&quot;</span>, <span class="st">&quot;you&quot;</span>, <span class="st">&quot;need&quot;</span>, <span class="st">&quot;Python&quot;</span>] <span class="co"># 리스트 생성</span></a>
+<a class="sourceLine" id="cb63-2" title="2"><span class="op">&gt;&gt;&gt;</span> element <span class="op">=</span> mylist[<span class="dv">0</span>] <span class="co"># 0번 요소인 &quot;Life&quot; 추출</span></a>
+<a class="sourceLine" id="cb63-3" title="3"><span class="op">&gt;&gt;&gt;</span> element[:<span class="dv">2</span>] <span class="co"># &quot;Life&quot;에서 2번 문자까지 슬라이싱</span></a>
+<a class="sourceLine" id="cb63-4" title="4"><span class="co">&#39;Li&#39;</span></a>
+<a class="sourceLine" id="cb63-5" title="5"><span class="op">&gt;&gt;&gt;</span> element[:<span class="dv">2</span>] <span class="op">==</span> mylist[<span class="dv">0</span>][:<span class="dv">2</span>] <span class="co"># 위 과정을 붙여서 쓴 코드</span></a>
+<a class="sourceLine" id="cb63-6" title="6"><span class="va">True</span></a></code></pre></div>
 <div class="warning">
 <p><strong>예제 5-2. 다음 리스트에서 “Wally”를 추출하세요.</strong></p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb55-1" title="1"><span class="op">&gt;&gt;&gt;</span> WhereIsWally <span class="op">=</span> [[<span class="st">&quot;wally&quot;</span>,<span class="st">&quot;Willy Wonka&quot;</span>],[[<span class="st">&quot;waly&quot;</span>],<span class="st">&quot;Wally&quot;</span>,<span class="st">&quot;Wallmart&quot;</span>]]</a></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb64-1" title="1"><span class="op">&gt;&gt;&gt;</span> WhereIsWally <span class="op">=</span> [[<span class="st">&quot;wally&quot;</span>,<span class="st">&quot;Willy Wonka&quot;</span>],[[<span class="st">&quot;waly&quot;</span>],<span class="st">&quot;Wally&quot;</span>,<span class="st">&quot;Wallmart&quot;</span>]]</a></code></pre></div>
 <p><strong>풀이</strong></p>
 <p>“Wally”는 두 번째 서브리스트의 두 번째 요소입니다. 따라서 다음과 같이 두 번의 인덱싱으로 손쉽게 월리를 찾아낼 수 있습니다.</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb56-1" title="1"><span class="op">&gt;&gt;&gt;</span> WhereIsWally <span class="op">=</span> [[<span class="st">&quot;wally&quot;</span>,<span class="st">&quot;Willy Wonka&quot;</span>],[[<span class="st">&quot;waly&quot;</span>],<span class="st">&quot;Wally&quot;</span>,<span class="st">&quot;Wallmart&quot;</span>]]</a>
-<a class="sourceLine" id="cb56-2" title="2"><span class="op">&gt;&gt;&gt;</span> WhereIsWally[<span class="dv">1</span>][<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb56-3" title="3"><span class="co">&#39;Wally&#39;</span></a></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb65-1" title="1"><span class="op">&gt;&gt;&gt;</span> WhereIsWally <span class="op">=</span> [[<span class="st">&quot;wally&quot;</span>,<span class="st">&quot;Willy Wonka&quot;</span>],[[<span class="st">&quot;waly&quot;</span>],<span class="st">&quot;Wally&quot;</span>,<span class="st">&quot;Wallmart&quot;</span>]]</a>
+<a class="sourceLine" id="cb65-2" title="2"><span class="op">&gt;&gt;&gt;</span> WhereIsWally[<span class="dv">1</span>][<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb65-3" title="3"><span class="co">&#39;Wally&#39;</span></a></code></pre></div>
 <p><strong>예제 5-3. 다음 주소에서 문자열 인덱싱을 사용하지 않고 동을 추출하세요.</strong></p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb57-1" title="1"><span class="op">&gt;&gt;&gt;</span> address <span class="op">=</span> <span class="st">&quot;서울특별시 서대문구 신촌동 연세로 50&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb66-1" title="1"><span class="op">&gt;&gt;&gt;</span> address <span class="op">=</span> <span class="st">&quot;서울특별시 서대문구 신촌동 연세로 50&quot;</span></a></code></pre></div>
 <p><strong>풀이</strong></p>
 <p>주어진 문자열은 띄어쓰기 기준으로 스플릿할 수 있습니다. 스플릿을 실행하면 각 어절이 리스트의 요소로 들어갈 것이고, “신촌동”은 리스트의 두 번째 요소가 될 것입니다. 이 결과를 코드로 정리해주면 됩니다.</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb58-1" title="1"><span class="op">&gt;&gt;&gt;</span> address <span class="op">=</span> <span class="st">&quot;서울특별시 서대문구 신촌동 연세로 50&quot;</span></a>
-<a class="sourceLine" id="cb58-2" title="2"><span class="op">&gt;&gt;&gt;</span> address.split(<span class="st">&quot; &quot;</span>)[<span class="dv">2</span>]</a>
-<a class="sourceLine" id="cb58-3" title="3"><span class="co">&#39;신촌동&#39;</span></a></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb67-1" title="1"><span class="op">&gt;&gt;&gt;</span> address <span class="op">=</span> <span class="st">&quot;서울특별시 서대문구 신촌동 연세로 50&quot;</span></a>
+<a class="sourceLine" id="cb67-2" title="2"><span class="op">&gt;&gt;&gt;</span> address.split(<span class="st">&quot; &quot;</span>)[<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb67-3" title="3"><span class="co">&#39;신촌동&#39;</span></a></code></pre></div>
 </div>
 </div>
 <div id="슬라이싱-1" class="section level3">
 <h3>슬라이싱</h3>
 <p>리스트 슬라이싱 역시 문자열 슬라이싱과 다르지 않습니다. 대괄호 안에 콜론을 써서 구간을 표현해주시면 됩니다.</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb59-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;one&#39;</span>, <span class="st">&#39;two&#39;</span>, <span class="st">&#39;three&#39;</span>, <span class="st">&#39;four&#39;</span>, <span class="st">&#39;five&#39;</span>][:<span class="dv">2</span>]</a>
-<a class="sourceLine" id="cb59-2" title="2">[<span class="st">&#39;one&#39;</span>, <span class="st">&#39;two&#39;</span>]</a>
-<a class="sourceLine" id="cb59-3" title="3"><span class="op">&gt;&gt;&gt;</span> [<span class="st">&quot;Apple&quot;</span>,<span class="st">&quot;Banana&quot;</span>, <span class="st">&quot;Computer&quot;</span>, <span class="st">&quot;Data&quot;</span>][<span class="dv">1</span>:<span class="dv">3</span>]</a>
-<a class="sourceLine" id="cb59-4" title="4">[<span class="st">&#39;Banana&#39;</span>, <span class="st">&#39;Computer&#39;</span>]</a>
-<a class="sourceLine" id="cb59-5" title="5"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>][<span class="dv">3</span>:<span class="op">-</span><span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb59-6" title="6">[<span class="dv">4</span>]</a></code></pre></div>
-<p>이번에는 특정 요소들을 건너뛰는 슬라이싱을 배워보겠습니다. 예를 들어 리스트 안에서 홀수 인덱스를 가진 요소들만 추출할고 싶을 때, 이 방법을 활용할 수 있습니다. <strong>기본적인 구간 표현법은 start:end:step과 같습니다. 이는 start부터 end까지 step만큼 이동하면서 가져오라는 의미입니다.</strong> step이 1이면 바로 다음 요소로 가는 것이므로 해당 구간의 모든 요소들을 가져올 것이고, step이 2이면 한 칸씩 건너뛰면서 요소들을 가져올 것입니다.</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb68-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;one&#39;</span>, <span class="st">&#39;two&#39;</span>, <span class="st">&#39;three&#39;</span>, <span class="st">&#39;four&#39;</span>, <span class="st">&#39;five&#39;</span>][:<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb68-2" title="2">[<span class="st">&#39;one&#39;</span>, <span class="st">&#39;two&#39;</span>]</a>
+<a class="sourceLine" id="cb68-3" title="3"><span class="op">&gt;&gt;&gt;</span> [<span class="st">&quot;Apple&quot;</span>,<span class="st">&quot;Banana&quot;</span>, <span class="st">&quot;Computer&quot;</span>, <span class="st">&quot;Data&quot;</span>][<span class="dv">1</span>:<span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb68-4" title="4">[<span class="st">&#39;Banana&#39;</span>, <span class="st">&#39;Computer&#39;</span>]</a>
+<a class="sourceLine" id="cb68-5" title="5"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>][<span class="dv">3</span>:<span class="op">-</span><span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb68-6" title="6">[<span class="dv">4</span>]</a></code></pre></div>
+<p>이번에는 특정 요소들을 건너뛰는 슬라이싱을 배워보겠습니다. 예를 들어 리스트 안에서 홀수 인덱스를 가진 요소들만 추출할고 싶을 때, 이 방법을 활용할 수 있습니다. <strong>기본적인 구간 표현법은 <code>start:end:step</code>과 같습니다. 이는 start부터 end까지 step만큼 이동하면서 가져오라는 의미입니다.</strong> step이 1이면 바로 다음 요소로 가는 것이므로 해당 구간의 모든 요소들을 가져올 것이고, step이 2이면 한 칸씩 건너뛰면서 요소들을 가져올 것입니다.</p>
 <p>예제와 함께 보겠습니다. 첫 예제에서 사용한 구간 1:8:2는 1번 인덱스부터 8번 인덱스까지 2칸씩 진행하면서 요소들을 가져오라는 뜻입니다. 즉 따라서 1, 3, 5, 7번 인덱스에 해당하는 1, 3, 5, 7이 추출되었습니다. 두 번째 예제에서는 start와 end를 생략하여 리스트의 전 구간을 표현하였고, step은 2로 주었습니다. 따라서 0, 2, 4, 6, 8번 인덱스에 해당하는 0, 2, 4, 6, 8이 추출되었습니다.</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb60-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>][<span class="dv">1</span>:<span class="dv">8</span>:<span class="dv">2</span>]</a>
-<a class="sourceLine" id="cb60-2" title="2">[<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</a>
-<a class="sourceLine" id="cb60-3" title="3"><span class="op">&gt;&gt;</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>][::<span class="dv">2</span>]</a>
-<a class="sourceLine" id="cb60-4" title="4">[<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb69-1" title="1"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>][<span class="dv">1</span>:<span class="dv">8</span>:<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb69-2" title="2">[<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>]</a>
+<a class="sourceLine" id="cb69-3" title="3"><span class="op">&gt;&gt;</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>][::<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb69-4" title="4">[<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>]</a></code></pre></div>
 </div>
 </div>
 <div id="리스트-메소드" class="section level2">
@@ -2488,50 +2591,50 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td>a.append(b)</td>
+<td><code>a.append(b)</code></td>
 <td>리스트 a에 요소 b를 추가함</td>
 </tr>
 <tr class="even">
-<td>a.index(b)</td>
+<td><code>a.index(b)</code></td>
 <td>리스트 a에서 요소 b의 인덱스를 찾음</td>
 </tr>
 </tbody>
 </table>
 <div id="append" class="section level3">
-<h3>append()</h3>
-<p>append 메소드는 특정 리스트에 요소를 추가하는 메소드입니다. <strong>이 메소드는 리스트를 즉시 변형시키므로 주의해서 사용해야 합니다.</strong> 즉 a.append(b)를 실행하면 즉시 리스트에 요소가 추가되고, 다시 할당을 할 필요가 없습니다.</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb61-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</a>
-<a class="sourceLine" id="cb61-2" title="2"><span class="op">&gt;&gt;&gt;</span> a.append(<span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb61-3" title="3"><span class="op">&gt;&gt;&gt;</span> a</a>
-<a class="sourceLine" id="cb61-4" title="4">[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>]</a></code></pre></div>
+<h3>append</h3>
+<p>append 메소드는 특정 리스트에 요소를 추가하는 메소드입니다. <strong>이 메소드는 리스트를 즉시 변형시키므로 주의해서 사용해야 합니다.</strong> 즉 <code>a.append(b)</code>를 실행하면 즉시 리스트에 요소가 추가되고, 다시 할당을 할 필요가 없습니다.</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb70-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb70-2" title="2"><span class="op">&gt;&gt;&gt;</span> a.append(<span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb70-3" title="3"><span class="op">&gt;&gt;&gt;</span> a</a>
+<a class="sourceLine" id="cb70-4" title="4">[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>]</a></code></pre></div>
 </div>
 <div id="index" class="section level3">
-<h3>index()</h3>
-<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb62-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> [<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>]</a>
-<a class="sourceLine" id="cb62-2" title="2"><span class="op">&gt;&gt;&gt;</span> a.index(<span class="st">&quot;C&quot;</span>)</a>
-<a class="sourceLine" id="cb62-3" title="3"><span class="dv">2</span></a></code></pre></div>
+<h3>index</h3>
+<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb71-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> [<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>]</a>
+<a class="sourceLine" id="cb71-2" title="2"><span class="op">&gt;&gt;&gt;</span> a.index(<span class="st">&quot;C&quot;</span>)</a>
+<a class="sourceLine" id="cb71-3" title="3"><span class="dv">2</span></a></code></pre></div>
 </div>
 </div>
 <div id="리스트의-요소들에-함수-적용하기-map" class="section level2">
-<h2>5.5 리스트의 요소들에 함수 적용하기: map()</h2>
-<p>map 함수는 리스트 내의 요소들에 일괄적으로 함수를 적용하는 함수입니다. 만약 리스트 안의 모든 요소들에 2를 곱하고 싶다면 어떻게 코드를 짜야 할까요? 리스트의 사칙연산은 숫자와 다르게 작동하므로, [1,2,3] * 2 와 같은 코드로는 원하는 결과를 얻을 수 없습니다. 이 때 map 함수를 사용하면 쉽게 해결이 가능합니다. map은 함수와 반복 가능한 객체 하나를 인자로 받습니다. 반복 가능한 객체는 리스트와 같이 각 요소에 차례대로 접근할 수 있는 객체를 말합니다.</p>
+<h2>5.5. 리스트의 요소들에 함수 적용하기: map</h2>
+<p><code>map</code> 함수는 리스트 내의 요소들에 일괄적으로 함수를 적용하는 함수입니다. 만약 리스트 안의 모든 요소들에 2를 곱하고 싶다면 어떻게 코드를 짜야 할까요? 리스트의 사칙연산은 숫자와 다르게 작동하므로, [1,2,3] * 2 와 같은 코드로는 원하는 결과를 얻을 수 없습니다. 이 때 map 함수를 사용하면 쉽게 해결이 가능합니다. map은 함수와 반복 가능한 객체 하나를 인자로 받습니다. 반복 가능한 객체는 리스트와 같이 각 요소에 차례대로 접근할 수 있는 객체를 말합니다.</p>
 <pre class="pyhon"><code>&gt;&gt;&gt; map(f, iterable)</code></pre>
-<p>아래 예시 코드를 보겠습니다. a는 리스트이고, f는 x라는 인자를 받아서 x의 제곱을 반환하는 함수입니다. map(f,a)는 a 리스트의 각 요소에 f 함수를 적용하는 코드입니다. 하지만 map(f,a)까지만 실행하면 계산이 실제로 실행되지는 않으며, 맵 객체라는 이상한 결과가 반환됩니다. 이 객체는 실제 계산을 실행하기 위해 대기중인 상태입니다. 실제 계산 결과를 반환받으려면 맵 객체를 list()로 다시 한 번 감싸주어야 합니다.</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb64-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</a>
-<a class="sourceLine" id="cb64-2" title="2"><span class="op">&gt;&gt;&gt;</span> f <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span></a>
-<a class="sourceLine" id="cb64-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">map</span>(f,mylist)</a>
-<a class="sourceLine" id="cb64-4" title="4"><span class="op">&lt;</span><span class="bu">map</span> <span class="bu">object</span> at <span class="bn">0x0000013C814CB3C8</span><span class="op">&gt;</span></a>
-<a class="sourceLine" id="cb64-5" title="5"><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(<span class="bu">map</span>(f,mylist))</a>
-<a class="sourceLine" id="cb64-6" title="6">[<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>]</a></code></pre></div>
+<p>아래 예시 코드를 보겠습니다. a는 리스트이고, f는 x라는 인자를 받아서 x의 제곱을 반환하는 함수입니다. <code>map(f,a)</code>는 a 리스트의 각 요소에 f 함수를 적용하는 코드입니다. 하지만 <code>map(f,a)</code>까지만 실행하면 계산이 실제로 실행되지는 않으며, 맵 객체라는 이상한 결과가 반환됩니다. 이 객체는 실제 계산을 실행하기 위해 대기중인 상태입니다. 실제 계산 결과를 반환받으려면 <code>list</code> 함수로 다시 한 번 감싸주어야 합니다.</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb73-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb73-2" title="2"><span class="op">&gt;&gt;&gt;</span> f <span class="op">=</span> <span class="kw">lambda</span> x: x <span class="op">**</span> <span class="dv">2</span></a>
+<a class="sourceLine" id="cb73-3" title="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">map</span>(f,mylist)</a>
+<a class="sourceLine" id="cb73-4" title="4"><span class="op">&lt;</span><span class="bu">map</span> <span class="bu">object</span> at <span class="bn">0x0000013C814CB3C8</span><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb73-5" title="5"><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(<span class="bu">map</span>(f,mylist))</a>
+<a class="sourceLine" id="cb73-6" title="6">[<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>]</a></code></pre></div>
 <div class="warning">
-<p><strong>예제 5-4. address_list는 주소 문자열을 요소로 갖는 리스트입니다. address_list 각 요소들에서 시/도를 추출하여 리스트를 만드세요. 다음과 같은 결과를 얻으시면 됩니다.</strong></p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb65-1" title="1"><span class="op">&gt;&gt;&gt;</span> address_list <span class="op">=</span> [</a>
-<a class="sourceLine" id="cb65-2" title="2">...     <span class="st">&#39;서울 서대문구 연세로00길 00&#39;</span>,</a>
-<a class="sourceLine" id="cb65-3" title="3">...     <span class="st">&#39;경기도 성남시 분당구 불정로 0&#39;</span>,</a>
-<a class="sourceLine" id="cb65-4" title="4">...     <span class="st">&#39;부산 남구 유엔평화로 00-00&#39;</span></a>
-<a class="sourceLine" id="cb65-5" title="5">...]</a>
-<a class="sourceLine" id="cb65-6" title="6"><span class="op">&gt;&gt;&gt;</span> your_code ...</a>
-<a class="sourceLine" id="cb65-7" title="7">[<span class="st">&#39;서울&#39;</span>, <span class="st">&#39;경기도&#39;</span>, <span class="st">&#39;부산&#39;</span>]</a></code></pre></div>
+<p><strong>예제 5-4. <code>address_list</code>는 주소 문자열을 요소로 갖는 리스트입니다. address_list 각 요소들에서 시/도를 추출하여 리스트를 만드세요. 다음과 같은 결과를 얻으시면 됩니다.</strong></p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb74-1" title="1"><span class="op">&gt;&gt;&gt;</span> address_list <span class="op">=</span> [</a>
+<a class="sourceLine" id="cb74-2" title="2">...     <span class="st">&#39;서울 서대문구 연세로00길 00&#39;</span>,</a>
+<a class="sourceLine" id="cb74-3" title="3">...     <span class="st">&#39;경기도 성남시 분당구 불정로 0&#39;</span>,</a>
+<a class="sourceLine" id="cb74-4" title="4">...     <span class="st">&#39;부산 남구 유엔평화로 00-00&#39;</span></a>
+<a class="sourceLine" id="cb74-5" title="5">...]</a>
+<a class="sourceLine" id="cb74-6" title="6"><span class="op">&gt;&gt;&gt;</span> your_code ...</a>
+<a class="sourceLine" id="cb74-7" title="7">[<span class="st">&#39;서울&#39;</span>, <span class="st">&#39;경기도&#39;</span>, <span class="st">&#39;부산&#39;</span>]</a></code></pre></div>
 <p><strong>풀이</strong></p>
 <p><strong>1. 주소 문자열로부터 시도를 분리할 수 있는 패턴 찾기</strong></p>
 <ul>
@@ -2545,32 +2648,32 @@ $(document).ready(function () {
 <ul>
 <li>map을 활용해 함수를 적용하고 list()를 씌워서 결과를 출력하면 끝입니다!</li>
 </ul>
-<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb66-1" title="1"><span class="op">&gt;&gt;&gt;</span> address_list <span class="op">=</span> [</a>
-<a class="sourceLine" id="cb66-2" title="2">...     <span class="st">&#39;서울 서대문구 연세로00길 00&#39;</span>,</a>
-<a class="sourceLine" id="cb66-3" title="3">...     <span class="st">&#39;경기도 성남시 분당구 불정로 0&#39;</span>,</a>
-<a class="sourceLine" id="cb66-4" title="4">...     <span class="st">&#39;부산 남구 유엔평화로 00-00&#39;</span></a>
-<a class="sourceLine" id="cb66-5" title="5">...]</a>
-<a class="sourceLine" id="cb66-6" title="6"><span class="op">&gt;&gt;&gt;</span> my_func <span class="op">=</span> <span class="kw">lambda</span> x: x.split(<span class="st">&quot; &quot;</span>)[<span class="dv">0</span>]</a>
-<a class="sourceLine" id="cb66-7" title="7"><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(<span class="bu">map</span>(my_func, address_list))</a>
-<a class="sourceLine" id="cb66-8" title="8">[<span class="st">&#39;서울&#39;</span>, <span class="st">&#39;경기도&#39;</span>, <span class="st">&#39;부산&#39;</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb75-1" title="1"><span class="op">&gt;&gt;&gt;</span> address_list <span class="op">=</span> [</a>
+<a class="sourceLine" id="cb75-2" title="2">...     <span class="st">&#39;서울 서대문구 연세로00길 00&#39;</span>,</a>
+<a class="sourceLine" id="cb75-3" title="3">...     <span class="st">&#39;경기도 성남시 분당구 불정로 0&#39;</span>,</a>
+<a class="sourceLine" id="cb75-4" title="4">...     <span class="st">&#39;부산 남구 유엔평화로 00-00&#39;</span></a>
+<a class="sourceLine" id="cb75-5" title="5">...]</a>
+<a class="sourceLine" id="cb75-6" title="6"><span class="op">&gt;&gt;&gt;</span> my_func <span class="op">=</span> <span class="kw">lambda</span> x: x.split(<span class="st">&quot; &quot;</span>)[<span class="dv">0</span>]</a>
+<a class="sourceLine" id="cb75-7" title="7"><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(<span class="bu">map</span>(my_func, address_list))</a>
+<a class="sourceLine" id="cb75-8" title="8">[<span class="st">&#39;서울&#39;</span>, <span class="st">&#39;경기도&#39;</span>, <span class="st">&#39;부산&#39;</span>]</a></code></pre></div>
 </div>
 </div>
 </div>
 <div id="튜플" class="section level1">
 <h1>6. 튜플</h1>
-<p>튜플은 순서쌍입니다. 요소들의 순서가 있는 배열이라는 점에서 리스트와 거의 비슷하지만, <strong>리스트가 요소의 생성, 삭제, 수정이 가능한 반면 튜플은 요소를 수정할 수 없습니다.</strong> 자주 쓰는 자료형은 아니지만, 특징을 알아둘 필요가 있습니다.</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb67-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb67-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="bu">tuple</span>((<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>))</a></code></pre></div>
+<p>튜플은 순서쌍이며, 소괄호 혹은 <code>tuple</code> 함수를 사용하여 만들 수 있습니다. 요소들의 순서가 있는 배열이라는 점에서 리스트와 거의 비슷하지만, <strong>튜플은 요소를 수정할 수 없으며 요소들의 자료형이 모두 같아야 합니다.</strong> 자주 쓰는 자료형은 아니지만, 특징을 알아둘 필요가 있습니다.</p>
+<div class="sourceCode" id="cb76"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb76-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb76-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="bu">tuple</span>((<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>))</a></code></pre></div>
 </div>
 <div id="셋" class="section level1">
 <h1>7. 셋</h1>
 <div id="집합" class="section level2">
 <h2>7.1. 집합</h2>
-<p>셋은 집합이며, set() 함수 안에 반복 가능한 객체(리스트, 튜플 등)을 전달해서 만들 수 있습니다.</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb68-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</a>
-<a class="sourceLine" id="cb68-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">set</span>(mylist)</a>
-<a class="sourceLine" id="cb68-3" title="3">{<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}</a></code></pre></div>
-<p><strong>셋의 중요한 특징들은 다음과 같습니다. 셋의 특징은 유용할 때가 많으므로 꼭 숙지해두시기 바랍니다.</strong></p>
+<p>셋은 집합이며, 중괄호<code>{}</code> 를 사용하거나 <code>set</code> 함수를 사용해서 만들 수 있습니다.</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb77-1" title="1"><span class="op">&gt;&gt;&gt;</span> myset <span class="op">=</span> {<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>}</a>
+<a class="sourceLine" id="cb77-2" title="2"><span class="op">&gt;&gt;&gt;</span> myset</a>
+<a class="sourceLine" id="cb77-3" title="3">{<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>}</a></code></pre></div>
+<p><strong>셋의 중요한 특징들은 다음과 같습니다.</strong></p>
 <ul>
 <li>셋은 중복을 허용하지 않는다</li>
 <li>셋에는 순서가 없다</li>
@@ -2580,48 +2683,48 @@ $(document).ready(function () {
 <div id="집합으로-중복-제거하기" class="section level2">
 <h2>7.1. 집합으로 중복 제거하기</h2>
 <p>중복을 허용하지 않는다는 특징 때문에 집합은 중복을 제거하는 수단으로 활용되기도 합니다. 중복이 존재하는 리스트를 집합으로 만들었다가, 다시 리스트로 변환하는 과정을 통해서 리스트의 중복을 제거할 수 있습니다.</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb69-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</a>
-<a class="sourceLine" id="cb69-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">set</span>(mylist)</a>
-<a class="sourceLine" id="cb69-3" title="3">{<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>}</a>
-<a class="sourceLine" id="cb69-4" title="4"><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(<span class="bu">set</span>(mylist))</a>
-<a class="sourceLine" id="cb69-5" title="5">[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb78-1" title="1"><span class="op">&gt;&gt;&gt;</span> mylist <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</a>
+<a class="sourceLine" id="cb78-2" title="2"><span class="op">&gt;&gt;&gt;</span> <span class="bu">set</span>(mylist)</a>
+<a class="sourceLine" id="cb78-3" title="3">{<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>}</a>
+<a class="sourceLine" id="cb78-4" title="4"><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(<span class="bu">set</span>(mylist))</a>
+<a class="sourceLine" id="cb78-5" title="5">[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</a></code></pre></div>
 </div>
 <div id="집합-연산" class="section level2">
 <h2>7.2. 집합 연산</h2>
 <p>집합 연산자는 <strong>1) 연산자를 통해서 실행하는 방법, 2) 메소드를 통해서 실행하는 방법</strong>이 있습니다. 어떤 방법을 사용해도 상관 없습니다.</p>
 <div id="합집합" class="section level3">
 <h3>합집합</h3>
-<p>합집합은 ‘|’ 연산자 혹은 union 메소드를 활용합니다. 집합의 개수와 상관 없이 연산이 가능합니다.</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb70-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="bu">set</span>([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>])</a>
-<a class="sourceLine" id="cb70-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="bu">set</span>([<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</a>
-<a class="sourceLine" id="cb70-3" title="3"><span class="op">&gt;&gt;&gt;</span> c <span class="op">=</span> <span class="bu">set</span>([<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>])</a>
-<a class="sourceLine" id="cb70-4" title="4"><span class="op">&gt;&gt;&gt;</span> a <span class="op">|</span> b</a>
-<a class="sourceLine" id="cb70-5" title="5">{<span class="dv">3</span>}</a>
-<a class="sourceLine" id="cb70-6" title="6"><span class="op">&gt;&gt;&gt;</span> a.union(b)</a>
-<a class="sourceLine" id="cb70-7" title="7"><span class="op">&gt;&gt;&gt;</span> a <span class="op">|</span> b <span class="op">|</span> c</a>
-<a class="sourceLine" id="cb70-8" title="8">{<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>}</a>
-<a class="sourceLine" id="cb70-9" title="9"><span class="op">&gt;&gt;&gt;</span> a.union(b,c)</a>
-<a class="sourceLine" id="cb70-10" title="10">{<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>}</a></code></pre></div>
+<p>합집합은 <code>|</code> 연산자 혹은 <code>union</code> 메소드를 활용합니다. 집합의 개수와 상관 없이 연산이 가능합니다.</p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb79-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="bu">set</span>([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>])</a>
+<a class="sourceLine" id="cb79-2" title="2"><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="bu">set</span>([<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</a>
+<a class="sourceLine" id="cb79-3" title="3"><span class="op">&gt;&gt;&gt;</span> c <span class="op">=</span> <span class="bu">set</span>([<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>])</a>
+<a class="sourceLine" id="cb79-4" title="4"><span class="op">&gt;&gt;&gt;</span> a <span class="op">|</span> b</a>
+<a class="sourceLine" id="cb79-5" title="5">{<span class="dv">3</span>}</a>
+<a class="sourceLine" id="cb79-6" title="6"><span class="op">&gt;&gt;&gt;</span> a.union(b)</a>
+<a class="sourceLine" id="cb79-7" title="7"><span class="op">&gt;&gt;&gt;</span> a <span class="op">|</span> b <span class="op">|</span> c</a>
+<a class="sourceLine" id="cb79-8" title="8">{<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>}</a>
+<a class="sourceLine" id="cb79-9" title="9"><span class="op">&gt;&gt;&gt;</span> a.union(b,c)</a>
+<a class="sourceLine" id="cb79-10" title="10">{<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>}</a></code></pre></div>
 </div>
 <div id="교집합" class="section level3">
 <h3>교집합</h3>
-<p>교집합은 ‘&amp;’ 연산자 혹은 intersection 메소드를 활용합니다. 역시 집합의 개수와 상관 없이 연산이 가능합니다.</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb71-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">&amp;</span> b</a>
-<a class="sourceLine" id="cb71-2" title="2">{<span class="dv">3</span>}</a>
-<a class="sourceLine" id="cb71-3" title="3"><span class="op">&gt;&gt;&gt;</span> a.intersection(b)</a>
-<a class="sourceLine" id="cb71-4" title="4">{<span class="dv">3</span>}</a>
-<a class="sourceLine" id="cb71-5" title="5"><span class="op">&gt;&gt;&gt;</span> a.intersection(b,c)</a>
-<a class="sourceLine" id="cb71-6" title="6"><span class="bu">set</span>()</a></code></pre></div>
+<p>교집합은 <code>&amp;</code> 연산자 혹은 <code>intersection</code> 메소드를 활용합니다. 역시 집합의 개수와 상관 없이 연산이 가능합니다.</p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb80-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">&amp;</span> b</a>
+<a class="sourceLine" id="cb80-2" title="2">{<span class="dv">3</span>}</a>
+<a class="sourceLine" id="cb80-3" title="3"><span class="op">&gt;&gt;&gt;</span> a.intersection(b)</a>
+<a class="sourceLine" id="cb80-4" title="4">{<span class="dv">3</span>}</a>
+<a class="sourceLine" id="cb80-5" title="5"><span class="op">&gt;&gt;&gt;</span> a.intersection(b,c)</a>
+<a class="sourceLine" id="cb80-6" title="6"><span class="bu">set</span>()</a></code></pre></div>
 </div>
 <div id="차집합" class="section level3">
 <h3>차집합</h3>
-<p>차집합은 ‘-’ 연산자 혹은 difference 메소드를 활용합니다.</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb72-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">-</span> b</a>
-<a class="sourceLine" id="cb72-2" title="2">{<span class="dv">1</span>, <span class="dv">2</span>}</a>
-<a class="sourceLine" id="cb72-3" title="3"><span class="op">&gt;&gt;&gt;</span> a.difference(b)</a>
-<a class="sourceLine" id="cb72-4" title="4">{<span class="dv">1</span>, <span class="dv">2</span>}</a>
-<a class="sourceLine" id="cb72-5" title="5"><span class="op">&gt;&gt;&gt;</span> b.difference(a,c)</a>
-<a class="sourceLine" id="cb72-6" title="6">{<span class="dv">4</span>}</a></code></pre></div>
+<p>차집합은 <code>-</code> 연산자 혹은 <code>difference</code> 메소드를 활용합니다.</p>
+<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb81-1" title="1"><span class="op">&gt;&gt;&gt;</span> a <span class="op">-</span> b</a>
+<a class="sourceLine" id="cb81-2" title="2">{<span class="dv">1</span>, <span class="dv">2</span>}</a>
+<a class="sourceLine" id="cb81-3" title="3"><span class="op">&gt;&gt;&gt;</span> a.difference(b)</a>
+<a class="sourceLine" id="cb81-4" title="4">{<span class="dv">1</span>, <span class="dv">2</span>}</a>
+<a class="sourceLine" id="cb81-5" title="5"><span class="op">&gt;&gt;&gt;</span> b.difference(a,c)</a>
+<a class="sourceLine" id="cb81-6" title="6">{<span class="dv">4</span>}</a></code></pre></div>
 </div>
 </div>
 </div>
@@ -2629,11 +2732,11 @@ $(document).ready(function () {
 <h1>8. 딕셔너리</h1>
 <div id="딕셔너리-만들기" class="section level2">
 <h2>8.1. 딕셔너리 만들기</h2>
-<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb73-1" title="1">{key1:value1, key2:value2, ...}</a></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb82-1" title="1">{key1:value1, key2:value2, ...}</a></code></pre></div>
 <p>사전에서 ’people’을 찾으면 ’사람’이라는 뜻이 대응되고, ’science’를 찾으면 ’과학’이라는 뜻이 대응됩니다. 파이썬의 딕셔너리 역시 이러한 대응관계를 나타내는 자료형이며, 키를 넣으면 그에 맞는 값을 얻을 수 있습니다. 리스트나 튜플의 요소들에 접근할 때에는 요소의 번호인 인덱스를 활용했지만, 딕셔너리에서는 키를 활용합니다. 딕셔너리의 각 요소는 키와 값을 콜론으로 대응시킨 쌍이고, 각 쌍들은 컴마로 구분합니다. 이 쌍들을 중괄호로 묶어주면 딕셔너리가 생성됩니다.</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb74-1" title="1"><span class="op">&gt;&gt;&gt;</span> dict1 <span class="op">=</span> {<span class="st">&quot;김연아&quot;</span>:<span class="st">&quot;피겨&quot;</span>,<span class="st">&quot;박찬호&quot;</span>:<span class="st">&quot;야구&quot;</span>,<span class="st">&quot;손흥민&quot;</span>:<span class="st">&quot;축구&quot;</span>}</a>
-<a class="sourceLine" id="cb74-2" title="2"><span class="op">&gt;&gt;&gt;</span> dict2 <span class="op">=</span> {<span class="st">&quot;이름&quot;</span>:[<span class="st">&quot;펭수&quot;</span>,<span class="st">&quot;뽀로로&quot;</span>,<span class="st">&quot;뿡뿡이&quot;</span>,<span class="st">&quot;뚝딱이&quot;</span>],<span class="st">&quot;종&quot;</span>:[<span class="st">&quot;펭귄&quot;</span>,<span class="st">&quot;펭귄&quot;</span>,<span class="st">&quot;NA&quot;</span>,<span class="st">&quot;도깨비&quot;</span>]}</a></code></pre></div>
-<p>dict1의 구조를 이해하는 것은 어렵지 않을 것입니다. dict2의 구조는 약간 더 복잡합니다. “이름”이라는 키에 이름의 리스트가 값으로 대응하고, “종”이라는 키에 종의 리스트가 값으로 대응합니다. 앞으로 계속 마주칠 DataFrame, Json에서 활용되는 구조이기 때문에, 정확히 이해하고 넘어가야 합니다. dict2를 테이블로 표현하면 다음과 같습니다. 즉 dict2는 키-값의 쌍이 하나의 컬럼을 이루는 표로 표현할 수 있습니다.</p>
+<div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb83-1" title="1"><span class="op">&gt;&gt;&gt;</span> dict1 <span class="op">=</span> {<span class="st">&quot;김연아&quot;</span>:<span class="st">&quot;피겨&quot;</span>,<span class="st">&quot;박찬호&quot;</span>:<span class="st">&quot;야구&quot;</span>,<span class="st">&quot;손흥민&quot;</span>:<span class="st">&quot;축구&quot;</span>}</a>
+<a class="sourceLine" id="cb83-2" title="2"><span class="op">&gt;&gt;&gt;</span> dict2 <span class="op">=</span> {<span class="st">&quot;이름&quot;</span>:[<span class="st">&quot;펭수&quot;</span>,<span class="st">&quot;뽀로로&quot;</span>,<span class="st">&quot;뿡뿡이&quot;</span>,<span class="st">&quot;뚝딱이&quot;</span>],<span class="st">&quot;종&quot;</span>:[<span class="st">&quot;펭귄&quot;</span>,<span class="st">&quot;펭귄&quot;</span>,<span class="st">&quot;NA&quot;</span>,<span class="st">&quot;도깨비&quot;</span>]}</a></code></pre></div>
+<p><code>dict1</code>의 구조를 이해하는 것은 어렵지 않을 것입니다. <code>dict2</code>의 구조는 약간 더 복잡합니다. “이름”이라는 문자열 키에 리스트가 값으로 대응하고, “종”이라는 문자열 키에 리스트가 값으로 대응합니다. 앞으로 계속 마주칠 DataFrame, Json에서 활용되는 구조이기 때문에, 정확히 이해하고 넘어가야 합니다. <code>dict2</code>를 테이블로 표현하면 다음과 같습니다. 즉 <code>dict2</code>는 키-값의 쌍이 하나의 컬럼을 이루는 표로 표현할 수 있습니다.</p>
 <table>
 <thead>
 <tr class="header">
@@ -2672,20 +2775,20 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td>a.keys()</td>
-<td>a 딕셔너리의 키를 반환</td>
+<td><code>keys</code></td>
+<td>딕셔너리의 키를 반환</td>
 </tr>
 <tr class="even">
-<td>a.values()</td>
-<td>b 딕셔너리의 값을 반환</td>
+<td><code>values</code></td>
+<td>딕셔너리의 값을 반환</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb75-1" title="1"><span class="op">&gt;&gt;&gt;</span> dict2 <span class="op">=</span> {<span class="st">&quot;이름&quot;</span>:[<span class="st">&quot;펭수&quot;</span>,<span class="st">&quot;뽀로로&quot;</span>,<span class="st">&quot;뿡뿡이&quot;</span>],<span class="st">&quot;종&quot;</span>:[<span class="st">&quot;펭귄&quot;</span>,<span class="st">&quot;펭귄&quot;</span>,<span class="st">&quot;NA&quot;</span>]}</a>
-<a class="sourceLine" id="cb75-2" title="2"><span class="op">&gt;&gt;&gt;</span> dict2.keys()</a>
-<a class="sourceLine" id="cb75-3" title="3">dict_keys([<span class="st">&#39;이름&#39;</span>, <span class="st">&#39;종&#39;</span>])</a>
-<a class="sourceLine" id="cb75-4" title="4"><span class="op">&gt;&gt;&gt;</span> dict2.values()</a>
-<a class="sourceLine" id="cb75-5" title="5">dict_values([[<span class="st">&#39;펭수&#39;</span>, <span class="st">&#39;뽀로로&#39;</span>, <span class="st">&#39;뿡뿡이&#39;</span>], [<span class="st">&#39;펭귄&#39;</span>, <span class="st">&#39;펭귄&#39;</span>, <span class="st">&#39;NA&#39;</span>]])</a></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb84-1" title="1"><span class="op">&gt;&gt;&gt;</span> dict2 <span class="op">=</span> {<span class="st">&quot;이름&quot;</span>:[<span class="st">&quot;펭수&quot;</span>,<span class="st">&quot;뽀로로&quot;</span>,<span class="st">&quot;뿡뿡이&quot;</span>],<span class="st">&quot;종&quot;</span>:[<span class="st">&quot;펭귄&quot;</span>,<span class="st">&quot;펭귄&quot;</span>,<span class="st">&quot;NA&quot;</span>]}</a>
+<a class="sourceLine" id="cb84-2" title="2"><span class="op">&gt;&gt;&gt;</span> dict2.keys()</a>
+<a class="sourceLine" id="cb84-3" title="3">dict_keys([<span class="st">&#39;이름&#39;</span>, <span class="st">&#39;종&#39;</span>])</a>
+<a class="sourceLine" id="cb84-4" title="4"><span class="op">&gt;&gt;&gt;</span> dict2.values()</a>
+<a class="sourceLine" id="cb84-5" title="5">dict_values([[<span class="st">&#39;펭수&#39;</span>, <span class="st">&#39;뽀로로&#39;</span>, <span class="st">&#39;뿡뿡이&#39;</span>], [<span class="st">&#39;펭귄&#39;</span>, <span class="st">&#39;펭귄&#39;</span>, <span class="st">&#39;NA&#39;</span>]])</a></code></pre></div>
 </div>
 </div>
 <div id="참고자료" class="section level1">
