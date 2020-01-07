@@ -1,5 +1,18 @@
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@font-face {
+  font-family: NanumSquare;
+  src: url(NanumSquareR.ttf) format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0-10FFFF;
+}
 
+@font-face {
+  font-family: Cosolas;
+  src: url(consola.ttf) format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0-10FFFF;
+}
 
 h1, h2, h3, h4, h5 {
 	font-family:NanumSquare,Consolas;
