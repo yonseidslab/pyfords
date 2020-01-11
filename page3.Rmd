@@ -600,7 +600,7 @@ Name: 명칭, dtype: object
 ```
 
 :::warning
-**예제 3.1. 판다스 데이터프레임의 `columns` 속성을 통해 데이터프레임의 컬럼 이름들에 접근할 수 있습니다. 위에서 읽어온 `titanic` 데이터의 컬럼 이름을 확인하고, 원하는 컬럼을 추출해보세요.
+**예제 3.1. 판다스 데이터프레임의 `columns` 속성을 통해 데이터프레임의 컬럼 이름들에 접근할 수 있습니다. 위에서 읽어온 `titanic` 데이터의 컬럼 이름을 확인하고, 원하는 컬럼을 추출해보세요.**
 
 ```{python eval=F}
 >>> titanic.columns
@@ -1066,5 +1066,144 @@ Name: Survived, dtype: float64
 ```
 :::
 
-# 4. 복수의 데이터프레임 조작: merge & concat
+# 4. 복수의 데이터프레임 합치기
 
+## 4.1. pd.merge
+
+![Pandas Merge and Append Tables](https://www.absentdata.com/wp-content/uploads/2019/07/pd.merge-1.png)
+
+마지막으로, 복수의 데이터프레임을 합치는 방법을 배워보겠습니다. 예를 들어 위와 같은 두 개의 데이터프레임은 `item_id`라는 컬럼을 기준으로 이어붙일 수 있을 것입니다. 이렇게 기준 열을 통해서 복수의 데이터를 병합하는 조작을 SQL에서는 조인이라고 부릅니다. 판다스에서 이러한 조작은 `pd.merge` 함수를 통해서 실행할 수 있습니다. **아무런 인자 없이 `pd.merge`를 실행할때는 양쪽 데이터에 공통된 이름의 컬럼이 존재해야 하며, 양쪽 컬럼의 자료형이 일치해야 합니다.**
+
+```{python eval=F}
+>>> leftData = pd.DataFrame({"item_id":[11,22,33,44,55],"price":[1.99,2.99,1.00,4.5,1.5]})
+>>> rightData = pd.DataFrame({
+...     "item_id":[11,22,33,44,55],
+...     "item":["sweet","salty","japanese","german","korean"]
+... })
+>>> pd.merge(leftData,rightData)
+   item_id  price      item
+0       11   1.99     sweet
+1       22   2.99     salty
+2       33   1.00  japanese
+3       44   4.50    german
+4       55   1.50    korean
+```
+
+![How to join (merge) data frames (inner, outer, right, left join) in pandas python](http://www.datasciencemadesimple.com/wp-content/uploads/2017/09/join-or-merge-in-python-pandas-1.png)
+
+위에서는 왼쪽 데이터와 오른쪽 데이터의 행 개수가 동일했지만, 그렇지 않은 경우에도 조인이 가능합니다. 위 그림을 보면, 크게 네 가지 방식의 조인이 존재하는 것을 알 수 있습니다.
+
+1. Inner join: 양쪽 데이터 모두에 존재하는 행들만을 남기는 조인(pd.merge 기본 옵션!)
+2. Left join: 왼쪽 데이터에 존재하는 행들만을 남기는 조인
+3. Right join: 오른쪽 데이터에 존재하는 행들만을 남기는 조인
+4. Outer join: 양쪽 데이터에 존재하는 행들을 모두 남기는 조인
+
+```{python eval=F}
+>>> pd.merge(왼쪽데이터, 오른쪽데이터, how='조인방식')
+```
+
+### inner join
+
+위의 코드를 약간 수정하여 `leftData`를 3개의 행으로, `rightData`를 4개의 행으로 줄여주었습니다. 데이터를 이렇게 수정해주면, 왼쪽 데이터와 오른쪽 데이터의 교집한은 아이디 11번, 22번 상품 뿐입니다. 따라서 inner join을 실행하면 11번, 22번 상품만 남게 됩니다. Inner join이 `pd.merge`의 기본 옵션이기 때문에 별도로 인자를 전달해줄 필요가 없습니다.
+
+```{python eval=F}
+>>> leftData = pd.DataFrame({"item_id":[11,22,33],"price":[1.99,2.99,1.00]})
+>>> rightData = pd.DataFrame({"item_id":[22,33,44,55],"item":["salty","japanese","german","korean"]})
+>>> pd.merge(leftData,rightData)
+   item_id  price      item
+0       22   2.99     salty
+1       33   1.00  japanese
+```
+
+### left join, right join
+
+Left join은 왼쪽 데이터에 존재하는 데이터를 모두 남기는 조인입니다. 아래 예시 코드를 보겠습니다. 왼쪽에 존재하는 데이터들이 모두 보존되는 것을 확인할 수 있습니다. 하지만 11번 상품은 오른쪽 데이터에 존재하지 않는 행이기 때문에, `item` 컬럼에 `NaN`이 할당되었습니다. Right join 역시 같은 원리로 작동하기 때문에 설명은 생략하겠습니다.
+
+```{python eval=F}
+>>> pd.merge(leftData,rightData,how='left')
+   item_id  price      item
+0       11   1.99       NaN
+1       22   2.99     salty
+2       33   1.00  japanese
+>>> pd.merge(leftData,rightData,how='right')
+   item_id  price      item
+0       22   2.99     salty
+1       33   1.00  japanese
+2       44    NaN    german
+3       55    NaN    korean
+```
+
+### outer join
+
+Outer join은 양쪽의 데이터를 모두 남기는 조인입니다. 아래 에시 코드를 보겠습니다. 양쪽 데이터에 들어있는 행들이 모두 보존되는 것을 확인할 수 있습니다. 역시 서로 대응되는 행이 없는 경우에는 `NaN`이 할당됩니다.
+
+```{python eval=F}
+>>> pd.merge(leftData,rightData,how='outer')
+   item_id  price      item
+0       11   1.99       NaN
+1       22   2.99     salty
+2       33   1.00  japanese
+3       44    NaN    german
+4       55    NaN    korean
+```
+
+### 기타 경우의 조인
+
+같은 이름의 컬럼이 존재하지 않거나, 복수의 열을 기준으로 조인을 실행할 경우에는 추가적으로 인자를 전달해주어야 합니다. 다양한 경우들을 여기에서 전부 다룰 수는 없기 때문에, 간단한 문법만 짚고 넘어가겠습니다. 더 자세한 정보를 원하시면 [pandas documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.merge.html)을 참조하시기 바랍니다. 
+
+```{python eval=F}
+>>> pd.merge(data1, data2, left_on="왼쪽컬럼명", right_on="오른쪽컬럼명") # 컬럼 이름이 일치하지 않는 경우
+>>> pd.merge(data1, data2, on = ['기준컬럼1','기준컬럼2', ...]) # 복수의 컬럼을 기준으로 merge
+```
+
+## 4.2. concat
+
+![](https://pandas.pydata.org/pandas-docs/version/0.20.2/_images/merging_concat_dict.png)
+
+`pd.merge`가 복수의 데이터를 옆으로 합쳐주었다면, `pd.concat`은 주로 복수의 데이터를 위아래로 합치는 경우에 사용합니다(양옆으로 합칠 때도 사용할 수 있습니다). 위와 같이 동일한 컬럼을 공유하는 복수의 데이터를 합쳐주는 경우가 대표적인 예시입니다. 아래 예시 코드를 보면 쉽게 이해할 수 있을 것입니다. `[]` 안에 데이터들을 넣어주시면 됩니다. `pd.concat`은 개별 데이터가 커질수록 느려지기 때문에 절대절대 `for` 문과 함께 사용하시면 안됩니다! 리스트 안에 복수의 데이터를 집어넣은 후, 한 번에 합쳐주셔야 그나마 빠르게 작업을 할 수 있습니다.
+
+```{python eval=F}
+>>> pd.concat([데이터1, 데이터2, 데이터3, ...])
+>>> data1 = pd.DataFrame({"height":[154, 184, 176], "weight":[54, 84, 76]})
+>>> data2 = pd.DataFrame({"height":[167, 170, 163, 165], "weight":[67, 70, 63, 65]})
+>>> pd.concat([data1, data2])
+   height  weight
+0     154      54
+1     184      84
+2     176      76
+0     167      67
+1     170      70
+2     163      63
+3     165      65
+```
+
+# 5. 기타 판다스 함수 및 메소드, 속성
+
+## 5.1. 판다스 함수
+
+함수|기능
+---|---
+pd.date_range|날짜 구간 생성
+pd.to_datetime|시리즈의 자료형을 timestamp로 변경
+pd.get_dummies|시리즈를 더미 인코딩
+
+## 5.2. 기타 데이터프레임 메소드
+
+메소드|기능
+---|---
+df.astype|특정 열의 데이터 타입 변경
+df.isnull()|값이 NA인지 판단
+df.dropna()|NA를 모두 드랍
+df.set_index()|열을 인덱스로
+df.reset_index()|인덱스를 초기화
+df.duplicated()|값이 중복되었는지 판단
+df.drop_duplicates()|중복된 행 제거
+df.pivot()|피봇 테이블
+
+## 5.3. 데이터프레임 속성
+
+메소드|내용
+---|---
+df.columns|데이터프레임의 열 이름
+df.values|데이터프레임의 값이 담긴 넘파이 어레이
+df.dtypes|데이터프레임의 데이터 타입 
