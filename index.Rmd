@@ -8,7 +8,6 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-reticulate::use_python("C://Users/administrator/Anaconda3/python")
 ```
 
 # 1. 목차
@@ -115,7 +114,7 @@ CMD|Browser
 아나콘다를 설치하였으면, 사용자 계정 디렉토리 바로 아래에 `.jupyter` 라는 디렉토리가 생겼을 것입니다. `.jupyter` 디렉토리에 들어가서, `custom` 디렉토리를 생성해주세요. 이 안에서 메모장 등 텍스트 편집기를 열고, 아래 내용을 복사 / 붙여넣기 해주세요(css를 잘 아시는 분들이라면 원하시는대로 수정해주시면 됩니다). 
 
 ```
-.CodeMirror pre {font-family: Consolas; font-size: 10pt; line-height: 140%;}
+.CodeMirror {font-family: Consolas; font-size: 10pt; line-height: 140%;}
 
 div.output pre{
     font-family: Consolas;

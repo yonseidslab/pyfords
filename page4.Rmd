@@ -9,7 +9,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(warning=FALSE, message=FALSE)
-reticulate::use_python("C://User/Administrator/Anaconda3/python3")
+reticulate::use_python("C://User/jhgan/Anaconda3/python3")
 ```
 
 - [00. 데이터 과학을 위한 파이썬](https://yonseidslab.github.io/pyfords/)
