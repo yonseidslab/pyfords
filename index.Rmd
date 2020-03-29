@@ -68,7 +68,6 @@ CMD|Browser
 ---|---
 ![](./assets/figs/jupyterURL.png)|![](./assets/figs/jupyter.png)
 
-
 ## 3.4. 새 노트북 생성
 
 브라우저에 주피터를 띄우는 것까지 성공했다면, 새로운 노트북을 만들 차례입니다. 우측 상단의 new > Python3를 클릭하여 새로운 노트북을 생성해주세요.
@@ -132,7 +131,7 @@ p {
 }
 
 code {
-	font-family: NanumSquare;
+	font-family: ConsolasK;
 }
 
 table {
